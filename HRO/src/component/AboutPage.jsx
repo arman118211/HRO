@@ -26,8 +26,11 @@ import {
   Lightbulb,
   Clock,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  PhilippinePeso,
+  Phone
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -245,17 +248,21 @@ const AboutPage = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
+            <Link to='/donate'>
             <button className="bg-white text-[#2979FF] px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 flex items-center space-x-2 group">
-              <span>Our Story</span>
+              <span>Donate</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
+            </Link>
+            <Link to='/contact'>
             <button 
               onClick={() => setShowVideo(true)}
               className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg font-semibold hover:bg-white/30 transition-all duration-200 flex items-center space-x-2 border border-white/30"
             >
-              <Play className="w-4 h-4" />
-              <span>Watch Video</span>
+              <Phone className="w-4 h-4" />
+              <span>Contact Us</span>
             </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -604,15 +611,19 @@ const AboutPage = () => {
             Together, we can create lasting change and build a better world for future generations.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link to='/volunteer'>
             <button className="bg-white text-[#2979FF] px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-200 flex items-center space-x-2 group">
               <HandHeart className="w-6 h-6" />
               <span>Volunteer With Us</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
+            </Link>
+            <Link to='/donate'>
             <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/30 transition-all duration-200 border border-white/30 flex items-center space-x-2">
               <Heart className="w-6 h-6" />
               <span>Make a Donation</span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

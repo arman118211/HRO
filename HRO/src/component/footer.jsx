@@ -11,21 +11,21 @@ export default function Footer() {
   ]
 
   const quickLinks = [
-    { name: "About Us", href: "#about" },
+    { name: "About Us", href: "/about" },
     { name: "Our Programs", href: "#programs" },
-    { name: "Impact Stories", href: "#impact" },
-    { name: "Annual Reports", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+    // { name: "Impact Stories", href: "#impact" },
+    { name: "Annual Reports", href: "/reports" },
+    { name: "Careers", href: "/career" },
+    
   ]
 
   const supportLinks = [
-    { name: "Donate", href: "#donate" },
-    { name: "Volunteer", href: "#" },
-    { name: "Fundraise", href: "#" },
-    { name: "Corporate Partners", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Donate", href: "/donate" },
+    { name: "Volunteer", href: "/volunteer" },
+    { name: "Fundraise", href: "/fundraiser" },
+    // { name: "Corporate Partners", href: "#" },
+    // { name: "FAQ", href: "#" },
+    { name: "Contact Us", href: "/contact" },
   ]
 
   return (
@@ -105,7 +105,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-background/80">+97 7984 7040 404</span>
+                <span className="text-background/80">+977 984 7040 404</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />

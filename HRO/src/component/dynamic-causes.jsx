@@ -31,6 +31,8 @@ import {
   Snowflake,
   Gift,
   Sun,
+  LifeBuoy,
+  Bandage,
 } from "lucide-react"
 import { Link } from "react-router-dom"
 
@@ -516,103 +518,6 @@ export default function DynamicCauses() {
         }
       ]
     },
-    "in-kind-gifts": {
-      title: "In-Kind Gifts Program",
-      subtitle: "Sharing Resources, Spreading Smiles",
-      description:
-        "Providing essential items such as food, clothing, school supplies, and medical kits to vulnerable families and children. Our program ensures dignity and relief through donations that directly impact daily lives.",
-      impactStats: [
-        {
-          icon: Package,
-          number: "15,000+",
-          label: "Families Supported",
-          color: "from-amber-500 to-yellow-600",
-          bgColor: "bg-amber-500/10"
-        },
-        {
-          icon: Shirt,
-          number: "25,000+",
-          label: "Clothing Items Distributed",
-          color: "from-indigo-500 to-purple-600",
-          bgColor: "bg-indigo-500/10"
-        },
-        {
-          icon: Utensils,
-          number: "40,000+",
-          label: "Meals Provided",
-          color: "from-green-500 to-emerald-600",
-          bgColor: "bg-green-500/10"
-        },
-        {
-          icon: GraduationCap,
-          number: "5,500+",
-          label: "School Kits Donated",
-          color: "from-blue-500 to-cyan-600",
-          bgColor: "bg-blue-500/10"
-        }
-      ],
-      programs: [
-        {
-          title: "Food & Nutrition Support",
-          description:
-            "Distributing groceries, ready meals, and nutritional supplements to families in crisis.",
-          impact: "200 families supported monthly",
-          cost: "$50 per family per month",
-          icon: Utensils,
-          gradient: "from-green-500 to-emerald-600",
-          features: ["Grocery kits", "Cooked meals", "Nutrition supplements"]
-        },
-        {
-          title: "Clothing for Dignity",
-          description:
-            "Providing new and gently used clothing to children, women, and families in need.",
-          impact: "500+ clothing items distributed monthly",
-          cost: "$20 per clothing kit",
-          icon: Shirt,
-          gradient: "from-indigo-500 to-purple-600",
-          features: ["Seasonal wear", "School uniforms", "Winter kits"]
-        },
-        {
-          title: "School Supplies Drive",
-          description:
-            "Equipping children with books, stationery, and school bags to support their education.",
-          impact: "1,000+ students supported annually",
-          cost: "$35 per school kit",
-          icon: GraduationCap,
-          gradient: "from-blue-500 to-cyan-600",
-          features: ["School bags", "Books & stationery", "Exam preparation kits"]
-        }
-      ],
-      stories: [
-        {
-          name: "Fatima Noor",
-          age: 10,
-          location: "Pakistan",
-          story:
-            "Fatima received a school kit through our program. With books and stationery in hand, she now attends school with confidence.",
-          image: "/fatima-pakistan-schoolkit.png",
-          achievement: "Access to school essentials"
-        },
-        {
-          name: "Samuel Johnson",
-          age: 42,
-          location: "Nigeria",
-          story:
-            "Samuel’s family struggled with food insecurity. Through our monthly grocery kits, his family now has regular meals and hope.",
-          image: "/samuel-nigeria-foodkit.png",
-          achievement: "Food security restored"
-        },
-        {
-          name: "Maria Lopez",
-          age: 35,
-          location: "Colombia",
-          story:
-            "After losing her belongings in a flood, Maria received clothing and household items from our In-Kind Gifts Program. She says it restored her dignity.",
-          image: "/maria-colombia-clothing.png",
-          achievement: "Support during crisis recovery"
-        }
-      ]
-    },
     "seasonal-programs": {
       title: "Seasonal Programs",
       subtitle: "Spreading Joy, Supporting Communities",
@@ -709,12 +614,104 @@ export default function DynamicCauses() {
           achievement: "Protected from extreme heat"
         }
       ]
-    }
-
-
-
-    
-
+    },
+    "emergency-relief": {
+      title: "Emergency & Relief",
+      subtitle: "Swift Response, Saving Lives",
+      description:
+        "Delivering immediate assistance during natural disasters, conflicts, and humanitarian crises. Our programs provide food, medical aid, shelter, and long-term support to help communities rebuild and recover.",
+      impactStats: [
+        {
+          icon: LifeBuoy,
+          number: "10,000+",
+          label: "Lives Saved",
+          color: "from-red-500 to-pink-600",
+          bgColor: "bg-red-500/10"
+        },
+        {
+          icon: Utensils,
+          number: "50,000+",
+          label: "Meals Distributed",
+          color: "from-orange-400 to-orange-600",
+          bgColor: "bg-orange-500/10"
+        },
+        {
+          icon: Bandage,
+          number: "8,500+",
+          label: "Medical Kits Provided",
+          color: "from-blue-500 to-indigo-600",
+          bgColor: "bg-blue-500/10"
+        },
+        {
+          icon: Home,
+          number: "2,000+",
+          label: "Families Sheltered",
+          color: "from-green-500 to-emerald-600",
+          bgColor: "bg-green-500/10"
+        }
+      ],
+      programs: [
+        {
+          title: "Rapid Relief Kits",
+          description:
+            "Providing emergency food, water, and hygiene supplies to families affected by disasters.",
+          impact: "5,000 families supported annually",
+          cost: "$100 per family",
+          icon: Package,
+          gradient: "from-orange-400 to-orange-600",
+          features: ["Nutritious food", "Clean water", "Hygiene essentials"]
+        },
+        {
+          title: "Emergency Medical Aid",
+          description:
+            "Supplying first aid, mobile clinics, and essential medicines to disaster-hit communities.",
+          impact: "10,000+ patients treated annually",
+          cost: "$50 per patient",
+          icon: Bandage,
+          gradient: "from-blue-500 to-indigo-600",
+          features: ["First aid care", "Mobile health camps", "Medicine supply"]
+        },
+        {
+          title: "Temporary Shelter Support",
+          description:
+            "Building safe, temporary shelters for displaced families until permanent housing is restored.",
+          impact: "2,000+ families sheltered annually",
+          cost: "$250 per family",
+          icon: Home,
+          gradient: "from-green-500 to-emerald-600",
+          features: ["Tent housing", "Warm bedding", "Basic utilities"]
+        }
+      ],
+      stories: [
+        {
+          name: "Anita Sharma",
+          age: 34,
+          location: "Nepal",
+          story:
+            "After a devastating earthquake, Anita and her children received emergency shelter, food, and medical care. Today, they are rebuilding their home with community support.",
+          image: "/anita-nepal-earthquake.png",
+          achievement: "Rebuilt life after disaster"
+        },
+        {
+          name: "Mohammed Ali",
+          age: 42,
+          location: "Syria",
+          story:
+            "Mohammed’s family fled conflict and found safety in our relief shelters. With access to food, medical aid, and education for his children, they now live with dignity and hope.",
+          image: "/mohammed-syria-relief.png",
+          achievement: "Safe shelter & restored dignity"
+        },
+        {
+          name: "Grace Njeri",
+          age: 28,
+          location: "Kenya",
+          story:
+            "Grace’s village was hit by floods, leaving many homeless. Through our relief program, she received rapid food aid, a safe tent, and medical support for her children.",
+          image: "/grace-kenya-floods.png",
+          achievement: "Survived and recovered after floods"
+        }
+      ]
+    },
   }
 
   const currentCause = causesData[causeType] || causesData.education
@@ -723,7 +720,7 @@ export default function DynamicCauses() {
   console.log("cuasestype",causeType)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 mt-0 md:mt-9">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50/30 to-orange-50 mt-0 md:mt-9 ">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
@@ -732,7 +729,7 @@ export default function DynamicCauses() {
             rotate: [0, 5, 0],
           }}
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-[#2979FF]/10 to-blue-400/10 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-amber-400/10 to-yellow-400/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -741,7 +738,7 @@ export default function DynamicCauses() {
             scale: [1, 1.1, 1],
           }}
           transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-          className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-xl"
+          className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -750,20 +747,20 @@ export default function DynamicCauses() {
             rotate: [0, -10, 0],
           }}
           transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-          className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-r from-green-400/10 to-blue-400/10 rounded-full blur-xl"
+          className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-full blur-xl"
         />
 
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#2979FF]/20 rounded-full animate-ping" />
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-purple-400/20 rounded-full animate-pulse" />
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-green-400/30 rounded-full animate-bounce" />
+        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-amber-500/20 rounded-full animate-ping" />
+        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-yellow-500/20 rounded-full animate-pulse" />
+        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-orange-400/30 rounded-full animate-bounce" />
       </div>
 
-      <div className="relative bg-gradient-to-r from-[#2979FF] via-[#1976D2] to-[#1565C0] text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
 
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-10 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-1/4 w-48 h-48 bg-blue-300/10 rounded-full blur-2xl" />
+          <div className="absolute bottom-10 right-1/4 w-48 h-48 bg-yellow-300/10 rounded-full blur-2xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -780,23 +777,23 @@ export default function DynamicCauses() {
                     transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                     className="bg-white/20 p-2 rounded-full"
                   >
-                    <Sparkles className="h-6 w-6 text-yellow-300" />
+                    <Sparkles className="h-6 w-6 text-yellow-200" />
                   </motion.div>
-                  <span className="text-blue-100 font-medium ">{currentCause.subtitle}</span>
+                  <span className="text-yellow-100 font-medium ">{currentCause.subtitle}</span>
                 </div>
 
-                <h1 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent ">
+                <h1 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-yellow-100 to-amber-200 bg-clip-text text-transparent ">
                   {currentCause.title}
                 </h1>
 
-                <p className="text-xl text-blue-100 mb-10 leading-relaxed max-w-lg">{currentCause.description}</p>
+                <p className="text-xl text-yellow-100 mb-10 leading-relaxed max-w-lg">{currentCause.description}</p>
 
                 <div className="flex gap-4">
                   <Link to="/donate">
                     <motion.button
                       whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white text-[#2979FF] px-6 md:px-10 md:py-4 py-4 rounded-full font-bold text-lg md:text-lg hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl"
+                      className="bg-white text-amber-600 px-6 md:px-10 md:py-4 py-4 rounded-full font-bold text-lg md:text-lg hover:bg-yellow-50 transition-all shadow-xl hover:shadow-2xl"
                     >
                       Donate Now
                     </motion.button>
@@ -805,7 +802,7 @@ export default function DynamicCauses() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="border-2 border-white text-white px-6 md:px-10 md:py-4 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#2979FF] transition-all backdrop-blur-sm"
+                      className="border-2 border-white text-white px-6 md:px-10 md:py-4 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-amber-600 transition-all backdrop-blur-sm"
                     >
                       Learn More
                     </motion.button>
@@ -841,7 +838,7 @@ export default function DynamicCauses() {
                         <stat.icon className="h-8 w-8 text-white" />
                       </motion.div>
                       <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-sm text-blue-100 font-medium">{stat.label}</div>
+                      <div className="text-sm text-yellow-100 font-medium">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -855,12 +852,12 @@ export default function DynamicCauses() {
               <motion.div
                 animate={{ y: [0, 10, 0], x: [0, 5, 0] }}
                 transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-                className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full shadow-lg"
+                className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-lg"
               />
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                className="absolute top-1/2 -right-4 w-4 h-4 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full"
+                className="absolute top-1/2 -right-4 w-4 h-4 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full"
               />
             </div>
           </div>
@@ -882,7 +879,7 @@ export default function DynamicCauses() {
                 whileTap={{ scale: 0.95 }}
                 className={`flex items-center space-x-2 py-4 px-6 border-b-3 font-semibold text-sm whitespace-nowrap transition-all relative ${
                   activeTab === tab.id
-                    ? "border-[#2979FF] text-[#2979FF] bg-blue-50/50"
+                    ? "border-amber-500 text-amber-600 bg-amber-50/50"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 hover:bg-gray-50/50"
                 }`}
               >
@@ -891,7 +888,7 @@ export default function DynamicCauses() {
                 {activeTab === tab.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-blue-50/30 rounded-t-lg -z-10"
+                    className="absolute inset-0 bg-amber-50/30 rounded-t-lg -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -921,15 +918,15 @@ export default function DynamicCauses() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
                     <div className="flex items-center space-x-3 mb-6">
-                      <div className="bg-[#2979FF]/10 p-2 rounded-full">
-                        <Target className="h-6 w-6 text-[#2979FF]" />
+                      <div className="bg-amber-500/10 p-2 rounded-full">
+                        <Target className="h-6 w-6 text-amber-600" />
                       </div>
-                      <span className="text-[#2979FF] font-semibold">Our Mission</span>
+                      <span className="text-amber-600 font-semibold">Our Mission</span>
                     </div>
 
                     <h2 className="text-4xl font-bold text-gray-900 mb-8 leading-tight">
                       Empowering Communities Through
-                      <span className="text-[#2979FF]"> {currentCause.title}</span>
+                      <span className="text-amber-600"> {currentCause.title}</span>
                     </h2>
 
                     <p className="text-lg text-gray-600 mb-10 leading-relaxed">{currentCause.description}</p>
@@ -942,9 +939,9 @@ export default function DynamicCauses() {
                     >
                       <Link to="/donate">
                         <motion.button
-                          whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(41, 121, 255, 0.3)" }}
+                          whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(245, 158, 11, 0.3)" }}
                           whileTap={{ scale: 0.95 }}
-                          className="bg-gradient-to-r from-[#2979FF] to-blue-500 text-white px-12 py-4 rounded-full font-bold text-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-xl hover:shadow-2xl flex items-center space-x-3"
+                          className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-12 py-4 rounded-full font-bold text-lg hover:from-amber-600 hover:to-yellow-600 transition-all shadow-xl hover:shadow-2xl flex items-center space-x-3"
                         >
                           <Heart className="h-6 w-6" />
                           <span>Donate Now</span>
@@ -984,15 +981,15 @@ export default function DynamicCauses() {
                           <div className="text-sm text-gray-600">Support</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-[#2979FF]">100%</div>
+                          <div className="text-2xl font-bold text-amber-600">100%</div>
                           <div className="text-sm text-gray-600">Transparency</div>
                         </div>
                       </div>
                     </motion.div>
                   </div>
 
-                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-[#2979FF] to-blue-500 rounded-full shadow-lg" />
-                  <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full shadow-lg" />
+                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg" />
+                  <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-lg" />
                 </motion.div>
               </div>
             </motion.div>
@@ -1014,14 +1011,14 @@ export default function DynamicCauses() {
                   transition={{ duration: 0.6 }}
                 >
                   <div className="flex items-center justify-center space-x-3 mb-6">
-                    <div className="bg-[#2979FF]/10 p-2 rounded-full">
-                      <BookOpen className="h-6 w-6 text-[#2979FF]" />
+                    <div className="bg-amber-500/10 p-2 rounded-full">
+                      <BookOpen className="h-6 w-6 text-amber-600" />
                     </div>
-                    <span className="text-[#2979FF] font-semibold">Our Impact Programs</span>
+                    <span className="text-amber-600 font-semibold">Our Impact Programs</span>
                   </div>
 
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Comprehensive <span className="text-[#2979FF]">Solutions</span>
+                    Comprehensive <span className="text-amber-600">Solutions</span>
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Comprehensive initiatives designed to create lasting impact in communities worldwide. Each program
@@ -1071,7 +1068,7 @@ export default function DynamicCauses() {
                       <div className="space-y-3 mb-8">
                         <div className="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
                           <span className="text-gray-600 font-medium">Impact:</span>
-                          <span className="font-bold text-[#2979FF]">{program.impact}</span>
+                          <span className="font-bold text-amber-600">{program.impact}</span>
                         </div>
                         <div className="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
                           <span className="text-gray-600 font-medium">Investment:</span>
@@ -1079,6 +1076,7 @@ export default function DynamicCauses() {
                         </div>
                       </div>
 
+                      <Link to='/donate'>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -1086,6 +1084,7 @@ export default function DynamicCauses() {
                       >
                         Support This Program
                       </motion.button>
+                      </Link>
                     </div>
 
                     {hoveredCard === index && (
@@ -1094,7 +1093,7 @@ export default function DynamicCauses() {
                         animate={{ scale: 1 }}
                         className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg"
                       >
-                        <TrendingUp className="h-4 w-4 text-[#2979FF]" />
+                        <TrendingUp className="h-4 w-4 text-amber-600" />
                       </motion.div>
                     )}
                   </motion.div>
@@ -1119,14 +1118,14 @@ export default function DynamicCauses() {
                   transition={{ duration: 0.6 }}
                 >
                   <div className="flex items-center justify-center space-x-3 mb-6">
-                    <div className="bg-[#2979FF]/10 p-2 rounded-full">
-                      <Star className="h-6 w-6 text-[#2979FF]" />
+                    <div className="bg-amber-500/10 p-2 rounded-full">
+                      <Star className="h-6 w-6 text-amber-600" />
                     </div>
-                    <span className="text-[#2979FF] font-semibold">Success Stories</span>
+                    <span className="text-amber-600 font-semibold">Success Stories</span>
                   </div>
 
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Lives <span className="text-[#2979FF]">Transformed</span>
+                    Lives <span className="text-amber-600">Transformed</span>
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Real stories from people whose lives have been transformed. These inspiring journeys show the power
@@ -1154,7 +1153,7 @@ export default function DynamicCauses() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
                       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <span className="text-xs font-semibold text-[#2979FF]">{story.achievement}</span>
+                        <span className="text-xs font-semibold text-amber-600">{story.achievement}</span>
                       </div>
 
                       <div className="absolute bottom-6 left-6 text-white">

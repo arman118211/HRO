@@ -7,20 +7,25 @@ import VolunteerTeamSection from "./volunteer-team-section"
 import PhotoGallerySection from "./photo-gallery-section"
 
 import CausesDonationSection from "./causes-donation-section"
-import DonationSection from "./donation-section"
+import DonationSection from "./DonationSection"
 import Footer from "./footer"
+import PosterCarousel from "./PosterCarousel"
+import OurCampaignSection from "./our-campaign"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <HeroCarousel />
+      {/* <HeroCarousel /> */}
+      <PosterCarousel/>
       <AboutSection />
       <CausesDonationSection />
       <ProgramsSection />
       <ImpactSection />
+      <OurCampaignSection/>
       <VolunteerTeamSection />
       <PhotoGallerySection />
-      <DonationSection />
+      {/* <DonationSection /> */}
+      <DonationSection/>
     
     </main>
   )

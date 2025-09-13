@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react"
-import { Link } from "react-router-dom"
 
 const causes = [
   {
@@ -32,7 +31,7 @@ const causes = [
     id: 2,
     title: "Clean Water Access",
     description: "Support our mission to bring clean, safe drinking water to communities in need.",
-    image: "/water1.png",
+    image: "/Picture24.jpg",
     icon: Droplets,
     raised: 32000,
     goal: 50000,
@@ -135,19 +134,19 @@ export default function CausesDonationSection() {
   }
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-amber-50 via-yellow-50/30 to-orange-50/50 overflow-hidden ">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#2979FF]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-yellow-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
 
       {/* Floating Sparkles */}
       {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-[#2979FF] rounded-full opacity-20"
+          className="absolute w-2 h-2 bg-yellow-500 rounded-full opacity-20"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -174,13 +173,13 @@ export default function CausesDonationSection() {
           className="text-center mb-16"
         >
           <motion.div className="inline-block mb-4" whileHover={{ scale: 1.05 }}>
-            <span className="px-4 py-2 bg-gradient-to-r from-[#2979FF]/20 to-blue-500/20 text-[#2979FF] rounded-full text-sm font-semibold border border-[#2979FF]/20">
+            <span className="px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 text-yellow-600 rounded-full text-sm font-semibold border border-yellow-500/20">
               Make a Difference Today
             </span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#2979FF] via-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-600 via-amber-600 to-orange-600 bg-clip-text text-transparent">
               Support Our Causes
             </span>
           </h2>
@@ -213,7 +212,7 @@ export default function CausesDonationSection() {
 
               {/* Category Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[#2979FF] text-xs font-semibold rounded-full shadow-lg">
+                <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-yellow-600 text-xs font-semibold rounded-full shadow-lg">
                   {cause.category}
                 </span>
               </div>
@@ -237,7 +236,7 @@ export default function CausesDonationSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#2979FF] transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
                   {cause.title}
                 </h3>
 
@@ -246,7 +245,7 @@ export default function CausesDonationSection() {
                 {/* Progress Bar */}
                 <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-semibold text-[#2979FF]">
+                    <span className="text-sm font-semibold text-yellow-600">
                       ${cause.raised.toLocaleString()} raised
                     </span>
                     <span className="text-sm text-gray-500">${cause.goal.toLocaleString()} goal</span>
@@ -254,7 +253,7 @@ export default function CausesDonationSection() {
 
                   <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-[#2979FF] to-blue-500 rounded-full"
+                      className="h-full bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${getProgressPercentage(cause.raised, cause.goal)}%` }}
                       transition={{ duration: 1.5, delay: 0.5 }}
@@ -263,29 +262,29 @@ export default function CausesDonationSection() {
 
                   <div className="flex justify-between items-center mt-2">
                     <span className="text-xs text-gray-500">{cause.donors} donors</span>
-                    <span className="text-xs font-semibold text-[#2979FF]">
+                    <span className="text-xs font-semibold text-yellow-600">
                       {getProgressPercentage(cause.raised, cause.goal).toFixed(0)}% funded
                     </span>
                   </div>
                 </div>
 
                 {/* Donation Button */}
-                <Link to='/donate'>
+                <a href='/donate'>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   
-                  className="w-full bg-gradient-to-r from-[#2979FF] to-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-600 hover:to-[#2979FF] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-amber-600 hover:to-yellow-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                 >
                   <DollarSign className="w-4 h-4" />
                   Donate Now
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform " />
                 </motion.button>
-                </Link>
+                </a>
               </div>
 
               {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#2979FF]/0 to-blue-500/0 group-hover:from-[#2979FF]/5 group-hover:to-blue-500/5 transition-all duration-500 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/0 to-amber-500/0 group-hover:from-yellow-500/5 group-hover:to-amber-500/5 transition-all duration-500 pointer-events-none"></div>
             </motion.div>
           ))}
         </div>
@@ -302,7 +301,7 @@ export default function CausesDonationSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={prevPage}
-            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-600 hover:text-[#2979FF] hover:border-[#2979FF] transition-all duration-300 shadow-sm hover:shadow-md"
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-600 hover:text-yellow-600 hover:border-yellow-500 transition-all duration-300 shadow-sm hover:shadow-md"
           >
             <ChevronLeft className="w-4 h-4" />
             Previous
@@ -318,8 +317,8 @@ export default function CausesDonationSection() {
                 onClick={() => goToPage(index)}
                 className={`w-10 h-10 rounded-full font-semibold transition-all duration-300 ${
                   currentPage === index
-                    ? "bg-[#2979FF] text-white shadow-lg"
-                    : "bg-white border border-gray-200 text-gray-600 hover:text-[#2979FF] hover:border-[#2979FF]"
+                    ? "bg-yellow-500 text-white shadow-lg"
+                    : "bg-white border border-gray-200 text-gray-600 hover:text-yellow-600 hover:border-yellow-500"
                 }`}
               >
                 {index + 1}
@@ -332,7 +331,7 @@ export default function CausesDonationSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={nextPage}
-            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-600 hover:text-[#2979FF] hover:border-[#2979FF] transition-all duration-300 shadow-sm hover:shadow-md"
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-gray-600 hover:text-yellow-600 hover:border-yellow-500 transition-all duration-300 shadow-sm hover:shadow-md"
           >
             Next
             <ChevronRight className="w-4 h-4" />
@@ -346,30 +345,30 @@ export default function CausesDonationSection() {
           transition={{ duration: 0.8 }}
           className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
         >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="group">
-              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-[#2979FF] mb-2">
+              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-yellow-600 mb-2">
                 $236K+
               </motion.div>
               <p className="text-gray-600 text-sm">Total Raised</p>
             </div>
 
             <div className="group">
-              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-[#2979FF] mb-2">
+              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-yellow-600 mb-2">
                 1,345
               </motion.div>
               <p className="text-gray-600 text-sm">Active Donors</p>
             </div>
 
             <div className="group">
-              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-[#2979FF] mb-2">
+              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-yellow-600 mb-2">
                 6
               </motion.div>
               <p className="text-gray-600 text-sm">Active Causes</p>
             </div>
 
             <div className="group">
-              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-[#2979FF] mb-2">
+              <motion.div whileHover={{ scale: 1.05 }} className="text-3xl font-bold text-yellow-600 mb-2">
                 98%
               </motion.div>
               <p className="text-gray-600 text-sm">Funds to Cause</p>
@@ -395,7 +394,7 @@ export default function CausesDonationSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center mb-6">
-              <selectedCause.icon className="w-12 h-12 text-[#2979FF] mx-auto mb-4" />
+              <selectedCause.icon className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{selectedCause.title}</h3>
               <p className="text-gray-600 text-sm">Choose your donation amount</p>
             </div>
@@ -408,7 +407,7 @@ export default function CausesDonationSection() {
                   onClick={() => setSelectedAmount(amount)}
                   className={`py-3 px-4 rounded-xl font-semibold transition-all ${
                     selectedAmount === amount
-                      ? "bg-[#2979FF] text-white shadow-lg"
+                      ? "bg-yellow-500 text-white shadow-lg"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
@@ -424,7 +423,7 @@ export default function CausesDonationSection() {
                 placeholder="Enter custom amount"
                 value={customAmount}
                 onChange={(e) => setCustomAmount(e.target.value)}
-                className="w-full py-3 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2979FF] focus:border-transparent"
+                className="w-full py-3 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
             </div>
 
@@ -436,7 +435,7 @@ export default function CausesDonationSection() {
               >
                 Cancel
               </button>
-              <button className="flex-1 py-3 px-6 bg-gradient-to-r from-[#2979FF] to-blue-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-[#2979FF] transition-all shadow-lg">
+              <button className="flex-1 py-3 px-6 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold hover:from-amber-600 hover:to-yellow-700 transition-all shadow-lg">
                 Donate Now
               </button>
             </div>

@@ -2,6 +2,7 @@
 
 import { useParams, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { motion } from "framer-motion"
 import {
   ArrowLeft,
   MapPin,
@@ -16,6 +17,7 @@ import {
   Award,
   TrendingUp,
 } from "lucide-react"
+import DonationSections from "./DonationSections"
 
 export default function ProgramDetail() {
   const { id } = useParams()
@@ -62,7 +64,7 @@ export default function ProgramDetail() {
       description: "Building wells and water systems to provide clean, safe drinking water to communities in need.",
       fullDescription:
         "Access to clean water is a fundamental human right. Our Clean Water Initiative works to provide sustainable water solutions through well construction, water purification systems, and community education on water safety and hygiene practices.",
-      image: "/water1.png",
+      image: "/Picture24.jpg",
       raised: 45000,
       goal: 80000,
       donors: 890,
@@ -146,7 +148,7 @@ export default function ProgramDetail() {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Program Not Found</h1>
           <button
             onClick={() => navigate("/")}
-            className="bg-[#2979FF] text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+            className="bg-amber-500 text-white px-6 py-2 rounded-lg hover:bg-amber-600 transition-colors"
           >
             Back to Home
           </button>
@@ -165,29 +167,17 @@ export default function ProgramDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden mt-15 md:mt-25 ">
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-[#2979FF]/20 to-blue-300/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-br from-purple-300/20 to-[#2979FF]/20 rounded-full blur-2xl animate-pulse delay-1000" />
-      <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-gradient-to-br from-blue-200/30 to-[#2979FF]/30 rounded-full blur-xl animate-pulse delay-2000" />
-
-      {/* <div className="bg-gradient-to-r from-white via-blue-50 to-white shadow-lg border-b backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <button
-            onClick={() => navigate("/")}
-            className="group flex items-center gap-3 text-[#2979FF] hover:text-blue-600 transition-all duration-300 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="font-medium">Back to Programs</span>
-          </button>
-        </div>
-      </div> */}
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-amber-50 relative overflow-hidden mt-15 md:mt-25 ">
+      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-amber-500/20 to-yellow-300/20 rounded-full blur-xl animate-pulse" />
+      <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-br from-yellow-300/20 to-amber-500/20 rounded-full blur-2xl animate-pulse delay-1000" />
+      <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-gradient-to-br from-amber-200/30 to-yellow-500/30 rounded-full blur-xl animate-pulse delay-2000" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2979FF]/5 to-blue-300/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-300/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative h-64 sm:h-80 overflow-hidden">
                 <img
                   src={program.image || "/placeholder.svg"}
@@ -197,14 +187,14 @@ export default function ProgramDetail() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute top-6 right-6 w-3 h-3 bg-white/80 rounded-full animate-ping" />
                 <div className="absolute top-12 right-12 w-2 h-2 bg-yellow-300/80 rounded-full animate-pulse delay-500" />
-                <div className="absolute top-8 right-20 w-1.5 h-1.5 bg-blue-300/80 rounded-full animate-ping delay-1000" />
+                <div className="absolute top-8 right-20 w-1.5 h-1.5 bg-amber-300/80 rounded-full animate-ping delay-1000" />
 
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                  <h1 className="text-xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-white to-yellow-100 bg-clip-text text-transparent">
                     {program.title}
                   </h1>
-                  <p className="text-lg opacity-90 max-w-2xl">{program.description}</p>
-                  <div className="mt-4 inline-flex items-center gap-2 bg-[#2979FF]/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <p className="text-sm md:text-lg opacity-90 max-w-2xl">{program.description}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm px-4 py-2 rounded-full">
                     <Star className="w-4 h-4 text-yellow-300" />
                     <span className="text-sm font-medium">High Impact Program</span>
                   </div>
@@ -213,20 +203,20 @@ export default function ProgramDetail() {
             </div>
 
             <div className="bg-white rounded-3xl shadow-2xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2979FF]/10 to-transparent rounded-bl-full" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-transparent rounded-bl-full" />
               <div className="relative">
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-[#2979FF] to-blue-600 bg-clip-text text-transparent mb-6">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent mb-6">
                   About This Program
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed mb-8 relative">
                   {program.fullDescription}
-                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#2979FF] to-blue-300 rounded-full" />
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-yellow-300 rounded-full" />
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="space-y-6">
-                    <div className="group flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-300">
-                      <div className="p-3 bg-[#2979FF] rounded-xl group-hover:scale-110 transition-transform">
+                    <div className="group flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-yellow-50 to-amber-50 hover:from-yellow-100 hover:to-amber-100 transition-all duration-300">
+                      <div className="p-3 bg-amber-500 rounded-xl group-hover:scale-110 transition-transform">
                         <MapPin className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -245,8 +235,8 @@ export default function ProgramDetail() {
                     </div>
                   </div>
                   <div className="space-y-6">
-                    <div className="group flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 transition-all duration-300">
-                      <div className="p-3 bg-purple-500 rounded-xl group-hover:scale-110 transition-transform">
+                    <div className="group flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 transition-all duration-300">
+                      <div className="p-3 bg-amber-600 rounded-xl group-hover:scale-110 transition-transform">
                         <DollarSign className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -266,9 +256,9 @@ export default function ProgramDetail() {
                   </div>
                 </div>
 
-                <div className="mb-8 p-6 bg-gradient-to-r from-[#2979FF]/5 to-blue-100/30 rounded-2xl">
+                <div className="mb-8 p-6 bg-gradient-to-r from-amber-500/5 to-yellow-100/30 rounded-2xl">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <div className="p-2 bg-[#2979FF] rounded-lg">
+                    <div className="p-2 bg-amber-500 rounded-lg">
                       <Target className="w-6 h-6 text-white" />
                     </div>
                     Program Objectives
@@ -279,7 +269,7 @@ export default function ProgramDetail() {
                         key={index}
                         className="group flex items-start gap-4 p-3 rounded-xl hover:bg-white/50 transition-all duration-300"
                       >
-                        <div className="w-8 h-8 bg-gradient-to-r from-[#2979FF] to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform">
+                        <div className="w-8 h-8 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform">
                           {index + 1}
                         </div>
                         <span className="text-gray-700 font-medium">{objective}</span>
@@ -290,7 +280,7 @@ export default function ProgramDetail() {
 
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg">
+                    <div className="p-2 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-lg">
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     Key Achievements
@@ -299,11 +289,11 @@ export default function ProgramDetail() {
                     {program.achievements.map((achievement, index) => (
                       <div
                         key={index}
-                        className="group relative p-6 bg-gradient-to-br from-[#2979FF]/10 via-blue-50 to-indigo-100 rounded-2xl hover:shadow-lg transition-all duration-300 overflow-hidden"
+                        className="group relative p-6 bg-gradient-to-br from-amber-500/10 via-yellow-50 to-amber-100 rounded-2xl hover:shadow-lg transition-all duration-300 overflow-hidden"
                       >
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#2979FF]/20 to-transparent rounded-bl-full" />
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-amber-500/20 to-transparent rounded-bl-full" />
                         <div className="flex items-start gap-3">
-                          <div className="p-2 bg-[#2979FF] rounded-lg group-hover:scale-110 transition-transform">
+                          <div className="p-2 bg-amber-500 rounded-lg group-hover:scale-110 transition-transform">
                             <TrendingUp className="w-4 h-4 text-white" />
                           </div>
                           <p className="text-gray-800 font-semibold">{achievement}</p>
@@ -316,141 +306,44 @@ export default function ProgramDetail() {
             </div>
           </div>
 
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 sticky top-8 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#2979FF] via-blue-400 to-purple-500" />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-[#2979FF]/10 to-purple-300/10 rounded-full blur-xl" />
+          <div className="lg:col-span-1  ">
+            {/* Funding Progress */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-white rounded-xl shadow-lg p-6 mb-8 sticky top-8 z-5 "
+              >
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Funding Progress</h3>
 
-              <div className="text-center mb-8 relative">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#2979FF] to-blue-600 bg-clip-text text-transparent mb-2">
-                  ${program.raised.toLocaleString()}
+              <div className="mb-4">
+                <div className="flex justify-between text-sm text-gray-600 mb-2">
+                  <span>Raised</span>
+                  <span>Goal</span>
                 </div>
-                <div className="text-gray-600 mb-6">raised of ${program.goal.toLocaleString()} goal</div>
-
-                <div className="relative w-full bg-gray-200 rounded-full h-4 mb-6 overflow-hidden">
+                <div className="flex justify-between text-lg font-bold text-gray-800 mb-3">
+                  <span>${program.raised.toLocaleString()}</span>
+                  <span>${program.goal.toLocaleString()}</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
                   <div
-                    className="bg-gradient-to-r from-[#2979FF] via-blue-400 to-purple-500 h-4 rounded-full transition-all duration-1000 relative overflow-hidden"
-                    style={{ width: `${Math.min(progressPercentage, 100)}%` }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse" />
-                  </div>
-                  <div className="absolute inset-0 rounded-full shadow-inner" />
+                    className="bg-yellow-500 h-3 rounded-full transition-all duration-500"
+                    style={{ width: `${progressPercentage}%` }}
+                  ></div>
                 </div>
-
-                <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    {program.donors.toLocaleString()} supporters
-                  </div>
-                  <div className="w-1 h-1 bg-gray-400 rounded-full" />
-                  <div className="flex items-center gap-1">
-                    <TrendingUp className="w-4 h-4" />
-                    {Math.round(progressPercentage)}% funded
-                  </div>
-                </div>
+                <div className="text-center text-sm text-gray-600">{Math.round(progressPercentage)}% funded</div>
               </div>
 
-              <form onSubmit={handleDonationSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-3">Choose Amount</label>
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {["25", "50", "100", "250"].map((amount) => (
-                      <button
-                        key={amount}
-                        type="button"
-                        onClick={() => {
-                          setDonationAmount(amount)
-                          setCustomAmount("")
-                        }}
-                        className={`group p-4 rounded-xl border-2 transition-all duration-300 font-semibold ${
-                          donationAmount === amount
-                            ? "border-[#2979FF] bg-gradient-to-r from-[#2979FF]/10 to-blue-100 text-[#2979FF] shadow-lg scale-105"
-                            : "border-gray-200 hover:border-[#2979FF]/50 hover:bg-blue-50"
-                        }`}
-                      >
-                        <div className="flex items-center justify-center gap-1">
-                          <DollarSign className="w-4 h-4" />
-                          {amount}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                  <input
-                    type="number"
-                    placeholder="Custom amount"
-                    value={customAmount}
-                    onChange={(e) => {
-                      setCustomAmount(e.target.value)
-                      setDonationAmount("")
-                    }}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#2979FF]/20 focus:border-[#2979FF] transition-all duration-300 font-medium"
-                  />
+              <div className="text-center text-gray-600 mb-6">
+                <div className="text-2xl font-bold text-yellow-600">
+                  ${(program.goal - program.raised).toLocaleString()}
                 </div>
-
-                <div className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#2979FF]/20 focus:border-[#2979FF] transition-all duration-300"
-                    required
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#2979FF]/20 focus:border-[#2979FF] transition-all duration-300"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#2979FF]/20 focus:border-[#2979FF] transition-all duration-300"
-                  />
-                  <textarea
-                    placeholder="Message (optional)"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={3}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-[#2979FF]/20 focus:border-[#2979FF] transition-all duration-300 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="group w-full bg-gradient-to-r from-[#2979FF] to-blue-500 text-white py-5 rounded-xl font-bold hover:from-blue-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                  <Heart className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                  <span>Donate Now</span>
-                </button>
-              </form>
-
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="text-center text-sm text-gray-600">
-                  <p className="mb-4 font-medium">Need help or have questions?</p>
-                  <div className="flex justify-center gap-6">
-                    <a
-                      href="mailto:support@hopefoundation.org"
-                      className="group flex items-center gap-2 text-[#2979FF] hover:text-blue-600 transition-all duration-300 p-2 rounded-lg hover:bg-blue-50"
-                    >
-                      <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                      <span className="font-medium">Email</span>
-                    </a>
-                    <a
-                      href="tel:+1234567890"
-                      className="group flex items-center gap-2 text-[#2979FF] hover:text-blue-600 transition-all duration-300 p-2 rounded-lg hover:bg-blue-50"
-                    >
-                      <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                      <span className="font-medium">Call</span>
-                    </a>
-                  </div>
-                </div>
+                <div className="text-sm">still needed</div>
               </div>
+              </motion.div>
+
+            {/* Donation Section */}
+            <div className="relative z-12  ">
+                <DonationSections  />
             </div>
           </div>
         </div>

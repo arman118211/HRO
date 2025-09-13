@@ -18,8 +18,8 @@ export default function DonationSection() {
       title: "Education for All",
       description: "Help children access quality education and build brighter futures",
       icon: "🎓",
-      color: "from-[#2979FF] to-[#1565C0]",
-      bgColor: "from-[#2979FF]/10 to-[#1565C0]/5",
+      color: "from-amber-500 to-yellow-600",
+      bgColor: "from-amber-400/20 to-yellow-400/10",
     },
     {
       id: "healthcare",
@@ -96,16 +96,16 @@ export default function DonationSection() {
   const selectedCauseData = causes.find((cause) => cause.id === selectedCause)
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#2979FF]/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-full blur-3xl"></div>
+    <section className="py-20 bg-gradient-to-br from-amber-50 to-yellow-50/30 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-400/15 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-yellow-400/15 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-gradient-to-r from-amber-400/30 to-orange-400/30 rounded-full blur-xl animate-bounce"></div>
 
       {/* Floating sparkles */}
-      <div className="absolute top-20 left-20 text-[#2979FF]/30 animate-pulse">
+      <div className="absolute top-20 left-20 text-amber-500/40 animate-pulse">
         <Sparkles className="h-6 w-6" />
       </div>
-      <div className="absolute bottom-32 right-32 text-[#1565C0]/30 animate-pulse delay-1000">
+      <div className="absolute bottom-32 right-32 text-yellow-600/40 animate-pulse delay-1000">
         <Heart className="h-8 w-8" />
       </div>
 
@@ -116,7 +116,7 @@ export default function DonationSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#2979FF] to-[#1565C0] bg-clip-text text-transparent mb-6"
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent mb-6"
           >
             Make a Difference Today
           </motion.h2>
@@ -141,7 +141,7 @@ export default function DonationSection() {
         >
           {/* Left side - Image */}
           <div className="relative h-full">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-2 overflow-hidden h-full flex flex-col">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-amber-100 p-2 overflow-hidden h-full flex flex-col">
               <img
                 src="/money.svg"
                 alt="People helping in community"
@@ -151,14 +151,14 @@ export default function DonationSection() {
 
               {/* Floating impact stats */}
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-amber-100">
                   <div className="grid grid-cols-3 gap-3 text-center">
                     <div>
-                      <div className="text-lg font-bold text-[#2979FF]">50K+</div>
+                      <div className="text-lg font-bold text-amber-600">50K+</div>
                       <div className="text-xs text-slate-600">Lives Changed</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-emerald-600">150+</div>
+                      <div className="text-lg font-bold text-yellow-600">150+</div>
                       <div className="text-xs text-slate-600">Projects</div>
                     </div>
                     <div>
@@ -172,8 +172,8 @@ export default function DonationSection() {
           </div>
 
           {/* Right side - Donation flow */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6 relative overflow-hidden h-full flex flex-col">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2979FF]/5 to-[#1565C0]/5 pointer-events-none"></div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-amber-100 p-6 relative overflow-hidden h-full flex flex-col">
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-400/8 to-yellow-400/8 pointer-events-none"></div>
 
             {/* Step 1: Cause Selection */}
             {step === 1 && (
@@ -187,14 +187,14 @@ export default function DonationSection() {
                         setSelectedCause(cause.id)
                         setStep(2)
                       }}
-                      className="p-4 rounded-xl border-2 border-slate-200 hover:border-[#2979FF] transition-all duration-300 text-left group hover:shadow-lg transform hover:scale-105"
+                      className="p-4 rounded-xl border-2 border-slate-200 hover:border-amber-500 transition-all duration-300 text-left group hover:shadow-lg transform hover:scale-105"
                     >
                       <div className="text-2xl mb-2">{cause.icon}</div>
-                      <h4 className="text-base font-bold text-slate-800 mb-1 group-hover:text-[#2979FF] transition-colors">
+                      <h4 className="text-base font-bold text-slate-800 mb-1 group-hover:text-amber-600 transition-colors">
                         {cause.title}
                       </h4>
                       <p className="text-slate-600 text-xs leading-relaxed">{cause.description}</p>
-                      <div className="flex items-center justify-end mt-3 text-[#2979FF] opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="flex items-center justify-end mt-3 text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity">
                         <ArrowRight className="h-3 w-3" />
                       </div>
                     </button>
@@ -208,13 +208,13 @@ export default function DonationSection() {
               <div className="relative z-10 flex-grow">
                 <button
                   onClick={() => setStep(1)}
-                  className="text-[#2979FF] hover:text-[#1565C0] mb-3 flex items-center gap-2 transition-colors text-sm"
+                  className="text-amber-600 hover:text-amber-700 mb-3 flex items-center gap-2 transition-colors text-sm"
                 >
                   ← Back to causes
                 </button>
 
                 <div
-                  className={`p-3 rounded-xl bg-gradient-to-r ${selectedCauseData.bgColor} border border-[#2979FF]/20 mb-4`}
+                  className={`p-3 rounded-xl bg-gradient-to-r ${selectedCauseData.bgColor} border border-amber-400/30 mb-4`}
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-xl">{selectedCauseData.icon}</span>
@@ -231,7 +231,7 @@ export default function DonationSection() {
                       onClick={() => setDonationType("one-time")}
                       className={`px-3 py-1.5 rounded-md font-semibold transition-all duration-200 text-sm ${
                         donationType === "one-time"
-                          ? "bg-gradient-to-r from-[#2979FF] to-[#1565C0] text-white shadow-sm"
+                          ? "bg-gradient-to-r from-amber-500 to-yellow-600 text-white shadow-sm"
                           : "text-slate-600 hover:text-slate-800"
                       }`}
                     >
@@ -241,7 +241,7 @@ export default function DonationSection() {
                       onClick={() => setDonationType("monthly")}
                       className={`px-3 py-1.5 rounded-md font-semibold transition-all duration-200 text-sm ${
                         donationType === "monthly"
-                          ? "bg-gradient-to-r from-[#2979FF] to-[#1565C0] text-white shadow-sm"
+                          ? "bg-gradient-to-r from-amber-500 to-yellow-600 text-white shadow-sm"
                           : "text-slate-600 hover:text-slate-800"
                       }`}
                     >
@@ -261,8 +261,8 @@ export default function DonationSection() {
                       }}
                       className={`p-2.5 rounded-lg border-2 transition-all duration-200 transform hover:scale-105 ${
                         selectedAmount === amount && !customAmount
-                          ? "border-[#2979FF] bg-gradient-to-br from-[#2979FF]/10 to-[#1565C0]/10 text-[#2979FF] shadow-lg"
-                          : "border-slate-200 hover:border-[#2979FF]/50 text-slate-700 hover:shadow-md"
+                          ? "border-amber-500 bg-gradient-to-br from-amber-400/20 to-yellow-400/20 text-amber-600 shadow-lg"
+                          : "border-slate-200 hover:border-amber-400/50 text-slate-700 hover:shadow-md"
                       }`}
                     >
                       <div className="text-base font-bold">${amount}</div>
@@ -279,12 +279,12 @@ export default function DonationSection() {
                       setCustomAmount(e.target.value)
                       setSelectedAmount(0)
                     }}
-                    className="w-full p-2.5 border-2 border-slate-200 rounded-lg text-base font-semibold text-center focus:border-[#2979FF] focus:outline-none transition-colors duration-200 bg-white/50"
+                    className="w-full p-2.5 border-2 border-slate-200 rounded-lg text-base font-semibold text-center focus:border-amber-500 focus:outline-none transition-colors duration-200 bg-white/50"
                   />
                   <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 text-base">$</span>
                 </div>
 
-                <div className="mb-4 p-3 bg-gradient-to-br from-[#2979FF]/10 to-[#1565C0]/10 rounded-xl border border-[#2979FF]/20">
+                <div className="mb-4 p-3 bg-gradient-to-br from-amber-400/20 to-yellow-400/20 rounded-xl border border-amber-400/30">
                   <div className="text-center">
                     <div className="text-2xl mb-1">{getCurrentReason().icon}</div>
                     <h4 className="text-base font-bold text-slate-800 mb-1">{getCurrentReason().title}</h4>
@@ -294,7 +294,7 @@ export default function DonationSection() {
 
                 <button
                   onClick={() => setStep(3)}
-                  className="w-full bg-gradient-to-r from-[#2979FF] to-[#1565C0] hover:from-[#1565C0] hover:to-[#0D47A1] text-white py-2.5 rounded-lg text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-yellow-600 hover:to-amber-700 text-white py-2.5 rounded-lg text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Continue to Payment
                   <ArrowRight className="h-4 w-4" />
@@ -307,7 +307,7 @@ export default function DonationSection() {
               <div className="relative z-10 flex-grow">
                 <button
                   onClick={() => setStep(2)}
-                  className="text-[#2979FF] hover:text-[#1565C0] mb-3 flex items-center gap-2 transition-colors text-sm"
+                  className="text-amber-600 hover:text-amber-700 mb-3 flex items-center gap-2 transition-colors text-sm"
                 >
                   ← Back to amount
                 </button>
@@ -320,8 +320,8 @@ export default function DonationSection() {
                       onClick={() => setSelectedPayment(method.id)}
                       className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center justify-between transform hover:scale-105 ${
                         selectedPayment === method.id
-                          ? "border-[#2979FF] bg-gradient-to-br from-[#2979FF]/10 to-[#1565C0]/10 text-[#2979FF] shadow-lg"
-                          : "border-slate-200 hover:border-[#2979FF]/50 text-slate-700 hover:shadow-md"
+                          ? "border-amber-500 bg-gradient-to-br from-amber-400/20 to-yellow-400/20 text-amber-600 shadow-lg"
+                          : "border-slate-200 hover:border-amber-400/50 text-slate-700 hover:shadow-md"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -333,7 +333,7 @@ export default function DonationSection() {
                   ))}
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-[#2979FF] to-[#1565C0] hover:from-[#1565C0] hover:to-[#0D47A1] text-white py-3 rounded-lg text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <button className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-yellow-600 hover:to-amber-700 text-white py-3 rounded-lg text-base font-bold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
                   <Heart className="h-4 w-4" />
                   Donate ${customAmount || selectedAmount} {donationType === "monthly" ? "Monthly" : "Now"}
                 </button>

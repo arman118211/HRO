@@ -38,17 +38,17 @@ export default function ImpactSection() {
     <section
       id="impact"
       className="py-20 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)" }}
+      style={{ background: "linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)" }}
     >
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#2979FF]/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#2979FF]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-amber-400/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-yellow-500/20 to-transparent rounded-full blur-3xl"></div>
 
         {/* Floating sparkles */}
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-[#2979FF]/30 rounded-full"
+            className="absolute w-2 h-2 bg-amber-400/40 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -74,7 +74,7 @@ export default function ImpactSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#2979FF] to-[#1e40af] rounded-full mb-6 shadow-lg"
+            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full mb-6 shadow-lg"
           >
             <Heart className="w-8 h-8 text-white" />
           </motion.div>
@@ -86,7 +86,7 @@ export default function ImpactSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold mb-6"
             style={{
-              background: "linear-gradient(135deg, #2979FF 0%, #1e40af 100%)",
+              background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -115,9 +115,9 @@ export default function ImpactSection() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden relative group border border-gray-100"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden relative group border border-amber-100"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#2979FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="relative overflow-hidden">
                 <img
@@ -130,7 +130,7 @@ export default function ImpactSection() {
                 {/* Corner decoration */}
                 <div className="absolute top-4 right-4">
                   <div className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                    <Star className="w-4 h-4 text-[#2979FF]" />
+                    <Star className="w-4 h-4 text-amber-500" />
                   </div>
                 </div>
               </div>
@@ -144,14 +144,14 @@ export default function ImpactSection() {
                       Age {story.age} • {story.location}
                     </p>
                   </div>
-                  <span className="bg-gradient-to-r from-[#2979FF]/10 to-[#1e40af]/10 text-[#2979FF] px-3 py-1 rounded-full text-xs font-semibold border border-[#2979FF]/20">
+                  <span className="bg-gradient-to-r from-amber-400/20 to-yellow-500/20 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold border border-amber-400/30">
                     {story.program}
                   </span>
                 </div>
                 <p className="text-gray-600 leading-relaxed">{story.story}</p>
 
                 {/* Bottom decoration line */}
-                <div className="absolute bottom-0 left-6 right-6 h-1 bg-gradient-to-r from-[#2979FF] to-[#1e40af] rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <div className="absolute bottom-0 left-6 right-6 h-1 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               </div>
             </motion.div>
           ))}
@@ -162,12 +162,12 @@ export default function ImpactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-100 relative overflow-hidden"
+          className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-amber-100 relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2979FF]/5 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-transparent"></div>
 
           <div className="relative z-10">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#2979FF] to-[#1e40af] rounded-full mb-4 shadow-lg">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full mb-4 shadow-lg">
               <Users className="w-6 h-6 text-white" />
             </div>
 
@@ -186,17 +186,17 @@ export default function ImpactSection() {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100 relative overflow-hidden group"
+                  className="text-center p-6 bg-white rounded-xl shadow-lg border border-amber-100 relative overflow-hidden group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#2979FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                   <div className="relative z-10">
                     <div className="text-3xl mb-2">{item.icon}</div>
-                    <div className="text-3xl font-bold text-[#2979FF] mb-2">{item.amount}</div>
+                    <div className="text-3xl font-bold text-amber-600 mb-2">{item.amount}</div>
                     <p className="text-sm text-gray-600">{item.description}</p>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#2979FF] to-[#1e40af] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </motion.div>
               ))}
             </div>

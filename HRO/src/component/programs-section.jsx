@@ -1,11 +1,8 @@
 "use client"
-import { useNavigate } from "react-router-dom"
 import { BookOpen, Stethoscope, Droplets, Home, ArrowRight, Sparkles, Star } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function ProgramsSection() {
-  const navigate = useNavigate()
-
   const programs = [
     {
       id: "education-for-all",
@@ -13,10 +10,10 @@ export default function ProgramsSection() {
       title: "Education Initiative",
       description:
         "Building schools, training teachers, and providing scholarships to ensure every child has access to quality education.",
-      image: "/sliderq-1.png",
+      image: "./Slider/Picture11a.jpg",
       impact: "12,000 students supported",
-      color: "from-[#2979FF] to-[#1565C0]",
-      bgColor: "from-[#2979FF]/10 to-[#1565C0]/5",
+      color: "from-yellow-500 to-amber-600",
+      bgColor: "from-yellow-50 to-amber-50",
     },
     {
       id: "healthcare-outreach",
@@ -35,7 +32,7 @@ export default function ProgramsSection() {
       title: "Clean Water Project",
       description:
         "Installing wells, water purification systems, and sanitation facilities for sustainable water access.",
-      image: "/water1.png",
+      image: "/Picture24.jpg",
       impact: "150 wells constructed",
       color: "from-cyan-500 to-blue-600",
       bgColor: "from-cyan-50 to-blue-50",
@@ -53,23 +50,24 @@ export default function ProgramsSection() {
   ]
 
   const handleSupportClick = (program) => {
-    navigate(`/program/${program.id}`)
+    // Navigate to program page
+    window.location.href = `/program/${program.id}`
   }
 
   return (
-    <section id="programs" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#2979FF]/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-gradient-to-r from-amber-300/20 to-orange-300/20 rounded-full blur-2xl animate-pulse"></div>
+    <section id="programs" className="py-20 bg-gradient-to-br from-amber-50 to-yellow-50/30 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-yellow-400/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-amber-400/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-gradient-to-r from-yellow-300/20 to-amber-300/20 rounded-full blur-2xl animate-pulse"></div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-20 right-20 text-[#2979FF]/20 animate-bounce">
+      <div className="absolute top-20 right-20 text-yellow-500/20 animate-bounce">
         <Star className="h-8 w-8" />
       </div>
-      <div className="absolute bottom-32 left-32 text-purple-400/20 animate-pulse delay-1000">
+      <div className="absolute bottom-32 left-32 text-amber-400/20 animate-pulse delay-1000">
         <Sparkles className="h-10 w-10" />
       </div>
-      <div className="absolute top-1/2 right-1/4 text-orange-400/20 animate-bounce delay-500">
+      <div className="absolute top-1/2 right-1/4 text-yellow-400/20 animate-bounce delay-500">
         <Star className="h-6 w-6" />
       </div>
 
@@ -80,7 +78,7 @@ export default function ProgramsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#2979FF] to-[#1565C0] bg-clip-text text-transparent mb-6"
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent mb-6"
           >
             Our Programs
           </motion.h2>
@@ -133,7 +131,7 @@ export default function ProgramsSection() {
                   </div>
 
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-[#2979FF] transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-yellow-600 transition-colors duration-300">
                       {program.title}
                     </h3>
                     <p className="text-slate-600 mb-6 leading-relaxed">{program.description}</p>
@@ -145,12 +143,12 @@ export default function ProgramsSection() {
                         >
                           Impact Made
                         </span>
-                        <span className="text-lg font-bold text-slate-800">{program.impact}</span>
+                        <span className=" text-sm md:text-lg font-bold text-slate-800">{program.impact}</span>
                       </div>
 
                       <button
                         onClick={() => handleSupportClick(program)}
-                        className={`bg-gradient-to-r ${program.color} text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 group-hover:gap-3`}
+                        className={`bg-gradient-to-r ${program.color} text-white md:text-md text-sm  px-5 md:px-6 py-2 md:py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 group-hover:gap-3 `}
                       >
                         Support This
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

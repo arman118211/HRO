@@ -92,30 +92,30 @@ export default function VolunteerTeamSection() {
   }
 
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-[#2979FF]/20 to-blue-400/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-indigo-400/20 to-[#2979FF]/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-full blur-lg animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-yellow-400/20 to-amber-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-orange-300/20 to-yellow-300/20 rounded-full blur-lg animate-pulse delay-2000"></div>
 
         {/* Sparkle Effects */}
-        <div className="absolute top-16 right-1/4 w-2 h-2 bg-[#2979FF] rounded-full animate-ping delay-500"></div>
-        <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping delay-1500"></div>
-        <div className="absolute top-1/3 right-20 w-1 h-1 bg-indigo-400 rounded-full animate-ping delay-2500"></div>
+        <div className="absolute top-16 right-1/4 w-2 h-2 bg-amber-500 rounded-full animate-ping delay-500"></div>
+        <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-ping delay-1500"></div>
+        <div className="absolute top-1/3 right-20 w-1 h-1 bg-orange-400 rounded-full animate-ping delay-2500"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#2979FF]/10 text-[#2979FF] px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-amber-400/20 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Users className="w-4 h-4" />
             Our Amazing Team
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Meet Our{" "}
-            <span className="bg-gradient-to-r from-[#2979FF] to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent">
               Volunteer Heroes
             </span>
           </h2>
@@ -128,14 +128,14 @@ export default function VolunteerTeamSection() {
         {/* Carousel Container */}
         <div className="relative max-w-5xl mx-auto">
           {/* Main Carousel */}
-          <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+          <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-amber-100">
             {/* Decorative Corner Elements */}
-            <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-[#2979FF]/20 to-transparent rounded-br-2xl"></div>
-            <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-blue-400/20 to-transparent rounded-tl-2xl"></div>
+            <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-amber-400/20 to-transparent rounded-br-2xl"></div>
+            <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-yellow-400/20 to-transparent rounded-tl-2xl"></div>
 
             <div className="grid md:grid-cols-2 gap-0 h-[500px] md:h-[400px] ">
               {/* Image Side */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-[#2979FF]/5 to-blue-50">
+              <div className="relative overflow-hidden bg-gradient-to-br from-amber-400/10 to-yellow-50">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10 "></div>
                 <img
                   src={volunteers[currentIndex].image || "/placeholder.svg"}
@@ -148,7 +148,7 @@ export default function VolunteerTeamSection() {
                   <div className="flex items-center gap-2">
                     {volunteers[currentIndex].icon &&
                       React.createElement(volunteers[currentIndex].icon, {
-                        className: "w-4 h-4 text-[#2979FF]",
+                        className: "w-4 h-4 text-amber-600",
                       })}
                     <span className="text-xs font-semibold text-gray-800">{volunteers[currentIndex].achievements}</span>
                   </div>
@@ -159,7 +159,7 @@ export default function VolunteerTeamSection() {
               <div className="p-6 md:p-8 flex flex-col justify-center relative  ">
                 {/* Background Pattern */}
                 <div className="absolute top-0 right-0 w-24 h-24 opacity-5 ">
-                  <div className="w-full h-full bg-gradient-to-br from-[#2979FF] to-blue-400 rounded-full"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-amber-500 to-yellow-400 rounded-full"></div>
                 </div>
 
                 <div className="relative z-10">
@@ -167,13 +167,13 @@ export default function VolunteerTeamSection() {
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                       {volunteers[currentIndex].name}
                     </h3>
-                    <p className="text-[#2979FF] font-semibold text-base">{volunteers[currentIndex].role}</p>
+                    <p className="text-amber-600 font-semibold text-base">{volunteers[currentIndex].role}</p>
                   </div>
 
                   <p className="text-gray-600 text-base leading-relaxed mb-6">{volunteers[currentIndex].bio}</p>
 
                   <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2 bg-[#2979FF]/10 text-[#2979FF] px-3 py-1.5 rounded-full">
+                    <div className="flex items-center gap-2 bg-amber-400/20 text-amber-700 px-3 py-1.5 rounded-full">
                       <Heart className="w-3.5 h-3.5" />
                       <span className="text-xs font-medium">Volunteer Since 2021</span>
                     </div>
@@ -186,14 +186,14 @@ export default function VolunteerTeamSection() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-[#2979FF] p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl z-20"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-amber-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl z-20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-[#2979FF] p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl z-20"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-amber-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl z-20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -206,7 +206,7 @@ export default function VolunteerTeamSection() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 rounded-full ${
-                index === currentIndex ? "w-8 h-3 bg-[#2979FF]" : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
+                index === currentIndex ? "w-8 h-3 bg-amber-500" : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}
@@ -221,8 +221,8 @@ export default function VolunteerTeamSection() {
             { number: "100+", label: "Projects Completed", icon: Award },
           ].map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-[#2979FF]/10 text-[#2979FF] rounded-lg mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-100">
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-amber-400/20 text-amber-600 rounded-lg mb-3 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-5 h-5" />
                 </div>
                 <div className="text-xl md:text-2xl font-bold text-gray-900 mb-1">{stat.number}</div>

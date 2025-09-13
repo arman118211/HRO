@@ -117,9 +117,9 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 mt-12 md:mt-25">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-amber-50 mt-12 md:mt-25">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#2979FF] to-blue-600 text-white py-10 px-4 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-amber-500 to-yellow-600 text-white py-10 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -translate-y-32 translate-x-32"></div>
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-white opacity-5 rounded-full translate-y-32 -translate-x-32"></div>
@@ -130,9 +130,9 @@ const ContactPage = () => {
             <span className="text-sm font-medium">Making a Difference Together</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Get in <span className="text-yellow-300">Touch</span>
+            Get in <span className="text-yellow-200">Touch</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-amber-100 max-w-3xl mx-auto leading-relaxed">
             We'd love to hear from you. Whether you want to volunteer, donate, or learn more about our mission, we're here to help.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
@@ -148,7 +148,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-2 md:px-9 py-16">
+      <div className="max-w-7xl mx-auto px-2 md:px-9 py-16 ">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="space-y-8">
@@ -162,7 +162,7 @@ const ContactPage = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-blue-100">
+            <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-yellow-100">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Full Name</label>
@@ -173,7 +173,7 @@ const ContactPage = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#2979FF] focus:ring-2 focus:ring-blue-100 transition-all duration-200 outline-none"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
                       placeholder="Enter your name"
                       required
                     />
@@ -189,7 +189,7 @@ const ContactPage = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#2979FF] focus:ring-2 focus:ring-blue-100 transition-all duration-200 outline-none"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
                       placeholder="your@email.com"
                       required
                     />
@@ -207,7 +207,7 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#2979FF] focus:ring-2 focus:ring-blue-100 transition-all duration-200 outline-none"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -219,7 +219,7 @@ const ContactPage = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#2979FF] focus:ring-2 focus:ring-blue-100 transition-all duration-200 outline-none bg-white"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none bg-white"
                     required
                   >
                     <option value="">Select a subject</option>
@@ -241,7 +241,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5}
-                    className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#2979FF] focus:ring-2 focus:ring-blue-100 transition-all duration-200 outline-none resize-none"
+                    className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none resize-none"
                     placeholder="Tell us how we can help you..."
                     required
                   ></textarea>
@@ -255,7 +255,7 @@ const ContactPage = () => {
                   name="volunteerInterest"
                   checked={formData.volunteerInterest}
                   onChange={handleInputChange}
-                  className="w-5 h-5 text-[#2979FF] border-2 border-gray-300 rounded focus:ring-2 focus:ring-blue-100"
+                  className="w-5 h-5 text-amber-500 border-2 border-gray-300 rounded focus:ring-2 focus:ring-yellow-100"
                 />
                 <label htmlFor="volunteer" className="text-sm text-gray-600">
                   I'm interested in volunteering opportunities
@@ -264,7 +264,7 @@ const ContactPage = () => {
 
               <button
                 onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-[#2979FF] to-blue-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group"
+                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group"
               >
                 {isSubmitted ? (
                   <>
@@ -290,12 +290,12 @@ const ContactPage = () => {
                 <span className="font-semibold text-lg">+1 (555) 911-HELP</span>
               </div>
             </div>
-            <div className="bg-gradient-to-r from-[#2979FF] to-blue-600 text-white p-6 rounded-2xl shadow-lg">
+            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold mb-3">Join Our Mission</h3>
               <p className="mb-4 opacity-90">
                 Become part of our community and help us make a lasting impact in people's lives.
               </p>
-              <button className="bg-white text-[#2979FF] px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center space-x-2 group">
+              <button className="bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-50 transition-colors flex items-center space-x-2 group">
                 <span>Learn More</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -304,11 +304,11 @@ const ContactPage = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-xl">
-                  <div className="bg-[#2979FF] p-3 rounded-full">
+                <div className="flex items-start space-x-4 p-4 bg-yellow-50 rounded-xl">
+                  <div className="bg-amber-500 p-3 rounded-full">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -324,18 +324,18 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Phone Number</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+977 984 7040 404</p>
                     <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4 p-4 bg-purple-50 rounded-xl">
-                  <div className="bg-purple-500 p-3 rounded-full">
+                <div className="flex items-start space-x-4 p-4 bg-amber-50 rounded-xl">
+                  <div className="bg-amber-600 p-3 rounded-full">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Email Address</h4>
-                    <p className="text-gray-600">contact@ngohelp.org</p>
+                    <p className="text-gray-600">info@hro.org.np</p>
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ const ContactPage = () => {
             </div>
 
             {/* Trust & Credibility Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Why Trust Us?</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4">
@@ -366,15 +366,15 @@ const ContactPage = () => {
                   <p className="text-sm text-gray-600">501(c)(3) certified</p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mx-auto mb-3">
-                    <Award className="w-8 h-8 text-blue-600" />
+                  <div className="bg-yellow-100 p-3 rounded-full w-fit mx-auto mb-3">
+                    <Award className="w-8 h-8 text-amber-600" />
                   </div>
                   <h4 className="font-semibold text-gray-800 mb-1">4-Star Rating</h4>
                   <p className="text-sm text-gray-600">Charity Navigator</p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="bg-purple-100 p-3 rounded-full w-fit mx-auto mb-3">
-                    <FileText className="w-8 h-8 text-purple-600" />
+                  <div className="bg-amber-100 p-3 rounded-full w-fit mx-auto mb-3">
+                    <FileText className="w-8 h-8 text-amber-700" />
                   </div>
                   <h4 className="font-semibold text-gray-800 mb-1">Transparent</h4>
                   <p className="text-sm text-gray-600">Annual reports</p>
@@ -388,18 +388,6 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-
-            {/* Call to Action Card */}
-            {/* <div className="bg-gradient-to-r from-[#2979FF] to-blue-600 text-white p-6 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold mb-3">Join Our Mission</h3>
-              <p className="mb-4 opacity-90">
-                Become part of our community and help us make a lasting impact in people's lives.
-              </p>
-              <button className="bg-white text-[#2979FF] px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center space-x-2 group">
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
@@ -408,9 +396,9 @@ const ContactPage = () => {
       <div className="bg-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-blue-50 px-4 py-2 rounded-full mb-4">
-              <HelpCircle className="w-5 h-5 mr-2 text-[#2979FF]" />
-              <span className="text-sm font-medium text-[#2979FF]">Got Questions?</span>
+            <div className="inline-flex items-center bg-yellow-50 px-4 py-2 rounded-full mb-4">
+              <HelpCircle className="w-5 h-5 mr-2 text-amber-600" />
+              <span className="text-sm font-medium text-amber-600">Got Questions?</span>
             </div>
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
               Frequently Asked Questions
@@ -422,14 +410,14 @@ const ContactPage = () => {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-blue-200 transition-colors">
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-yellow-200 transition-colors">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-yellow-50 transition-colors"
                 >
                   <h3 className="font-semibold text-gray-800 pr-4">{faq.question}</h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#2979FF] flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-amber-600 flex-shrink-0" />
                   ) : (
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
@@ -447,15 +435,21 @@ const ContactPage = () => {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Still have questions?</p>
-            <button className="bg-[#2979FF] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Contact Our Support Team
-            </button>
+            <a
+              href="mailto:info@hro.org.np?subject=Support%20Request&body=Hello%20Support%2C%0A%0AI%20have%20a%20question%20regarding..."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+                Contact Our Support Team
+              </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gradient-to-br from-blue-50 to-white py-16 px-4">
+      <div className="bg-gradient-to-br from-yellow-50 to-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -468,10 +462,10 @@ const ContactPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-100">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
@@ -491,7 +485,7 @@ const ContactPage = () => {
           <h2 className="text-3xl font-bold text-gray-800 mb-8">Visit Our Office</h2>
           <div className="bg-white rounded-2xl shadow-xl p-8 h-96 flex items-center justify-center border border-gray-200">
             <div className="text-center">
-              <MapPin className="w-16 h-16 text-[#2979FF] mx-auto mb-4" />
+              <MapPin className="w-16 h-16 text-amber-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-700 mb-2">Interactive Map</h3>
               <p className="text-gray-500">
                 Integrate with Google Maps or your preferred mapping service
