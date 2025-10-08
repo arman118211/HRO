@@ -11,11 +11,14 @@ import DonationSection from "./DonationSection"
 import Footer from "./footer"
 import PosterCarousel from "./PosterCarousel"
 import OurCampaignSection from "./our-campaign"
+import LanguageSelector from "./LanguageSelector"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       {/* <HeroCarousel /> */}
+      
+      
       <PosterCarousel/>
       <AboutSection />
       <CausesDonationSection />

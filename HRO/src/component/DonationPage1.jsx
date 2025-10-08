@@ -630,7 +630,7 @@ const DonationPage1 = () => {
                                 <div className="space-y-2 text-left bg-gray-50 p-6 rounded-lg">
                                     <div className="flex justify-between font-semibold">
                                         <span>Account Holder:</span>
-                                        <span>Hope Foundation</span>
+                                        <span>Human Relief Organization Nepal</span>
                                     </div>
                                     <div className="flex justify-between font-semibold">
                                         <span>Bank Name:</span>

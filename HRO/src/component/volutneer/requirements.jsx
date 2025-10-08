@@ -107,7 +107,7 @@ export default function Requirements() {
               {/* Enhanced image container */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border-2 border-[#D4AF37]/20 bg-gradient-to-br from-white to-yellow-50/30 shadow-lg hover:scale-[1.02] transition-transform duration-500">
                 <img
-                  src="https://www.cry.org/wp-content/uploads/Volunteer-picture-1.png"
+                  src="volut_goal.jpeg"
                   alt="Volunteer orientation session in progress"
                   className="h-full w-full object-cover"
                 />

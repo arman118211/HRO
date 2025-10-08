@@ -15,11 +15,15 @@ import BlogPostPage from "./component/BlogPostPage"
 import AnnualReports from "./component/AnnualReports"
 import CareersPage from "./component/CareersPage"
 import DonationPage from "./component/DonationPage"
+import LanguageSelector from "./component/LanguageSelector"
+import ShareButton from "./component/ShareButton"
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <LanguageSelector/>
+      <ShareButton/>
       <ScrollToTop/>
       <Routes>
         <Route path="/" element={<HomePage />} />

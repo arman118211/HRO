@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { Menu, X, ChevronDown, Facebook, Twitter, Instagram, Linkedin, Phone, Mail } from "lucide-react"
+import { Menu, X, ChevronDown, Facebook, Twitter, Instagram, Linkedin, Phone, Mail,Play } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
@@ -77,12 +77,40 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 ">
                   <span className="text-sm">Follow Us:</span>
-                  <Facebook className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
-                  <Twitter className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
-                  <Instagram className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
-                  <Linkedin className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
+                  <a
+                    href="https://facebook.com/hronepal.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
+                  </a>
+
+                  <a
+                    href="https://x.com/hronepalorg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/hro.org.np/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/@hro.org.np.1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Play className="h-4 w-4 hover:text-yellow-200 cursor-pointer transition-colors" />
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -98,8 +126,8 @@ export default function Navbar() {
             <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gradient-to-r from-amber-400/30 to-orange-400/30 rounded-full animate-bounce"></div>
 
             <div className="relative">
-              <div className=" w-12 h-12 rounded-full shadow-lg relative overflow-hidden">
-                <img src="/logo.png" alt="" className="h-12 w-12 text-white relative z-10" />
+              <div className=" w-15 h-15 rounded-full shadow-lg relative overflow-hidden">
+                <img src="/logo.png" alt="" className="h-15 w-15 text-white relative z-10" />
                 {/* Decorative gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent "></div>
               </div>

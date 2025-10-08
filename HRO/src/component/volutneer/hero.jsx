@@ -151,7 +151,7 @@ export default function Hero() {
             {/* Main image container with enhanced styling */}
             <div className="relative aspect-[4/3] w-full rounded-2xl border-2 border-[#D4AF37]/20 bg-gradient-to-br from-white to-yellow-50/30 shadow-2xl overflow-hidden ring-1 ring-[#D4AF37]/10 transform hover:scale-[1.02] transition-transform duration-500">
               <img
-                src="https://www.shutterstock.com/image-photo/happy-volunteer-portrait-people-park-260nw-2507688333.jpg"
+                src="/volunteer.jpeg"
                 alt="Volunteers working together in the community"
                 className="h-full w-full object-cover"
               />

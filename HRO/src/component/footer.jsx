@@ -1,13 +1,13 @@
 "use client"
 
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Play } from "lucide-react"
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Facebook, href: "https://facebook.com/hronepal.org", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/hronepalorg", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/hro.org.np/", label: "Instagram" },
+    { icon: Play, href: "https://www.youtube.com/@hro.org.np.1", label: "YouTube" },
   ]
 
   const quickLinks = [
@@ -42,7 +42,7 @@ export default function Footer() {
               <span className="text-xl font-bold">Human Relief Organization</span>
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
-              Creating lasting change through education, healthcare, and sustainable development programs worldwide.
+              Creating lasting change through education, healthcare, and sustainable development programs across Nepal.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -99,8 +99,8 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div className="text-background/80">
-                  <p>123 Hope Street</p>
-                  <p>New York, NY 10001</p>
+                  <p>Krishna Nagar Municipality,</p>
+                  <p>Ward No. 02, District: Kapilvastu Lumbini, Nepal</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -118,7 +118,7 @@ export default function Footer() {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-background/60 text-sm mb-4 md:mb-0">
-              © 2024 Hope Foundation. All rights reserved. | Tax ID: 12-3456789
+              © 2023 Human Relief Organization Nepal. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-background/60 hover:text-background transition-colors duration-200">
@@ -126,9 +126,6 @@ export default function Footer() {
               </a>
               <a href="#" className="text-background/60 hover:text-background transition-colors duration-200">
                 Terms of Service
-              </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors duration-200">
-                Financial Transparency
               </a>
             </div>
           </div>

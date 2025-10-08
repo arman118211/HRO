@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import SectionHeader from "./section-header"
 import { Search, Shield, HeartHandshake,ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const steps = [
   {
@@ -86,12 +87,14 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center "
         >
-          <div className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300">
-            Ready to make a difference?
-            <ArrowRight className="h-5 w-5 text-amber-800" aria-hidden />
-          </div>
+          <Link  to='/donate'>
+            <div className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300 ">
+              Ready to make a difference?
+              <ArrowRight className="h-5 w-5 text-amber-800 " aria-hidden />
+            </div>
+          </Link>
         </motion.div>
       </div>
     </section>

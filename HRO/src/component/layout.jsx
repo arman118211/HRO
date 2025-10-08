@@ -13,7 +13,7 @@ const manrope = Manrope({
 })
 
 export const metadata = {
-  title: "Hope Foundation - Making a Difference Together",
+  title: "Human Relief Organization Nepal - Making a Difference Together",
   description:
     "Join us in creating positive change. Your donation helps provide education, healthcare, and hope to communities in need.",
 }

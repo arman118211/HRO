@@ -21,6 +21,7 @@ import {
   FileText,
   Star
 } from 'lucide-react';
+import { Link } from "react-router-dom"
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -142,7 +143,7 @@ const ContactPage = () => {
             </div>
             <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
               <Globe className="w-4 h-4 mr-2" />
-              <span>Worldwide Impact</span>
+              <span>Across Nepal Impact</span>
             </div>
           </div>
         </div>
@@ -287,7 +288,7 @@ const ContactPage = () => {
               </p>
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
-                <span className="font-semibold text-lg">+1 (555) 911-HELP</span>
+                <span className="font-semibold text-lg">+977-76-520102-HELP</span>
               </div>
             </div>
             <div className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white p-6 rounded-2xl shadow-lg">
@@ -295,10 +296,12 @@ const ContactPage = () => {
               <p className="mb-4 opacity-90">
                 Become part of our community and help us make a lasting impact in people's lives.
               </p>
-              <button className="bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-50 transition-colors flex items-center space-x-2 group">
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link to="/about">
+                <button className="bg-white text-amber-600 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-50 transition-colors flex items-center space-x-2 group">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -313,8 +316,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Our Address</h4>
-                    <p className="text-gray-600">123 Hope Street, Compassion City</p>
-                    <p className="text-gray-600">New York, NY 10001, USA</p>
+                    <p className="text-gray-600">Krishna Nagar Municipality,</p>
+                    <p className="text-gray-600">Ward No. 02, District: Kapilvastu Lumbini, Nepal</p>
                   </div>
                 </div>
                 
@@ -481,19 +484,31 @@ const ContactPage = () => {
 
       {/* Map Section */}
       <div className="bg-gray-100 py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Visit Our Office</h2>
-          <div className="bg-white rounded-2xl shadow-xl p-8 h-96 flex items-center justify-center border border-gray-200">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-amber-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">Interactive Map</h3>
-              <p className="text-gray-500">
-                Integrate with Google Maps or your preferred mapping service
-              </p>
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-gray-800 mb-8">Visit Our Office</h2>
+
+    <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+      <div className="flex flex-col items-center justify-center">
+        <MapPin className="w-16 h-16 text-amber-500 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-gray-700 mb-4">Our Location</h3>
+
+        {/* Embedded Google Map */}
+        <div className="w-full h-96 rounded-lg overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d452805.87330041063!2d82.798396!3d27.545564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39971ba7889e59a3%3A0xfb91e7058c137f88!2sKrishnanagar%2C%20Nepal!5e0!3m2!1sen!2sus!4v1759854314882!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
     </div>
   );
 };

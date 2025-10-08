@@ -231,7 +231,7 @@ const AboutPage = () => {
             <span className="text-sm font-medium">Since 2008 • Making a Difference</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            About <span className="text-yellow-300">Hope Foundation</span>
+            About <span className="text-yellow-300">Human Relief Organization Nepal</span>
           </h1>
           <p className="text-lg md:text-xl mb-6 text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Creating lasting positive change in underserved communities through education, healthcare, and economic empowerment.

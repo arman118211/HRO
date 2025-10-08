@@ -35,6 +35,7 @@ import {
   Bandage,
 } from "lucide-react"
 import { Link } from "react-router-dom"
+import React, { useEffect } from "react";
 
 export default function DynamicCauses() {
   const { causeType } = useParams()
@@ -714,6 +715,53 @@ export default function DynamicCauses() {
     },
   }
 
+  const images = {
+    education: [
+      "/education-program-hero-image.png",
+      "/hro-1-1.png",
+      "/HRO-2-img-41.png",
+    ],
+    healthcare: [
+      "/healthcare-program-hero-image.png",
+      "/emergency-relief-program-hero-image.png",
+      
+    ],
+    "skill-development": [
+      "/skill-development-program-hero-image.png",
+      "/seasonal-programs-program-hero-image.png",
+      "/HRO-2-img-41.png",
+    ],
+    "orphans-destitute-children": [
+      "/Orphans-Support-.1.png",
+      "/Seasonal-projects.jpg",
+      "/hr4.png",
+    ],
+    "seasonal-programs": [
+      "/Seasonal-projects.jpg",
+      "/seasonal-programs-program-hero-image.png",
+      "/hr5.png",
+    ],
+    "water-for-life": [
+      "/water1.png",
+      "https://waterforpeopleindia.org/wp-content/uploads/2021/02/water-for-people.jpg",
+      "https://b2616979.smushcdn.com/2616979/wp-content/uploads/hero-water_for_life_charity.jpg?lossy=2&strip=1&webp=1",
+    ],
+    "emergency-relief": [
+      "/emergency-relief-program-hero-image.png",
+      "/d.png",
+      "/Seasonal-projects.jpg",
+    ],
+  };
+
+  const imageList = images[causeType] || images.education;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % imageList.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [imageList.length]);
+
   const currentCause = causesData[causeType] || causesData.education
   console.log(causesData[causeType],causeType)
   console.log("current",currentCause)
@@ -952,45 +1000,60 @@ export default function DynamicCauses() {
                 </div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="relative"
-                >
-                  <div className="relative overflow-hidden rounded-3xl shadow-2xl ">
-                    <img
-                      src={`/${causeType}-program-hero-image.png`}
-                      alt={`${currentCause.title} program`}
-                      className="w-full h-96 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      initial={{ opacity: 0, x: 30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="relative"
+    >
+      <div className="relative overflow-hidden rounded-3xl shadow-2xl h-96">
+        {/* 🌄 Image Slider */}
+        {imageList.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img}
+            alt={`${currentCause.title} program ${index + 1}`}
+            className={`absolute inset-0 w-full h-96 object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentIndex ? 1 : 0 }}
+            transition={{ duration: 1 }}
+          />
+        ))}
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.8 }}
-                      className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="text-2xl font-bold text-gray-900">98%</div>
-                          <div className="text-sm text-gray-600">Success Rate</div>
-                        </div>
-                        <div>
-                          <div className="text-2xl font-bold text-gray-900">24/7</div>
-                          <div className="text-sm text-gray-600">Support</div>
-                        </div>
-                        <div>
-                          <div className="text-2xl font-bold text-amber-600">100%</div>
-                          <div className="text-sm text-gray-600">Transparency</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg" />
-                  <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-lg" />
-                </motion.div>
+        {/* 🌟 Glassy Info Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="absolute bottom-6 left-6 right-6 
+                     bg-white/20 backdrop-blur-xl border border-white/30 
+                     rounded-2xl p-6 shadow-lg shadow-white/10"
+        >
+          <div className="flex items-center justify-between text-white">
+            <div className="text-center">
+              <div className="text-2xl font-bold drop-shadow-md">98%</div>
+              <div className="text-sm opacity-90">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold drop-shadow-md">24/7</div>
+              <div className="text-sm opacity-90">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-yellow-300 drop-shadow-md">100%</div>
+              <div className="text-sm opacity-90">Transparency</div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Decorative Circles */}
+      <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg" />
+      <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full shadow-lg" />
+    </motion.div>
               </div>
             </motion.div>
           )}
