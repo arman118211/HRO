@@ -7,9 +7,9 @@ import { GraduationCap, Heart, Home, Leaf, Shield, Utensils, DollarSign, Users, 
 
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
-  serviceId: "service_j5smok4", // Replace with your EmailJS service ID
-  templateId: "template_8mqpxmi", // Replace with your EmailJS template ID
-  publicKey: "wlRazedBdxGXG1R42", // Replace with your EmailJS public key
+  serviceId: "service_iqusr2n", // Replace with your EmailJS service ID
+  templateId: "template_1rdssqk", // Replace with your EmailJS template ID
+  publicKey: "F_6wWHN285iK7ADKS", // Replace with your EmailJS public key
 }
 
 // Initialize EmailJS

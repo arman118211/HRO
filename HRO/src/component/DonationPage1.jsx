@@ -49,9 +49,9 @@ import {
 
 // Ensure EmailJS is initialized on the client side
 const EMAILJS_CONFIG = {
-  serviceId: "service_j5smok4",
-  templateId: "template_8mqpxmi",
-  publicKey: "wlRazedBdxGXG1R42",
+  serviceId: "service_iqusr2n", // Replace with your EmailJS service ID
+  templateId: "template_1rdssqk", // Replace with your EmailJS template ID
+  publicKey: "F_6wWHN285iK7ADKS", // Replace with your EmailJS public key
 }
 
 if (typeof window !== "undefined") {

@@ -93,9 +93,9 @@ export default function Signup() {
           <div className="rounded-lg border border-white/10 bg-white/5 p-5">
             <h3 className="text-lg font-semibold text-white">Contact</h3>
             <ul className="mt-3 space-y-2 text-sm text-white/80">
-              <li>Email: volunteers@example.org</li>
-              <li>Phone: +1 555 123 4567</li>
-              <li>Address: 123 Impact Ave, Hope City</li>
+              <li>Email: info@hro.org.np</li>
+              <li>Phone: +977 984 7040 404</li>
+              <li>Address: Krishna Nagar Municipality,Ward No. 02, District: Kapilvastu Lumbini, Nepal</li>
             </ul>
           </div>
         </aside>

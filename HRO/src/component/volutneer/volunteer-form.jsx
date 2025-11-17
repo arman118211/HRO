@@ -2,17 +2,65 @@
 
 import { useState } from "react"
 import { Send, Phone, Mail, MapPin, Check, UserPlus, Sparkles } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export default function VolunteerForm() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    location: '',
+    interests: '',
+    availability: '',
+    hours: '',
+    message: ''
+  })
+
+  // EmailJS configuration - Replace with your actual credentials
+  const EMAILJS_SERVICE_ID = 'service_iqusr2n'
+  const EMAILJS_TEMPLATE_ID = 'template_riu5epe'
+  const EMAILJS_PUBLIC_KEY = 'F_6wWHN285iK7ADKS'
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   async function onSubmit(e) {
     e.preventDefault()
     setSubmitting(true)
+
     try {
-      await new Promise((res) => setTimeout(res, 1000))
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        e.target,
+        EMAILJS_PUBLIC_KEY
+      )
+
       setSubmitted(true)
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        interests: '',
+        availability: '',
+        hours: '',
+        message: ''
+      })
+
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      alert('Failed to submit application. Please try again.')
     } finally {
       setSubmitting(false)
     }
@@ -37,12 +85,12 @@ export default function VolunteerForm() {
           <h2 id="form-heading" className="text-4xl sm:text-5xl lg:text-4xl font-bold text-[#111827] mb-6">
             Ready to Make a <span className="bg-gradient-to-r from-[#D4AF37] to-yellow-500 bg-clip-text text-transparent">Difference</span>?
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto ">
             Tell us a bit about yourself—we'll match you with the perfect opportunity to create impact.
           </p>
         </div>
 
-        <div className="relative rounded-3xl border-2 border-[#D4AF37]/15 bg-gradient-to-br from-white via-amber-50/10 to-yellow-50/15 p-8 sm:p-12 lg:p-16 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-500 overflow-hidden">
+        <form onSubmit={onSubmit} className="relative rounded-3xl border-2 border-[#D4AF37]/15 bg-gradient-to-br from-white via-amber-50/10 to-yellow-50/15 p-8 sm:p-12 lg:p-16 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-500 overflow-hidden">
           {/* Form background glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/3 to-yellow-200/3 opacity-50 rounded-3xl "></div>
           
@@ -60,7 +108,9 @@ export default function VolunteerForm() {
                 </label>
                 <input
                   id="name"
-                  name="name"
+                  name="from_name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                   className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
                   placeholder="Your full name"
@@ -76,7 +126,9 @@ export default function VolunteerForm() {
                   <input
                     id="email"
                     type="email"
-                    name="email"
+                    name="from_email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                     className="w-full rounded-xl border-2 border-gray-200 bg-white/80 pl-14 pr-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
                     placeholder="you@example.com"
@@ -93,6 +145,8 @@ export default function VolunteerForm() {
                   <input
                     id="phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     className="w-full rounded-xl border-2 border-gray-200 bg-white/80 pl-14 pr-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
                     placeholder="+1 555 555 5555"
                   />
@@ -108,6 +162,8 @@ export default function VolunteerForm() {
                   <input
                     id="location"
                     name="location"
+                    value={formData.location}
+                    onChange={handleInputChange}
                     className="w-full rounded-xl border-2 border-gray-200 bg-white/80 pl-14 pr-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
                     placeholder="City, Country"
                   />
@@ -123,8 +179,9 @@ export default function VolunteerForm() {
                 <select
                   id="interests"
                   name="interests"
+                  value={formData.interests}
+                  onChange={handleInputChange}
                   className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
-                  defaultValue=""
                   required
                 >
                   <option value="" disabled>
@@ -148,8 +205,9 @@ export default function VolunteerForm() {
                 <select
                   id="availability"
                   name="availability"
+                  value={formData.availability}
+                  onChange={handleInputChange}
                   className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
-                  defaultValue=""
                   required
                 >
                   <option value="" disabled>
@@ -171,6 +229,8 @@ export default function VolunteerForm() {
                   id="hours"
                   name="hours"
                   type="number"
+                  value={formData.hours}
+                  onChange={handleInputChange}
                   min="1"
                   max="40"
                   className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50"
@@ -186,6 +246,8 @@ export default function VolunteerForm() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={6}
                   className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-5 py-4 text-base outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all duration-300 hover:border-[#D4AF37]/50 resize-none"
                   placeholder="Share any relevant experience, skills, or what motivates you to volunteer with us..."
@@ -203,7 +265,7 @@ export default function VolunteerForm() {
             </div>
             
             <button
-              onClick={onSubmit}
+              type="submit"
               disabled={submitting || submitted}
               className="group relative inline-flex items-center justify-center gap-3 rounded-xl border border-transparent bg-gradient-to-r from-[#D4AF37] to-yellow-400 px-10 py-5 text-lg font-bold text-[#111827] shadow-lg hover:shadow-xl hover:shadow-[#D4AF37]/25 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/60 focus:ring-offset-2 transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:hover:scale-100 overflow-hidden min-w-[240px]"
             >
@@ -244,7 +306,7 @@ export default function VolunteerForm() {
               )}
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   )

@@ -21,7 +21,8 @@ import {
   FileText,
   Star
 } from 'lucide-react';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,13 @@ const ContactPage = () => {
     volunteerInterest: false
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(null);
+
+  // EmailJS configuration - Replace with your actual credentials
+  const EMAILJS_SERVICE_ID = 'service_iqusr2n';
+  const EMAILJS_TEMPLATE_ID = 'template_riu5epe';
+  const EMAILJS_PUBLIC_KEY = 'F_6wWHN285iK7ADKS';
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -43,18 +50,42 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-      volunteerInterest: false
-    });
+    setSubmitting(true);
+
+    try {
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        e.target,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+        volunteerInterest: false
+      });
+
+      // Reset submission status after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const toggleFAQ = (index) => {
@@ -163,15 +194,15 @@ const ContactPage = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-yellow-100">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-yellow-100">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700">Full Name</label>
+                  <label className="block text-sm font-semibold text-gray-700">Full Name *</label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="text"
-                      name="name"
+                      name="from_name"
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
@@ -182,12 +213,12 @@ const ContactPage = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700">Email Address</label>
+                  <label className="block text-sm font-semibold text-gray-700">Email Address *</label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="email"
-                      name="email"
+                      name="from_email"
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
@@ -209,13 +240,13 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+977 984 7040 404"
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="block text-sm font-semibold text-gray-700">Subject</label>
+                  <label className="block text-sm font-semibold text-gray-700">Subject *</label>
                   <select
                     name="subject"
                     value={formData.subject}
@@ -234,7 +265,7 @@ const ContactPage = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">Message</label>
+                <label className="block text-sm font-semibold text-gray-700">Message *</label>
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-4 text-gray-400 w-5 h-5" />
                   <textarea
@@ -264,13 +295,19 @@ const ContactPage = () => {
               </div>
 
               <button
-                onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group"
+                type="submit"
+                disabled={submitting || isSubmitted}
+                className="w-full bg-gradient-to-r from-amber-500 to-yellow-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 group disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {isSubmitted ? (
                   <>
                     <CheckCircle className="w-6 h-6" />
                     <span>Message Sent!</span>
+                  </>
+                ) : submitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span>Sending...</span>
                   </>
                 ) : (
                   <>
@@ -279,7 +316,7 @@ const ContactPage = () => {
                   </>
                 )}
               </button>
-            </div>
+            </form>
             
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold mb-3">Emergency Contact</h3>
@@ -484,31 +521,30 @@ const ContactPage = () => {
 
       {/* Map Section */}
       <div className="bg-gray-100 py-16 px-4">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl font-bold text-gray-800 mb-8">Visit Our Office</h2>
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">Visit Our Office</h2>
 
-    <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-      <div className="flex flex-col items-center justify-center">
-        <MapPin className="w-16 h-16 text-amber-500 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">Our Location</h3>
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+            <div className="flex flex-col items-center justify-center">
+              <MapPin className="w-16 h-16 text-amber-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">Our Location</h3>
 
-        {/* Embedded Google Map */}
-        <div className="w-full h-96 rounded-lg overflow-hidden shadow-md">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d452805.87330041063!2d82.798396!3d27.545564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39971ba7889e59a3%3A0xfb91e7058c137f88!2sKrishnanagar%2C%20Nepal!5e0!3m2!1sen!2sus!4v1759854314882!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
+              {/* Embedded Google Map */}
+              <div className="w-full h-96 rounded-lg overflow-hidden shadow-md">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d452805.87330041063!2d82.798396!3d27.545564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39971ba7889e59a3%3A0xfb91e7058c137f88!2sKrishnanagar%2C%20Nepal!5e0!3m2!1sen!2sus!4v1759854314882!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
     </div>
   );
 };

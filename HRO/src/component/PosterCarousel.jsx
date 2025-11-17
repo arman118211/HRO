@@ -9,22 +9,52 @@ const PosterCarousel = () => {
     {
       id: 1,
       // imageUrl: "/slider7.png"
-      imageUrl: "./Slider/Picture24a.jpg"
+      imageUrl: "./Slider/r6.jpg"
     },
     {
       id: 2,
       // imageUrl: "/slider-p-1-2.png"
-      imageUrl: "./Slider/Picture19a.jpg"
+      imageUrl: "./Slider/r7.jpeg"
     },
     {
       id: 3,
       // imageUrl: "/slider8.png"
-      imageUrl: "./Slider/Picture29a.jpg"
+      imageUrl: "./Slider/r8.jpg"
     },
     {
       id: 4,
       // imageUrl: "/sliderq-1.png"
-      imageUrl: "./Slider/Picture30a.jpg"
+      imageUrl: "./Slider/r9.jpg"
+    },
+    {
+      id: 5,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r5.jpg"
+    },
+    {
+      id: 6,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r4.jpg"
+    },
+    {
+      id: 7,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r3.jpg"
+    },
+    {
+      id: 8,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r2.jpg"
+    },
+    {
+      id: 9,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r1.jpg"
+    },
+    {
+      id: 10,
+      // imageUrl: "/sliderq-1.png"
+      imageUrl: "./Slider/r10.jpg"
     }
   ];
 
