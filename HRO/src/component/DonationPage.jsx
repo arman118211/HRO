@@ -2106,10 +2106,12 @@ const DonationPage = () => {
                       {/* Banking Details Grid */}
                       <div className="grid sm:grid-cols-2 gap-4">
                         {[
-                          { label: "Account Holder", value: "Human Relief Organization Nepal", icon: "👥" },
+                          { label: "Account Holder", value: "Community Welfare International", icon: "👥" },
                           { label: "Bank Name", value: "Wells Fargo", icon: "🏛️" },
                           { label: "Account Number", value: "5304058059", icon: "💳", mono: true },
                           { label: "Routing Number", value: "021200025", icon: "🔢", mono: true },
+                          { label: "Swift Code", value: "WFBIUS6SXXX", icon: "🔢", mono: true },
+
                         ].map((item, index) => (
                           <motion.div
                             key={item.label}
@@ -2260,7 +2262,7 @@ const DonationPage = () => {
                                 <img
                                   src="https://hro.org.np/wp-content/uploads/2025/02/qrcode.png"
                                   alt={qr.title}
-                                  className="w-40 h-40 object-contain rounded-xl"
+                                  className="w-40 h-40 object-contain rounded-xl border-2 border-red-500"
                                 />
                                 {/* Scanning animation overlay */}
                                 <motion.div
