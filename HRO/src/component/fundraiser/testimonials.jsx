@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import SectionHeader from "./section-header"
 import { Star } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const testimonials = [
   {
@@ -97,18 +98,20 @@ export default function Testimonials() {
         </div>
 
         {/* Enhanced call-to-action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
-          <div className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300">
-            Join thousands of satisfied donors
-            <Star className="h-5 w-5 text-amber-800 fill-amber-700" />
-          </div>
-        </motion.div>
+        <Link to='/donate'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 text-center"
+          >
+            <div className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300">
+              Join thousands of satisfied donors
+              <Star className="h-5 w-5 text-amber-800 fill-amber-700" />
+            </div>
+          </motion.div>
+        </Link>
       </div>
     </section>
   )

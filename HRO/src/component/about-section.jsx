@@ -88,7 +88,7 @@ export default function AboutSection() {
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 to-amber-500/20 rounded-2xl blur-lg"></div>
             <img
-              src="/mission.svg"
+              src="https://img.freepik.com/free-photo/close-up-people-volunteer-teamwork-putting-finger-star-shapehands-togetherstack-handsunity-teamwork-world-environment-day_640221-299.jpg?semt=ais_hybrid&w=740&q=80"
               alt="Our team working in the community"
               className="rounded-xl shadow-lg w-full relative z-10"
             />

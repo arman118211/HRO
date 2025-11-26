@@ -19,7 +19,9 @@ import {
   Award,
   Headphones,
   FileText,
-  Star
+  Star,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
@@ -36,6 +38,7 @@ const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   // EmailJS configuration - Replace with your actual credentials
   const EMAILJS_SERVICE_ID = 'service_iqusr2n';
@@ -92,6 +95,19 @@ const ContactPage = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  // Carousel navigation functions
+  const nextTestimonial = () => {
+    setCurrentTestimonialIndex((prevIndex) => 
+      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
+    );
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonialIndex((prevIndex) => 
+      prevIndex - 3 < 0 ? Math.floor((testimonials.length - 1) / 3) * 3 : prevIndex - 3
+    );
+  };
+
   const faqs = [
     {
       question: "How can I get involved as a volunteer?",
@@ -129,24 +145,57 @@ const ContactPage = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Volunteer Coordinator",
-      text: "Working with this organization has been incredibly rewarding. The staff is professional, dedicated, and truly makes a difference.",
+      name: "Ghufran Ahmad Shakir",
+      role: "Executive Director",
+      text: "Leading this organization has been an honor. Our team's passion and dedication consistently create meaningful change.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "Corporate Partner",
-      text: "Their transparency and impact reporting gives us complete confidence in our partnership. Highly recommended!",
+      name: "Hafiz Ziyaur Rahman",
+      role: "Project Coordinator",
+      text: "Managing projects here feels fulfilling because every task contributes to improving lives in communities.",
       rating: 5
     },
     {
-      name: "Emma Rodriguez",
-      role: "Monthly Donor",
-      text: "I love receiving updates about how my donations are being used. It's amazing to see the direct impact of my contributions.",
+      name: "Md. Irshad Ansari",
+      role: "Project Coordinator",
+      text: "The teamwork and project execution in this organization ensure that every initiative reaches those who need it the most.",
+      rating: 5
+    },
+    {
+      name: "Mohammad Aslam Halwai",
+      role: "Project Coordinator",
+      text: "It's inspiring to be part of a mission-driven environment where results truly matter.",
+      rating: 5
+    },
+    {
+      name: "Mozammil Haque",
+      role: "Project Coordinator",
+      text: "We plan, execute, and monitor projects with the utmost transparency to maximize community impact.",
+      rating: 5
+    },
+    {
+      name: "Saddam Hussain",
+      role: "Program Coordinator",
+      text: "Working with multiple programs allows me to see firsthand how each effort transforms lives and empowers families.",
+      rating: 5
+    },
+    {
+      name: "Suhail Ahmad Shah",
+      role: "Field Officer",
+      text: "Being on the ground gives me the opportunity to connect directly with beneficiaries and understand their real challenges.",
+      rating: 5
+    },
+    {
+      name: "Tahir Mahmood",
+      role: "Program Manager",
+      text: "Managing different programs has helped create a sustainable and long-lasting impact in underserved communities.",
       rating: 5
     }
   ];
+
+  // Get current testimonials to display (3 at a time)
+  const currentTestimonials = testimonials.slice(currentTestimonialIndex, currentTestimonialIndex + 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-amber-50 mt-12 md:mt-25">
@@ -488,7 +537,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section with Carousel */}
       <div className="bg-gradient-to-br from-yellow-50 to-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -500,21 +549,61 @@ const ContactPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-100">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
-                  ))}
+          {/* Carousel Container */}
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-amber-50 transition-colors z-10"
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft className="w-6 h-6 text-amber-600" />
+            </button>
+            
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-amber-50 transition-colors z-10"
+              aria-label="Next testimonials"
+            >
+              <ChevronRight className="w-6 h-6 text-amber-600" />
+            </button>
+
+            {/* Testimonials Grid */}
+            <div className="grid md:grid-cols-3 gap-8 px-4">
+              {currentTestimonials.map((testimonial, index) => (
+                <div 
+                  key={currentTestimonialIndex + index} 
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
+                  <div className="border-t pt-4">
+                    <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
-                <div className="border-t pt-4">
-                  <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonialIndex(index * 3)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    currentTestimonialIndex === index * 3 
+                      ? 'bg-amber-500' 
+                      : 'bg-gray-300 hover:bg-amber-300'
+                  }`}
+                  aria-label={`Go to testimonial group ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -7,59 +7,63 @@ import React from "react" // Import React for JSX creation
 const volunteers = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     role: "Community Outreach Coordinator",
-    image: "https://blog.landg.com/asset/4a6d63/globalassets/lgim-blog/images/author-images/aysha_patel-638623678636527682.jpg",
-    bio: "Sarah has been leading our community outreach programs for over 3 years, connecting with local families and organizing support networks.",
+    image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",
+    bio: "Priya has been supporting our community outreach programs for over 3 years, connecting with vulnerable families and organizing local support networks.",
     achievements: "Helped 500+ families",
     icon: Users,
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Amit Verma",
     role: "Education Program Director",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrA3tpj76vCg/profile-displayphoto-shrink_200_200/B4DZTcNyYRHIAc-/0/1738861390380?e=2147483647&v=beta&t=v4VC1irP4DEKXluXHvqQZWgYLkqXO-6YaqdZnUw_ywI",
-    bio: "Michael develops and oversees our educational initiatives, ensuring quality learning opportunities for underprivileged children.",
+    image: "https://themindfulaimanifesto.org/wp-content/uploads/2020/09/male-placeholder-image.jpeg",
+    bio: "Amit leads our educational initiatives, ensuring underprivileged children receive quality learning opportunities and academic support.",
     achievements: "Educated 1000+ children",
     icon: Award,
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
+    name: "Sita Rai",
     role: "Healthcare Volunteer",
-    image: "https://run.imgix.net/1a4e460e-4d01-4e62-837b-75ef484fe5c9/c8fe794a-7a5d-4d8d-aa53-0ed7ae778412/c8fe794a-7a5d-4d8d-aa53-0ed7ae778412.jpeg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=1429%2C0%2C3665%2C4000&auto=compress%2Cformat&fit=fillmax&w=2048&q=75",
-    bio: "Emily provides essential healthcare services in remote areas, bringing medical care to those who need it most.",
+    location: "Nepal",
+    image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",
+    bio: "Sita provides essential medical assistance at our free health camps and cataract surgery programs, reaching remote communities in Nepal.",
     achievements: "Treated 800+ patients",
     icon: Heart,
   },
   {
     id: 4,
-    name: "David Thompson",
+    name: "Rajesh Thapa",
     role: "Environmental Advocate",
-    image: "https://m.media-amazon.com/images/M/MV5BMDhhYjYxYjYtMjY2Zi00MmNiLWE4MjctMTFlNGQ3NjdjMGJjXkEyXkFqcGc@._V1_CR2103,329,1653,2479_.jpg",
-    bio: "David leads our environmental conservation efforts, organizing clean-up drives and sustainability workshops.",
+    location: "Nepal",
+    image: "https://themindfulaimanifesto.org/wp-content/uploads/2020/09/male-placeholder-image.jpeg",
+    bio: "Rajesh leads sustainable development workshops and organizes environmental clean-up drives across rural Nepal.",
     achievements: "Planted 2000+ trees",
     icon: Globe,
   },
   {
     id: 5,
-    name: "Aisha Patel",
+    name: "Anita Kumari",
     role: "Youth Mentor",
-    image: "https://bateswells.co.uk/wp-content/uploads/2019/05/Web_BWB_Chetal-Patel-1.jpg",
-    bio: "Aisha mentors young adults, providing guidance and support to help them build better futures for themselves.",
+    image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",
+    bio: "Anita mentors young adults, helping them build confidence, career skills, and strong leadership qualities.",
     achievements: "Mentored 300+ youth",
     icon: Users,
   },
   {
     id: 6,
-    name: "James Wilson",
+    name: "Deepak Singh",
     role: "Emergency Response Coordinator",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHSaU7F68Xlcu371OeRlObQevbXxt6vmS5sg&s",
-    bio: "James coordinates our disaster relief efforts, ensuring rapid response and aid distribution during emergencies.",
+    image: "https://themindfulaimanifesto.org/wp-content/uploads/2020/09/male-placeholder-image.jpeg",
+    bio: "Deepak manages our emergency relief missions, ensuring timely aid distribution during disasters and crises.",
     achievements: "Led 50+ relief missions",
     icon: Award,
   },
-]
+];
+
+
 
 export default function VolunteerTeamSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -217,7 +221,7 @@ export default function VolunteerTeamSection() {
           {[
             { number: "50+", label: "Active Volunteers", icon: Users },
             { number: "10K+", label: "Lives Impacted", icon: Heart },
-            { number: "25+", label: "Countries Served", icon: Globe },
+            { number: "8+", label: "Districts  + covered", icon: Globe },
             { number: "100+", label: "Projects Completed", icon: Award },
           ].map((stat, index) => (
             <div key={index} className="text-center group">

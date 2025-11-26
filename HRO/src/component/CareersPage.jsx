@@ -142,7 +142,7 @@ const CareersPage = () => {
               transition={{ delay: 0.7 }}
             >
               Be part of something bigger. Join our team of passionate changemakers and help us create 
-              <span className="text-yellow-600 font-bold"> lasting impact</span> in communities around the world.
+              <span className="text-yellow-600 font-bold"> lasting impact</span> in communities around the Nepal.
             </motion.p>
 
             <motion.div

@@ -6,7 +6,7 @@ import { Globe2, School, Droplets } from "lucide-react"
 const items = [
   { icon: Droplets, label: "Wells built", value: "92" },
   { icon: School, label: "Students supported", value: "6,400+" },
-  { icon: Globe2, label: "Countries", value: "14" },
+  { icon: Globe2, label: "Districts", value: "8" },
 ]
 
 export default function ImpactBanner() {

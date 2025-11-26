@@ -33,6 +33,10 @@ import {
   Sun,
   LifeBuoy,
   Bandage,
+  Eye,
+  ChevronDown,
+  ChevronUp,
+  HelpCircle
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import React, { useEffect } from "react";
@@ -40,7 +44,42 @@ import React, { useEffect } from "react";
 export default function DynamicCauses() {
   const { causeType } = useParams()
   const [activeTab, setActiveTab] = useState("overview")
+  const [openFAQ, setOpenFAQ] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null)
+  const faqs = [
+    {
+      question: "How can I get involved as a volunteer?",
+      answer: "We welcome volunteers of all backgrounds and skill levels! Simply fill out our contact form with 'Volunteer Opportunities' selected, or call us directly. We'll schedule a brief orientation session where you'll learn about our various programs and find the perfect match for your interests and availability. No prior experience is necessary - we provide all necessary training."
+    },
+    {
+      question: "What types of donations do you accept?",
+      answer: "We accept monetary donations, in-kind donations such as food, clothing, school supplies, and medical equipment. For monetary donations, you can donate online through our secure portal or send checks to our office address. All donations are tax-deductible, and we'll provide you with proper documentation for your records."
+    },
+    {
+      question: "How do you ensure transparency in fund usage?",
+      answer: "Transparency is core to our mission. We publish annual reports detailing how every dollar is spent, maintain third-party audits, and provide regular updates to our donors. You can request detailed financial statements at any time, and we're proud to maintain a 4-star rating with charity watchdog organizations."
+    },
+    {
+      question: "Can I visit your facilities or programs?",
+      answer: "Absolutely! We encourage supporters to visit our facilities and see our programs in action. Please contact us at least 48 hours in advance to schedule a visit. We offer guided tours on weekdays and can arrange special group visits for organizations, schools, or corporate teams interested in learning more about our work."
+    },
+    {
+      question: "Do you provide tax receipts for donations?",
+      answer: "Yes, we provide official tax receipts for all donations. For online donations, you'll receive an automatic email receipt immediately. For other donations, we'll mail or email your receipt within 5 business days. As a registered 501(c)(3) organization, all donations are tax-deductible to the full extent allowed by law."
+    },
+    {
+      question: "How can my company partner with your organization?",
+      answer: "We offer various corporate partnership opportunities including sponsorships, employee volunteer programs, matching gift programs, and cause marketing collaborations. Each partnership is tailored to align with your company's values and CSR goals while maximizing impact for our beneficiaries. Contact us to discuss how we can work together."
+    },
+    {
+      question: "What is your refund and cancellation policy?",
+      answer: "For recurring donations, you can cancel at any time by contacting us. For event registrations, we offer full refunds up to 7 days before the event. For one-time donations, while we don't typically process refunds since funds are quickly deployed to programs, we'll work with you on a case-by-case basis if there are exceptional circumstances."
+    },
+    {
+      question: "How do I know if someone claiming to represent your organization is legitimate?",
+      answer: "All our official representatives carry identification cards with our logo and their photo. We never solicit donations door-to-door or through cold calls. If someone contacts you claiming to represent us, ask for their full name and ID number, then call our office to verify. When in doubt, donate directly through our official website or office."
+    }
+  ];
 
   const causesData = {
     education: {
@@ -58,22 +97,22 @@ export default function DynamicCauses() {
         },
         {
           icon: School,
-          number: "250+",
+          number: "1+",
           label: "Schools Built",
           color: "from-green-500 to-green-600",
           bgColor: "bg-green-500/10",
         },
         {
-          icon: Users,
-          number: "800+",
-          label: "Teachers Trained",
+          icon: Globe,
+          number: "45+",
+          label: "Countries Reacherd",
           color: "from-purple-500 to-purple-600",
           bgColor: "bg-purple-500/10",
         },
         {
           icon: Globe,
-          number: "45",
-          label: "Countries Reached",
+          number: "8",
+          label: "Districts Reached",
           color: "from-orange-500 to-orange-600",
           bgColor: "bg-orange-500/10",
         },
@@ -112,26 +151,26 @@ export default function DynamicCauses() {
         {
           name: "Maria Santos",
           age: 16,
-          location: "Philippines",
+          location: "Nepal",
           story:
             "Thanks to the scholarship program, I'm now studying engineering and dream of building schools in my community.",
-          image: "/student-maria-philippines-scholarship.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Engineering Student",
         },
         {
           name: "Ahmed Hassan",
           age: 14,
-          location: "Kenya",
+          location: "Nepal",
           story: "The mobile library brought books to our village. Now I read every day and want to become a teacher.",
-          image: "/student-ahmed-kenya-mobile-library.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Future Teacher",
         },
         {
           name: "Priya Sharma",
           age: 17,
-          location: "India",
+          location: "Nepal",
           story: "The computer lab at our school opened new possibilities. I'm learning coding and web development.",
-          image: "/student-priya-india-computer-lab.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Web Developer",
         },
       ],
@@ -150,82 +189,81 @@ export default function DynamicCauses() {
           bgColor: "bg-red-500/10",
         },
         {
-          icon: Stethoscope,
-          number: "2,800+",
-          label: "Clinics Established",
-          color: "from-blue-500 to-blue-600",
-          bgColor: "bg-blue-500/10",
-        },
-        {
-          icon: Activity,
-          number: "18,000+",
-          label: "Healthcare Workers Trained",
-          color: "from-green-500 to-green-600",
-          bgColor: "bg-green-500/10",
-        },
-        {
           icon: Shield,
-          number: "92",
-          label: "Countries Reached",
+          number: "8",
+          label: "Districts Reached",
           color: "from-purple-500 to-purple-600",
           bgColor: "bg-purple-500/10",
         },
       ],
       programs: [
-        {
-          title: "Mobile Health Clinics",
-          description: "Bringing medical care directly to remote communities with fully equipped medical units",
-          impact: "1,000+ patients served monthly",
-          cost: "$500 per month",
-          icon: Stethoscope,
-          gradient: "from-[#2979FF] to-blue-500",
-          features: ["Fully equipped units", "Trained medical staff", "Essential medicines"],
-        },
-        {
-          title: "Maternal & Child Health",
-          description: "Specialized care for mothers and children with comprehensive health programs",
-          impact: "20 safe deliveries monthly",
-          cost: "$150 per month",
-          icon: Heart,
-          gradient: "from-pink-500 to-rose-500",
-          features: ["Prenatal care", "Safe delivery", "Child immunization"],
-        },
-        {
-          title: "Community Health Training",
-          description: "Building local healthcare capacity through comprehensive training programs",
-          impact: "10 health workers trained",
-          cost: "$75 per month",
-          icon: Users,
-          gradient: "from-green-500 to-emerald-500",
-          features: ["Medical training", "First aid certification", "Health awareness"],
-        },
-      ],
+            {
+              title: "Medical Camp",
+              description: "Providing free medical checkups, basic treatments, medications, and diagnostic services to underserved communities.",
+              impact: "1,200+ patients treated monthly",
+              cost: "$300 per medical camp",
+              icon: Stethoscope,
+              gradient: "from-blue-500 to-cyan-500",
+              features: [
+                "General health checkups",
+                "Free medicines",
+                "Basic diagnostic tests"
+              ],
+            },
+            {
+              title: "Eye Cataract Surgeries",
+              description: "Restoring vision for elderly and low-income individuals through free cataract screening and surgeries.",
+              impact: "200+ cataract screenings and 50 surgeries monthly",
+              cost: "$150 per surgery",
+              icon: Eye,
+              gradient: "from-yellow-500 to-amber-500",
+              features: [
+                "Cataract screening",
+                "Free surgeries",
+                "Post-operative care"
+              ],
+            },
+            {
+              title: "Community Health Training",
+              description: "Building local healthcare capacity through comprehensive training programs.",
+              impact: "10 health workers trained",
+              cost: "$75 per month",
+              icon: Users,
+              gradient: "from-green-500 to-emerald-500",
+              features: [
+                "Medical training",
+                "First aid certification",
+                "Health awareness"
+              ],
+            },
+          ]
+          ,
       stories: [
         {
           name: "Dr. Sarah Okonkwo",
           age: 34,
-          location: "Nigeria",
+          location: "Nepal",
           story:
             "The mobile clinic program allowed me to reach villages that hadn't seen a doctor in years. We've reduced infant mortality by 60% in our coverage area.",
-          image: "/doctor-sarah-nigeria-mobile-clinic.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Established 15 health outposts",
         },
         {
           name: "Rosa Martinez",
           age: 28,
-          location: "Peru",
+          location: "Nepal",
           story:
             "Thanks to the maternal health program, I had a safe delivery and my baby is healthy. Now I volunteer to help other expecting mothers.",
-          image: "/mother-rosa-peru-maternal-health.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Community birth attendant",
         },
         {
           name: "James Kimani",
           age: 45,
-          location: "Kenya",
+          location: "Nepal",
           story:
             "The community health training saved my life. I learned to recognize diabetes symptoms and got treatment early.",
-          image: "/james-kenya-diabetes-support.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Diabetes support group leader",
         },
       ],
@@ -245,7 +283,7 @@ export default function DynamicCauses() {
         },
         {
           icon: TrendingUp,
-          number: "320+",
+          number: "1+",
           label: "Training Centers Built",
           color: "from-green-500 to-green-600",
           bgColor: "bg-green-500/10",
@@ -299,28 +337,28 @@ export default function DynamicCauses() {
         {
           name: "Carlos Rodriguez",
           age: 32,
-          location: "Mexico",
+          location: "Nepal",
           story:
             "The carpentry training program changed my life. I now run my own furniture workshop and employ 8 people from my community.",
-          image: "/carlos-mexico-furniture-workshop.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Successful furniture business owner",
         },
         {
           name: "Fatima Al-Zahra",
           age: 26,
-          location: "Morocco",
+          location: "Nepal",
           story:
             "Learning digital marketing opened up a world of opportunities. I now help local artisans sell their crafts online.",
-          image: "/fatima-morocco-digital-marketing.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Online marketplace creator",
         },
         {
           name: "Raj Patel",
           age: 29,
-          location: "India",
+          location: "Nepal",
           story:
             "The entrepreneurship program gave me the knowledge to start my organic farming business. Now I supply 20 restaurants.",
-          image: "/raj-india-organic-farming.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Sustainable organic farmer",
         },
       ],
@@ -347,15 +385,15 @@ export default function DynamicCauses() {
           },
           {
             icon: Leaf,
-            number: "3,200+",
-            label: "Rainwater Harvesting Systems",
+            number: "101+",
+            label: "Filteration Plant Installed",
             color: "from-green-500 to-green-600",
             bgColor: "bg-green-500/10",
           },
           {
             icon: Globe,
-            number: "36",
-            label: "Countries Impacted",
+            number: "8",
+            label: "District Impacted",
             color: "from-teal-500 to-teal-600",
             bgColor: "bg-teal-500/10",
           },
@@ -382,42 +420,42 @@ export default function DynamicCauses() {
             features: ["Community filters", "Household kits", "Chlorination training"],
           },
           {
-            title: "Rainwater Harvesting Program",
+            title: "Water Hand Pumps",
             description:
-              "Harnessing rainwater to provide sustainable and eco-friendly water solutions.",
-            impact: "20 villages benefiting annually",
-            cost: "$500 per system",
-            icon: Leaf,
-            gradient: "from-green-500 to-emerald-500",
-            features: ["Storage tanks", "Filtration units", "Community awareness"],
-          },
+              "Installing durable hand pumps to provide reliable access to clean and safe drinking water in underserved communities.",
+            impact: "50+ families served per pump",
+            cost: "$350 per hand pump",
+            icon: Droplet, // change if you want a different icon
+            gradient: "from-blue-500 to-cyan-500",
+            features: ["Deep well installation", "Clean water access", "Low maintenance system"],
+          }
         ],
         stories: [
           {
             name: "Amina Hassan",
             age: 34,
-            location: "Kenya",
+            location: "Nepal",
             story:
               "Before the well installation, my family had to walk 5 kilometers daily to fetch water. Now, our village has safe water right here.",
-            image: "/amina-kenya-water-well.png",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
             achievement: "Empowered village with safe water",
           },
           {
             name: "Luis Fernandez",
             age: 28,
-            location: "Peru",
+            location: "Nepal",
             story:
               "The rainwater harvesting program changed our farming community. We now have enough water for both drinking and crops.",
-            image: "/luis-peru-rainwater-harvesting.png",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
             achievement: "Sustainable farming through rainwater",
           },
           {
             name: "Neha Sharma",
             age: 22,
-            location: "India",
+            location: "Nepal",
             story:
               "Thanks to the purification project, our school children now drink clean water every day, reducing illness and absenteeism.",
-            image: "/neha-india-water-purification.png",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
             achievement: "Healthier school community",
           },
         ],
@@ -443,16 +481,16 @@ export default function DynamicCauses() {
           bgColor: "bg-blue-500/10"
         },
         {
-          icon: Heart,
-          number: "1,200+",
-          label: "Children Rehabilitated",
+          icon: Globe,
+          number: "8+",
+          label: "Districts Supported",
           color: "from-red-500 to-pink-600",
           bgColor: "bg-red-500/10"
         },
         {
-          icon: Users,
+          icon: Globe,
           number: "25+",
-          label: "Communities Supported",
+          label: "Countires Supported",
           color: "from-green-500 to-emerald-600",
           bgColor: "bg-green-500/10"
         }
@@ -493,28 +531,28 @@ export default function DynamicCauses() {
         {
           name: "Ravi Kumar",
           age: 12,
-          location: "India",
+          location: "Nepal",
           story:
             "Ravi lost his parents at a young age. Through our shelter home and education program, he is now excelling in school and dreams of becoming a teacher.",
-          image: "/ravi-india-shelter.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Shelter & education transformed his future"
         },
         {
           name: "Aisha Ahmed",
           age: 9,
-          location: "Kenya",
+          location: "Nepal",
           story:
             "Aisha was abandoned as a baby. With our support, she now lives in a safe home, goes to school, and participates in cultural activities.",
-          image: "/aisha-kenya-orphan.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Safe home & education for a brighter future"
         },
         {
           name: "Daniel Mwangi",
           age: 15,
-          location: "Uganda",
+          location: "Nepal",
           story:
             "Daniel struggled on the streets before joining our rehabilitation program. Today, he is healthy, back in school, and reconnected with his extended family.",
-          image: "/daniel-uganda-rehabilitation.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Rehabilitation and family reintegration"
         }
       ]
@@ -590,28 +628,28 @@ export default function DynamicCauses() {
         {
           name: "Rekha Devi",
           age: 38,
-          location: "India",
+          location: "Nepal",
           story:
             "During winter, Rekha’s family struggled with the cold. Our Winter Warmth Drive provided blankets and jackets, making their home much warmer.",
-          image: "/rekha-india-winter.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Survived harsh winter with dignity"
         },
         {
           name: "Mohammed Ali",
           age: 11,
-          location: "Pakistan",
+          location: "Nepal",
           story:
             "Mohammed received a toy and food hamper during Eid. His smile reflected the true joy of celebrating like other children.",
-          image: "/mohammed-pakistan-eid.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Festive joy for orphaned child"
         },
         {
           name: "Grace Njeri",
           age: 29,
-          location: "Kenya",
+          location: "Nepal",
           story:
             "Grace’s family was supported with summer relief kits during a severe heatwave, ensuring hydration and safety.",
-          image: "/grace-kenya-summer.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Protected from extreme heat"
         }
       ]
@@ -690,30 +728,33 @@ export default function DynamicCauses() {
           location: "Nepal",
           story:
             "After a devastating earthquake, Anita and her children received emergency shelter, food, and medical care. Today, they are rebuilding their home with community support.",
-          image: "/anita-nepal-earthquake.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Rebuilt life after disaster"
         },
         {
           name: "Mohammed Ali",
           age: 42,
-          location: "Syria",
+          location: "Nepal",
           story:
             "Mohammed’s family fled conflict and found safety in our relief shelters. With access to food, medical aid, and education for his children, they now live with dignity and hope.",
-          image: "/mohammed-syria-relief.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Safe shelter & restored dignity"
         },
         {
           name: "Grace Njeri",
           age: 28,
-          location: "Kenya",
+          location: "Nepal",
           story:
             "Grace’s village was hit by floods, leaving many homeless. Through our relief program, she received rapid food aid, a safe tent, and medical support for her children.",
-          image: "/grace-kenya-floods.png",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Survived and recovered after floods"
         }
       ]
     },
   }
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
 
   const images = {
     education: [
@@ -1084,7 +1125,7 @@ export default function DynamicCauses() {
                     Comprehensive <span className="text-amber-600">Solutions</span>
                   </h2>
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Comprehensive initiatives designed to create lasting impact in communities worldwide. Each program
+                    Comprehensive initiatives designed to create lasting impact in communities in Nepal. Each program
                     is carefully crafted to address specific challenges.
                   </p>
                 </motion.div>
@@ -1255,7 +1296,62 @@ export default function DynamicCauses() {
             </motion.div>
           )}
         </AnimatePresence>
+        <div className=" py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-yellow-50 px-4 py-2 rounded-full mb-4">
+              <HelpCircle className="w-5 h-5 mr-2 text-amber-600" />
+              <span className="text-sm font-medium text-amber-600">Got Questions?</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Find answers to common questions about our organization, donations, volunteering, and more.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-yellow-200 transition-colors">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-yellow-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-gray-800 pr-4">{faq.question}</h3>
+                  {openFAQ === index ? (
+                    <ChevronUp className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                  )}
+                </button>
+                {openFAQ === index && (
+                  <div className="px-6 pb-4">
+                    <div className="border-t border-gray-200 pt-4">
+                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">Still have questions?</p>
+            <a
+              href="mailto:info@hro.org.np?subject=Support%20Request&body=Hello%20Support%2C%0A%0AI%20have%20a%20question%20regarding..."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+                Contact Our Support Team
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
+      </div>
+      
     </div>
   )
 }

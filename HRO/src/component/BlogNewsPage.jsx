@@ -235,7 +235,7 @@ function FeaturedCard({ post }) {
     >
       <div className="relative">
         <img
-          src={"https://en-media.thebetterindia.com/uploads/2017/04/Untitled-design9.jpg" || "/placeholder.svg"}
+          src={"https://savioursfoundation.org/wp-content/uploads/2021/03/ngo_rece.png" || "/placeholder.svg"}
           alt="Featured story visual"
           className="h-64 w-full object-cover sm:h-80 md:h-[22rem] "
         />

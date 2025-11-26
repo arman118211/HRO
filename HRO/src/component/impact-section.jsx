@@ -5,34 +5,35 @@ import { Heart, Users, Globe, Star } from "lucide-react"
 
 export default function ImpactSection() {
   const stories = [
-    {
-      name: "Maria Santos",
-      age: 12,
-      location: "Guatemala",
-      story:
-        "Thanks to your support, Maria now attends school regularly and dreams of becoming a doctor to help her community.",
-      image: "https://mariasantosfdez.github.io/images/headshot.jpg",
-      program: "Education Initiative",
-    },
-    {
-      name: "Ahmed Hassan",
-      age: 45,
-      location: "Kenya",
-      story:
-        "The new water well in Ahmed's village has reduced water collection time from 6 hours to 30 minutes daily.",
-      image: "https://ceocoachinginternational.com/wp-content/uploads/2023/04/Ahmed-Hassan.jpeg",
-      program: "Clean Water Project",
-    },
-    {
-      name: "Rosa Martinez",
-      age: 28,
-      location: "Peru",
-      story:
-        "Rosa received life-saving treatment at our mobile clinic and now volunteers to help other mothers in her community.",
-      image: "https://pbs.twimg.com/profile_images/740472114113826816/KnLqZN7-_400x400.jpg",
-      program: "Healthcare Access",
-    },
-  ]
+  {
+    name: "Anjali Sharma",
+    age: 11,
+    location: "Uttar Pradesh, India",
+    story:
+      "Thanks to your support, Anjali now receives proper nutritional meals and medical checkups, helping her stay healthy and continue her education.",
+    image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",
+    program: "Nutrition Support Program",
+  },
+  {
+    name: "Ramesh Thapa",
+    age: 42,
+    location: "Kathmandu, Nepal",
+    story:
+      "After receiving cataract surgery through our free medical camp, Ramesh regained his vision and returned to his daily livelihood.",
+    image: "https://themindfulaimanifesto.org/wp-content/uploads/2020/09/male-placeholder-image.jpeg",
+    program: "Medical & Cataract Surgeries",
+  },
+  {
+    name: "Priya Gurung",
+    age: 26,
+    location: "Pokhara, Nepal",
+    story:
+      "Priya attended our health-awareness workshop and now helps spread essential health knowledge in her community.",
+    image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",
+    program: "Healthcare Access",
+  },
+];
+
 
   return (
     <section

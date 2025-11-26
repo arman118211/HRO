@@ -72,21 +72,25 @@ export default function PartnerAffiliatesSection() {
               }}
             >
               {duplicatedPartners.map((partner, index) => (
-                <div key={`${partner.name}-${index}`} className="flex-shrink-0 group mx-4 md:mx-6 ">
-                  <div className="relative bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-100 hover:border-amber-400/30 w-40 md:w-48 h-24 md:h-28 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-amber-50/30 hover:scale-105">
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 mx-4 md:mx-6"
+                >
+                  <div className="relative bg-white rounded-xl p-6 md:p-8 shadow-lg border border-amber-100 w-40 md:w-48 h-24 md:h-28 flex items-center justify-center">
+
                     {/* Decorative Corner */}
-                    <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-amber-400/30 group-hover:border-amber-500/50 transition-colors duration-300"></div>
+                    <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-amber-400/30"></div>
 
                     <img
                       src={partner.logo || "/placeholder.svg"}
                       alt={`${partner.name} logo`}
-                      className=" object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                      className="object-contain"
                     />
 
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-400/8 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-400/8 to-transparent opacity-0"></div>
                   </div>
                 </div>
+
               ))}
             </div>
           </div>
@@ -102,11 +106,11 @@ export default function PartnerAffiliatesSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">
-              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">50+</div>
+              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">14+</div>
               <div className="text-gray-600 font-medium">Global Partners</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">
-              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">25+</div>
+              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">8+</div>
               <div className="text-gray-600 font-medium">Countries Reached</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">

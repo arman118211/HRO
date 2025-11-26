@@ -37,6 +37,9 @@ import {
   Download,
   MapPin,
   Receipt,
+  Sun,
+  Briefcase,
+  Droplet
 } from "lucide-react"
 
 
@@ -836,73 +839,96 @@ const DonationPage = () => {
   }
 
   const donationReasons = [
-    {
-      id: "education",
-      title: "Education",
-      description: "Empower through learning",
-      icon: GraduationCap,
-      impact: "Fund 5 children's education for a month",
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50",
-      raised: 12500,
-      goal: 25000,
-    },
-    {
-      id: "healthcare",
-      title: "Healthcare",
-      description: "Save lives, restore hope",
-      icon: Heart,
-      impact: "Provide medical care for 10 families",
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50",
-      raised: 18750,
-      goal: 30000,
-    },
-    {
-      id: "hunger",
-      title: "End Hunger",
-      description: "Nourish communities",
-      icon: Utensils,
-      impact: "Feed 50 people for a week",
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50",
-      raised: 8200,
-      goal: 15000,
-    },
-    {
-      id: "shelter",
-      title: "Shelter",
-      description: "Build safe homes",
-      icon: Home,
-      impact: "House 3 families safely",
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      raised: 22000,
-      goal: 40000,
-    },
-    {
-      id: "environment",
-      title: "Environment",
-      description: "Protect our planet",
-      icon: Leaf,
-      impact: "Plant 100 trees in communities",
-      color: "from-emerald-500 to-emerald-600",
-      bgColor: "bg-emerald-50",
-      raised: 15800,
-      goal: 20000,
-    },
-    {
-      id: "emergency",
-      title: "Emergency Aid",
-      description: "Crisis response",
-      icon: Shield,
-      impact: "Emergency supplies for 20 families",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50",
-      raised: 35000,
-      goal: 50000,
-    },
-  ]
+  {
+    id: "education",
+    title: "Education Support",
+    description: "Empowering children through quality education",
+    icon: GraduationCap,
+    impact: "Sponsor monthly education for 5 underprivileged children",
+    color: "from-blue-500 to-blue-600",
+    bgColor: "bg-blue-50",
+    raised: 12500,
+    goal: 25000,
+  },
+  {
+    id: "healthcare",
+    title: "Healthcare Assistance",
+    description: "Access to medical facilities for every family",
+    icon: Heart,
+    impact: "Provide health checkups & medicines to 10 families",
+    color: "from-red-500 to-red-600",
+    bgColor: "bg-red-50",
+    raised: 18750,
+    goal: 30000,
+  },
+  {
+    id: "orphan",
+    title: "Orphan & Destitute Children",
+    description: "Care & nourishment for children in need",
+    icon: Utensils,
+    impact: "Provide monthly meals & essentials to 20 children",
+    color: "from-orange-500 to-orange-600",
+    bgColor: "bg-orange-50",
+    raised: 8200,
+    goal: 15000,
+  },
+  {
+    id: "shelter",
+    title: "Shelter for Homeless",
+    description: "Safe housing for vulnerable families",
+    icon: Home,
+    impact: "Support rebuilding homes for 3 families",
+    color: "from-green-500 to-green-600",
+    bgColor: "bg-green-50",
+    raised: 22000,
+    goal: 40000,
+  },
+  {
+    id: "seasonal",
+    title: "Seasonal Projects",
+    description: "Support during Ramzan, Eid & winter seasons",
+    icon: Sun, // If you have Leaf earlier, I changed to Sun for seasonal relevance
+    impact: "Distribute food/relief to 100 families",
+    color: "from-yellow-500 to-yellow-600",
+    bgColor: "bg-yellow-50",
+    raised: 15800,
+    goal: 20000,
+  },
+  {
+    id: "emergency",
+    title: "Emergency Relief",
+    description: "Rapid response during crisis & disasters",
+    icon: Shield,
+    impact: "Provide emergency kits to 20 affected families",
+    color: "from-purple-500 to-purple-600",
+    bgColor: "bg-purple-50",
+    raised: 35000,
+    goal: 50000,
+  },
+  {
+    id: "skills",
+    title: "Skills & Livelihood Development",
+    description: "Creating sustainable income opportunities",
+    icon: Briefcase,
+    impact: "Vocational training for 10 youth or women",
+    color: "from-lime-500 to-lime-600",
+    bgColor: "bg-lime-50",
+    raised: 11000,
+    goal: 30000,
+  },
+  {
+    id: "wash",
+    title: "WASH",
+    description: "Access to clean water & hygienic facilities",
+    icon: Droplet,
+    impact: "Install 2 community water systems",
+    color: "from-cyan-500 to-cyan-600",
+    bgColor: "bg-cyan-50",
+    raised: 14000,
+    goal: 28000,
+  },
+];
+
 
   const additionalReasons = [
     {
@@ -2260,7 +2286,7 @@ const DonationPage = () => {
                                 className="w-48 h-48 mx-auto bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center mb-4 shadow-inner border-4 border-white group-hover:border-blue-100 transition-all duration-300"
                               >
                                 <img
-                                  src="https://hro.org.np/wp-content/uploads/2025/02/qrcode.png"
+                                  src="/Paypal qrcode.png"
                                   alt={qr.title}
                                   className="w-40 h-40 object-contain rounded-xl border-2 border-red-500"
                                 />

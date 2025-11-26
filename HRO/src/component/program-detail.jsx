@@ -39,7 +39,7 @@ export default function ProgramDetail() {
       fullDescription:
         "Our Education for All program focuses on breaking the cycle of poverty through education. We establish schools, provide learning materials, train teachers, and offer scholarships to ensure every child has access to quality education regardless of their economic background.",
       image: "/sliderq-1.png",
-      raised: 75000,
+      raised: 0,
       goal: 100000,
       donors: 1250,
       objectives: [
@@ -65,7 +65,7 @@ export default function ProgramDetail() {
       fullDescription:
         "Access to clean water is a fundamental human right. Our Clean Water Initiative works to provide sustainable water solutions through well construction, water purification systems, and community education on water safety and hygiene practices.",
       image: "/Picture24.jpg",
-      raised: 45000,
+      raised: 0,
       goal: 80000,
       donors: 890,
       objectives: [
@@ -91,7 +91,7 @@ export default function ProgramDetail() {
       fullDescription:
         "Our Healthcare Outreach program brings medical care directly to communities that lack access to healthcare facilities. Through mobile clinics, medical camps, and telemedicine, we provide preventive care, treatment, and health education.",
       image: "/org-3.png",
-      raised: 62000,
+      raised: 0,
       goal: 90000,
       donors: 1100,
       objectives: [
@@ -111,32 +111,39 @@ export default function ProgramDetail() {
         "90% improvement in health outcomes",
       ],
     },
-    "housing-shelter": {
-      title: "Housing & Shelter Program",
-      description: "Safe, sustainable, and dignified housing solutions for vulnerable communities.",
+    "nutrition-support": {
+      title: "Nutrition & Food Support Program",
+      description: "Providing nutritious meals, essential food supplies, and health-focused nutrition support to children, mothers, and vulnerable communities.",
       fullDescription:
-        "Our Housing & Shelter Program focuses on providing safe, affordable, and sustainable housing for families displaced by poverty, natural disasters, or conflict. We build durable homes, emergency shelters, and community housing facilities while ensuring access to clean water, sanitation, and basic utilities. This initiative empowers communities by creating stable living conditions, which are essential for dignity, security, and long-term development.",
-      image: "/slider7.png",
-      raised: 48000,
-      goal: 100000,
-      donors: 850,
+        "Our Nutrition & Food Support Program focuses on combating hunger and malnutrition among vulnerable groups, especially children, pregnant women, and low-income families. Through regular meal distributions, nutrition kits, growth monitoring, and community-based awareness sessions, we aim to build a healthier and stronger generation. This program ensures access to balanced diets, micronutrient-rich foods, and essential supplements needed for overall health and development.",
+      image: "/slider7.png", // replace with a nutrition-related image when available
+      raised: 0,
+      goal: 80000,
+      donors: 950,
       objectives: [
-        "Construct safe and durable homes for displaced families",
-        "Provide emergency shelters during natural disasters",
-        "Develop community housing with clean water and sanitation facilities",
-        "Promote eco-friendly and sustainable building practices",
-        "Empower communities through housing-related skill training"
+        "Provide nutritious meals to children and undernourished families",
+        "Distribute essential nutrition kits including grains, pulses, and supplements",
+        "Monitor children's growth and identify cases of malnutrition",
+        "Promote nutrition awareness among mothers and caregivers",
+        "Support pregnant and lactating women with specialized nutrition packages"
       ],
-      locations: ["Flood-affected regions of Bangladesh", "Earthquake-prone areas in Nepal", "Urban slums in Kenya"],
-      timeline: "2024-2028",
-      budget: "$100,000",
+      locations: [
+        "Rural communities in Maharashtra, India",
+        "Slum areas of Kolkata, India",
+        "Underserved villages in Sindh, Pakistan"
+      ],
+      timeline: "2024-2026",
+      budget: "$80,000",
       achievements: [
-        "1,200 families resettled in safe homes",
-        "3,500 individuals provided with emergency shelters",
-        "15 community housing projects completed",
-        "Introduction of eco-friendly building techniques in 5 regions"
+        "25,000+ nutritious meals distributed",
+        "1,800+ families supported with monthly nutrition kits",
+        "1,200 children monitored for growth and nutrition levels",
+        "50 nutrition awareness workshops conducted",
+        "Special nutrition support provided to 600 pregnant women"
       ]
-    },
+    }
+
+
   }
 
   const program = programs[id]

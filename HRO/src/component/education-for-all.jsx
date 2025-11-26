@@ -50,8 +50,8 @@ export default function EducationForAll() {
     },
     {
       icon: Globe,
-      number: "45",
-      label: "Countries Reached",
+      number: "8",
+      label: "Districts Reached",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-500/10",
     },

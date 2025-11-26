@@ -37,16 +37,16 @@ export default function ProgramsSection() {
       color: "from-cyan-500 to-blue-600",
       bgColor: "from-cyan-50 to-blue-50",
     },
-    {
-      id: "housing-shelter",
-      icon: Home,
-      title: "Housing & Shelter",
-      description: "Emergency shelter, disaster relief, and sustainable housing solutions for families in need.",
-      image: "/slider7.png",
-      impact: "500 homes built",
-      color: "from-orange-500 to-red-500",
-      bgColor: "from-orange-50 to-red-50",
-    },
+   {
+    id: "nutrition-support",
+    icon: Home, 
+    title: "Nutrition Food Program",
+    description: "Providing nutritious meals and essential food support to children and vulnerable families.",
+    image: "/slider7.png", 
+    impact: "25,000+ meals distributed",
+    color: "from-orange-500 to-yellow-500", 
+    bgColor: "from-orange-50 to-yellow-50",
+  }
   ]
 
   const handleSupportClick = (program) => {

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import emailjs from "@emailjs/browser"
-import { GraduationCap, Heart, Home, Leaf, Shield, Utensils, DollarSign, Users, Globe, Award, Search, CheckCircle, Lock, Target, Sparkles, X, Receipt, Download, MapPin } from 'lucide-react'
+import { GraduationCap, Heart, Home, Leaf, Shield, Utensils, DollarSign,Briefcase,Calendar, Droplet, Users, Globe, Award, Search, CheckCircle, Lock, Target, Sparkles, X, Receipt, Download, MapPin } from 'lucide-react'
 
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
@@ -670,49 +670,54 @@ const DonationSection = () => {
   const searchRef = useRef(null)
 
   const donationReasons = [
-    {
-      id: "education",
-      title: "Education",
-      description: "Empower through learning",
-      icon: GraduationCap,
-      impact: "Fund 5 children's education for a month",
-    },
-    {
-      id: "healthcare",
-      title: "Healthcare",
-      description: "Save lives, restore hope",
-      icon: Heart,
-      impact: "Provide medical care for 10 families",
-    },
-    {
-      id: "hunger",
-      title: "End Hunger",
-      description: "Nourish communities",
-      icon: Utensils,
-      impact: "Feed 50 people for a week",
-    },
-    {
-      id: "shelter",
-      title: "Shelter",
-      description: "Build safe homes",
-      icon: Home,
-      impact: "House 3 families safely",
-    },
-    {
-      id: "environment",
-      title: "Environment",
-      description: "Protect our planet",
-      icon: Leaf,
-      impact: "Plant 100 trees in communities",
-    },
-    {
-      id: "emergency",
-      title: "Emergency Aid",
-      description: "Crisis response",
-      icon: Shield,
-      impact: "Emergency supplies for 20 families",
-    },
-  ]
+  {
+    id: "education",
+    title: "Education",
+    description: "Empower through learning",
+    icon: GraduationCap,
+    impact: "Fund 5 children's education for a month",
+  },
+  {
+    id: "healthcare",
+    title: "Healthcare",
+    description: "Save lives, restore hope",
+    icon: Heart,
+    impact: "Provide medical care for 10 families",
+  },
+
+  // ⭐ NEWLY ADDED ⭐
+  {
+    id: "skills-development",
+    title: "Skills Development & Livelihood",
+    description: "Support long-term earning and empowerment",
+    icon: Briefcase, // change anytime
+    impact: "Help 5 individuals gain employable skills",
+  },
+  {
+    id: "orphan-support",
+    title: "Orphan Support",
+    description: "Care, nurture & protect",
+    icon: Users, // or Baby icon if preferred
+    impact: "Provide essential care for 10 orphan children",
+  },
+  {
+    id: "seasonal-project",
+    title: "Seasonal Project",
+    description: "Support communities during key seasons",
+    icon: Calendar, // symbolic seasonal icon
+    impact: "Deliver seasonal aid to 20 families",
+  },
+  {
+    id: "water-for-life",
+    title: "Water for Life",
+    description: "Give clean & safe drinking water",
+    icon: Droplet, // perfect for water programs
+    impact: "Provide clean water to a village",
+  },
+
+  // Removed hunger, shelter, environment as requested
+];
+
 
   // Additional reasons available only through search
   const additionalReasons = [
