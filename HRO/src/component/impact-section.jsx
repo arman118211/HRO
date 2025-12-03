@@ -8,7 +8,7 @@ export default function ImpactSection() {
   {
     name: "Anjali Sharma",
     age: 11,
-    location: "Uttar Pradesh, India",
+    location: "Nepal",
     story:
       "Thanks to your support, Anjali now receives proper nutritional meals and medical checkups, helping her stay healthy and continue her education.",
     image: "https://www.gmevents.ae/wp-content/uploads/2019/04/female-placeholder.jpg",

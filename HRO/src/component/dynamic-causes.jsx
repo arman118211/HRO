@@ -36,10 +36,28 @@ import {
   Eye,
   ChevronDown,
   ChevronUp,
-  HelpCircle
+  HelpCircle,
+  MapPin,
+  Lightbulb,
+  UserCheck,
+  HeartPulse ,
+  Hospital ,
+  Syringe ,
+  ShieldCheck ,
+  Wrench ,
+  Building, 
+  Hand,  
+  HeartHandshake ,
+  Bed ,
+  SunSnow ,
+  AlertTriangle ,
+  Truck 
+
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import React, { useEffect } from "react";
+import { ImageSlider } from "./helper/ImageSlider"
+import { ProjectPage } from "./helper/MoreInfo"
 
 export default function DynamicCauses() {
   const { causeType } = useParams()
@@ -174,6 +192,162 @@ export default function DynamicCauses() {
           achievement: "Web Developer",
         },
       ],
+      bannerImage:[
+        {
+          src: "https://shridantrust.org/images/bnr.jpg",
+          alt: "Mountain",
+          caption: "Beautiful Mountain",
+        },
+        {
+          src: "https://sarthakeknaisoch.org/wp-content/uploads/slider/cache/6c6ea41453f13e54946b375f474ea552/slide-ngo-2.jpg",
+          alt: "Forest",
+          caption: "Forest Path",
+        },
+        {
+          src: "https://www.ksvss.com/images/rrtwer.jpg",
+          alt: "Lake",
+          caption: "Lake Sunset",
+        }
+      ],
+      moreInfo:{
+        heroIcon: BookOpen,
+        heroTitle: "Education for All",
+        heroSubtitle: "Empowering Nepal’s children and communities through inclusive and quality learning.",
+        heroCtaText: "Join Our Mission",
+        heroCtaLink: "/contact",
+
+        colorScheme: {
+          primary: "#F59E0B",
+          primaryDark: "#D97706",
+          primaryLight: "#FCD34D",
+        },
+
+        stats: [
+          { icon: Users, number: "8,500+", label: "Students Educated" },
+          { icon: School, number: "80+", label: "Schools Supported" },
+          { icon: GraduationCap, number: "92%", label: "Success Rate" },
+          { icon: MapPin, number: "35+", label: "Communities Reached" },
+        ],
+
+        aboutTitle: "About Our Education Initiative",
+        aboutDescription:
+          "Our Education for All project focuses on providing accessible and equitable education to children in rural and marginalized communities of Nepal. We work to remove barriers such as poverty, distance, and lack of educational infrastructure.",
+
+        aboutImage:
+          "https://oecdedutoday.com/wp-content/uploads/2021/06/Skills-outlook-2021-blog.jpg",
+
+        missionTitle: "Our Mission",
+        missionDescription:
+          "To ensure every child in Nepal has access to quality education and lifelong learning opportunities.",
+        missionPoints: [
+          "Equitable access to schooling",
+          "Teacher training & support",
+          "Digital learning opportunities",
+        ],
+
+        objectives: [
+          {
+            icon: BookOpen,
+            title: "Quality Education Access",
+            description:
+              "Supporting children in remote areas with schooling materials and learning opportunities.",
+          },
+          {
+            icon: Users,
+            title: "Teacher Training",
+            description:
+              "Empowering local teachers with modern teaching tools and methodologies.",
+          },
+          {
+            icon: Lightbulb,
+            title: "Digital Literacy",
+            description:
+              "Introducing computer education and e-learning in rural communities.",
+          },
+          {
+            icon: Heart,
+            title: "Holistic Development",
+            description:
+              "Fostering confidence, creativity, and essential life skills in students.",
+          },
+        ],
+
+        programs: [
+          {
+            title: "Rural School Support",
+            description:
+              "Providing books, uniforms, classroom materials, and infrastructure support.",
+            beneficiaries: "4,500+ children",
+            duration: "Ongoing",
+          },
+          {
+            title: "Adult Literacy",
+            description:
+              "Helping adults—particularly women—gain basic reading and math skills.",
+            beneficiaries: "1,400+ adults",
+            duration: "Evening classes",
+          },
+          {
+            title: "Scholarship Program",
+            description:
+              "Financial aid for talented students from extremely poor families.",
+            beneficiaries: "800+ students",
+            duration: "Annual",
+          },
+        ],
+
+        achievements: [
+          "Built 18 learning centers in remote villages",
+          "Distributed over 15,000 educational kits",
+          "Trained 300+ teachers",
+          "Introduced e-learning in 20 rural schools",
+        ],
+
+        testimonials: [
+          {
+            name: "Sita Lama",
+            role: "Parent",
+            text: "My children now attend school regularly thanks to the support received.",
+            rating: 5,
+          },
+          {
+            name: "Prakash Thapa",
+            role: "Teacher",
+            text: "The teacher training program has changed the way we interact with students.",
+            rating: 5,
+          },
+        ],
+
+        impactTitle: "Transforming the Future of Children",
+        impactDescription:
+          "Our education programs create sustainable changes in families, communities, and entire generations.",
+        impactPoints: [
+          {
+            icon: TrendingUp,
+            title: "Higher Literacy Rates",
+            description: "Significant improvement in school attendance and learning.",
+          },
+          {
+            icon: Globe,
+            title: "Empowered Communities",
+            description: "Education helps communities grow socially and economically.",
+          },
+          {
+            icon: UserCheck,
+            title: "Better Career Opportunities",
+            description: "Students unlock opportunities to secure better jobs.",
+          },
+        ],
+
+        impactImage:
+          "https://cdn.teachstarter.com/fileserver/2019/07/kids-celebrating.jpg",
+
+        ctaTitle: "Help Us Educate Every Child",
+        ctaDescription:
+          "Together, we can make quality education accessible across Nepal.",
+        ctaDonateLink: "/donate",
+        ctaVolunteerLink: "/volunteer",
+      },
     },
     healthcare: {
       title: "Healthcare for All",
@@ -267,6 +441,141 @@ export default function DynamicCauses() {
           achievement: "Diabetes support group leader",
         },
       ],
+      bannerImage:[
+        {
+          src: "https://www.cry.org/wp-content/themes/cry/images/child-health-and-nutrition/child-health-and-nutrition.jpg",
+          alt: "Mountain",
+          caption: "Beautiful Mountain",
+          
+        },
+        {
+          src: "https://helplocal.in/uploads/ngo/banner_image1.PNG",
+          alt: "Forest",
+          caption: "Forest Path",
+        },
+        {
+          src: "https://www.mmpc.in/wp-content/uploads/2023/06/healthcare-bg.jpg",
+          alt: "Lake",
+          caption: "Lake Sunset",
+        }
+      ],
+      moreInfo:{
+        heroIcon: HeartPulse,
+        heroTitle: "Healthcare for All",
+        heroSubtitle:
+          "Providing accessible, affordable, and quality healthcare to underserved communities in Nepal.",
+        heroCtaText: "Support Healthcare",
+        heroCtaLink: "/contact",
+
+        colorScheme: {
+          primary: "#10B981",
+          primaryDark: "#059669",
+          primaryLight: "#6EE7B7",
+        },
+
+        stats: [
+          { icon: Users, number: "20,000+", label: "Patients Treated" },
+          { icon: Hospital, number: "40+", label: "Health Camps" },
+          { icon: Stethoscope, number: "120+", label: "Medical Volunteers" },
+          { icon: MapPin, number: "30+", label: "Districts Covered" },
+        ],
+
+        aboutTitle: "About Our Healthcare Program",
+        aboutDescription:
+          "Many communities in Nepal lack basic medical facilities. Our healthcare project brings essential medical services directly to rural villages through mobile health camps, awareness programs, and preventive care initiatives.",
+
+        aboutImage:
+          "https://www.unicef.org/sites/default/files/styles/media_large_image/public/UN0513076.jpg",
+
+        missionTitle: "Our Mission",
+        missionDescription:
+          "To improve community health by providing accessible preventive and primary healthcare services.",
+        missionPoints: [
+          "Free medical camps",
+          "Maternal & child health support",
+          "Preventive health education",
+        ],
+
+        objectives: [
+          {
+            icon: Syringe,
+            title: "Medical Access",
+            description: "Free checkups, diagnosis, and treatment in remote villages.",
+          },
+          {
+            icon: Heart,
+            title: "Maternal Care",
+            description: "Safe motherhood, nutrition guidance, and newborn care.",
+          },
+          {
+            icon: ShieldCheck,
+            title: "Disease Prevention",
+            description: "Awareness on hygiene, sanitation, and communicable diseases.",
+          },
+        ],
+
+        programs: [
+          {
+            title: "Mobile Health Camps",
+            description: "Bringing doctors and medications to remote communities.",
+            beneficiaries: "10,000+ individuals",
+            duration: "Monthly",
+          },
+          {
+            title: "Malnutrition Program",
+            description: "Nutrition support for children under 5.",
+            beneficiaries: "2,000+ children",
+            duration: "Ongoing",
+          },
+          {
+            title: "Women’s Health Program",
+            description: "Awareness on menstrual health and reproductive care.",
+            beneficiaries: "5,000+ women",
+            duration: "Workshops",
+          },
+        ],
+
+        achievements: [
+          "Conducted 40 health camps in hard-to-reach areas",
+          "Distributed 8,000+ hygiene kits",
+          "Supported 300+ pregnant women with safe delivery kits",
+          "Created awareness in 50+ communities",
+        ],
+
+        testimonials: [
+          {
+            name: "Mina Thapa",
+            role: "Mother",
+            text: "The health camp saved my son's life. I am truly grateful.",
+            rating: 5,
+          },
+        ],
+
+        impactTitle: "Healthier Communities, Stronger Nepal",
+        impactDescription:
+          "Better health opens doors to economic growth and improved quality of life.",
+        impactPoints: [
+          {
+            icon: HeartPulse,
+            title: "Reduced Illness",
+            description: "Timely diagnosis and treatment in rural regions.",
+          },
+          {
+            icon: Users,
+            title: "Community Awareness",
+            description: "People adopt cleaner and healthier habits.",
+          },
+        ],
+
+        impactImage:
+          "https://www.concernusa.org/wp-content/uploads/2020/09/nepal-768x439.jpg",
+
+        ctaTitle: "Support Healthcare in Nepal",
+        ctaDescription:
+          "Help us continue providing life-saving care to those who need it most.",
+        ctaDonateLink: "/donate",
+        ctaVolunteerLink: "/volunteer",
+            }
     },
     "skill-development": {
       title: "Skill Development & Livelihood",
@@ -362,6 +671,125 @@ export default function DynamicCauses() {
           achievement: "Sustainable organic farmer",
         },
       ],
+      bannerImage:[
+        {
+          src: "https://www.pratham.org/wp-content/uploads/2025/01/1.png",
+          alt: "Mountain",
+          caption: "Beautiful Mountain",
+          
+        },
+        {
+          src: "https://crowdera-platform.s3.ap-south-1.amazonaws.com/gocrowdera/campaign-assets/355a98ac-17d4-4588-a961-08f1a7f3adb3_original_skill-1.jpg",
+          alt: "Forest",
+          caption: "Forest Path",
+        }
+      ],
+      moreInfo:{
+        heroIcon: Wrench,
+        heroTitle: "Skill Development & Livelihood",
+        heroSubtitle:
+          "Empowering youth, women, and marginalized communities with income-generating skills.",
+        heroCtaText: "Join Our Mission",
+        heroCtaLink: "/contact",
+
+        colorScheme: {
+          primary: "#3B82F6",
+          primaryDark: "#2563EB",
+          primaryLight: "#93C5FD",
+        },
+
+        stats: [
+          { icon: Users, number: "5,000+", label: "Beneficiaries Trained" },
+          { icon: Briefcase, number: "60%", label: "Employment Achieved" },
+          { icon: Building, number: "35+", label: "Training Centers" },
+        ],
+
+        aboutTitle: "About Our Livelihood Program",
+        aboutDescription:
+          "In Nepal, unemployment and migration are major challenges. Our livelihood initiative helps individuals gain practical skills to secure stable income and build sustainable communities.",
+
+        aboutImage:
+          "https://www.ilo.org/global/photos/WCMS_348349/lang--en/index.htm",
+
+        missionTitle: "Our Mission",
+        missionDescription:
+          "To create employment opportunities and empower communities with sustainable livelihood skills.",
+        missionPoints: ["Skill training", "Micro-entrepreneurship", "Mentorship"],
+
+        objectives: [
+          {
+            icon: Users,
+            title: "Vocational Training",
+            description:
+              "Training in tailoring, carpentry, driving, agriculture, and more.",
+          },
+          {
+            icon: Lightbulb,
+            title: "Entrepreneurship",
+            description: "Helping individuals start small businesses.",
+          },
+          {
+            icon: Users,
+            title: "Women Empowerment",
+            description: "Skill training for marginalized women.",
+          },
+        ],
+
+        programs: [
+          {
+            title: "Women Tailoring Program",
+            description: "Training women in stitching and garment production.",
+            beneficiaries: "1,500+ women",
+            duration: "3 months",
+          },
+          {
+            title: "Youth Skill Development",
+            description: "Driving, plumbing, electrician, IT literacy.",
+            beneficiaries: "2,000+ youth",
+            duration: "6 months",
+          },
+        ],
+
+        achievements: [
+          "Helped 1,200+ beneficiaries start their own businesses",
+          "Partnered with 15 technical institutes",
+          "Reduced migration in 10 communities",
+        ],
+
+        testimonials: [
+          {
+            name: "Laxmi BK",
+            role: "Tailoring Trainee",
+            text: "I now earn enough to support my children. The training changed my life.",
+            rating: 5,
+          },
+        ],
+
+        impactTitle: "Building Sustainable Futures",
+        impactDescription:
+          "Skills empower individuals to build a stable and dignified life.",
+        impactPoints: [
+          {
+            icon: TrendingUp,
+            title: "Increased Income",
+            description: "Families become financially independent.",
+          },
+          {
+            icon: UserCheck,
+            title: "Job Opportunities",
+            description: "Youth gain employment or start businesses.",
+          },
+        ],
+
+        impactImage:
+          "https://www.worldvision.org/wp-content/uploads/nepal-skills-training.jpg",
+
+        ctaTitle: "Support Skill Training",
+        ctaDescription:
+          "Your contribution helps families become self-reliant.",
+        ctaDonateLink: "/donate",
+        ctaVolunteerLink: "/volunteer",
+      }
     },
     "water-for-life": {
         title: "Water for Life",
@@ -459,6 +887,135 @@ export default function DynamicCauses() {
             achievement: "Healthier school community",
           },
         ],
+        bannerImage:[
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+            alt: "Lake",
+            caption: "Lake Sunset",
+          }
+        ],
+        moreInfo:{
+          heroIcon: Droplet,
+          heroTitle: "Water for Life",
+          heroSubtitle:
+            "Providing clean drinking water, sanitation, and hygiene solutions to communities across Nepal.",
+          heroCtaText: "Support Clean Water",
+          heroCtaLink: "/contact",
+
+          colorScheme: {
+            primary: "#0EA5E9",
+            primaryDark: "#0284C7",
+            primaryLight: "#7DD3FC",
+          },
+
+          stats: [
+            { icon: Droplet, number: "90+", label: "Water Projects" },
+            { icon: Users, number: "40,000+", label: "People Served" },
+            { icon: Users, number: "12,000+", label: "Hygiene Kits Distributed" },
+            { icon: MapPin, number: "35+", label: "Villages Covered" },
+          ],
+
+          aboutTitle: "About Water for Life",
+          aboutDescription:
+            "Access to clean water is a challenge in many parts of Nepal, especially in hill and mountain regions. Our Water for Life project provides safe drinking water, water tanks, filtration systems, and hygiene education.",
+
+          aboutImage:
+            "https://www.unicef.org/sites/default/files/styles/media_large_image/public/UN0686654.jpg",
+
+          missionTitle: "Our Mission",
+          missionDescription:
+            "To ensure every family in Nepal has access to clean drinking water and improved hygiene practices.",
+
+          missionPoints: [
+            "Clean drinking water supply",
+            "Hygiene and sanitation training",
+            "Water infrastructure development",
+          ],
+
+          objectives: [
+            {
+              icon: Droplet,
+              title: "Water Access",
+              description: "Installing taps, wells, and gravity-fed water systems.",
+            },
+            {
+              icon: Droplet,
+              title: "Water Purification",
+              description: "Providing filters and purification units.",
+            },
+            {
+              icon: Hand,
+              title: "Hygiene Awareness",
+              description: "Teaching handwashing and sanitation practices.",
+            },
+          ],
+
+          programs: [
+            {
+              title: "Community Water Systems",
+              description: "Gravity-fed water supply in remote hilly villages.",
+              beneficiaries: "20,000+ people",
+              duration: "Ongoing",
+            },
+            {
+              title: "Hygiene Promotion",
+              description: "Handwashing stations and hygiene education in schools.",
+              beneficiaries: "8,000+ students",
+              duration: "Monthly",
+            },
+          ],
+
+          achievements: [
+            "Installed 90+ water systems",
+            "Reduced waterborne diseases by 60% in project areas",
+            "Trained 10,000+ individuals on hygiene practices",
+          ],
+
+          testimonials: [
+            {
+              name: "Tsering Lama",
+              role: "Community Leader",
+              text: "We finally have clean water in our village after decades of struggle.",
+              rating: 5,
+            },
+          ],
+
+          impactTitle: "Clean Water Changes Everything",
+          impactDescription:
+            "Access to water improves health, education, and family livelihoods.",
+          impactPoints: [
+            {
+              icon: HeartPulse,
+              title: "Health Improvement",
+              description: "Drastic reduction in waterborne illnesses.",
+            },
+            {
+              icon: Users,
+              title: "Empowered Communities",
+              description: "Water frees women and children from long-distance fetching.",
+            },
+          ],
+
+          impactImage:
+            "https://www.wateraid.org/sites/g/files/jkxoof211/files/2023-03/Nepal-clean-water.jpg",
+
+          ctaTitle: "Bring Water to a Village",
+          ctaDescription:
+            "Your support can give families clean, safe drinking water.",
+          ctaDonateLink: "/donate",
+          ctaVolunteerLink: "/volunteer",
+        }
+
       },
     "orphans-destitute-children": {
       title: "Orphans & Destitute Children",
@@ -555,7 +1112,153 @@ export default function DynamicCauses() {
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Rehabilitation and family reintegration"
         }
-      ]
+      ],
+      bannerImage:[
+          {
+            src: "https://sadgurufoundation.com/static/images/backgrounds/Orphanage-Banner-2.webp",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+            alt: "Lake",
+            caption: "Lake Sunset",
+          }
+        ],
+      moreInfo:{
+        heroIcon: HeartHandshake,
+        heroTitle: "Orphans & Destitute Care",
+        heroSubtitle:
+          "Providing protection, love, education, and a safe home for Nepal’s most vulnerable children and individuals.",
+        heroCtaText: "Support This Cause",
+        heroCtaLink: "/contact",
+
+        colorScheme: {
+          primary: "#EF4444",
+          primaryDark: "#DC2626",
+          primaryLight: "#FCA5A5",
+        },
+
+        stats: [
+          { icon: Users, number: "600+", label: "Children Supported" },
+          { icon: Home, number: "8+", label: "Care Homes" },
+          { icon: Heart, number: "1,200+", label: "Meals Served Daily" },
+          { icon: GraduationCap, number: "95%", label: "School Enrollment" },
+        ],
+
+        aboutTitle: "About Our Orphan & Destitute Program",
+        aboutDescription:
+          "Many children in Nepal lose parental care due to poverty, disasters, or social challenges. Our program provides a safe environment, education, emotional support, and basic needs so every child can grow with dignity.",
+
+        aboutImage:
+          "https://www.savethechildren.org/content/dam/global/photos/countries/nepal/nepal-children.jpg",
+
+        missionTitle: "Our Mission",
+        missionDescription:
+          "To protect vulnerable children, restore hope, and build a nurturing environment for their growth.",
+
+        missionPoints: [
+          "Safe shelter and nutrition",
+          "Formal and informal education",
+          "Emotional and mental care",
+        ],
+
+        objectives: [
+          {
+            icon: Bed,
+            title: "Safe Shelter",
+            description:
+              "Offering secure homes to orphaned and destitute children.",
+          },
+          {
+            icon: BookOpen,
+            title: "Education Support",
+            description:
+              "Ensuring every child receives school education and tutoring.",
+          },
+          {
+            icon: Heart,
+            title: "Emotional Healing",
+            description:
+              "Counseling and caring guidance to support emotional well-being.",
+          },
+          {
+            icon: Gift,
+            title: "Reintegration",
+            description:
+              "Working with families or guardians for safe reintegration whenever possible.",
+          },
+        ],
+
+        programs: [
+          {
+            title: "Residential Care Homes",
+            description: "Safe homes offering food, shelter, clothing, and love.",
+            beneficiaries: "300+ children",
+            duration: "Ongoing",
+          },
+          {
+            title: "Education Sponsorship",
+            description:
+              "School fee support and materials for children from vulnerable backgrounds.",
+            beneficiaries: "400+ children",
+            duration: "Annual",
+          },
+          {
+            title: "Psychosocial Support",
+            description:
+              "Counseling and emotional support for traumatized children.",
+            beneficiaries: "500+ individuals",
+            duration: "Weekly sessions",
+          },
+        ],
+
+        achievements: [
+          "Successfully reintegrated 150 children with families",
+          "Built 8 child-friendly care homes",
+          "Provided 1 million+ meals to children",
+          "Ensured 95% school enrollment and continuity",
+        ],
+
+        testimonials: [
+          {
+            name: "Rina (12 yrs)",
+            role: "Child Beneficiary",
+            text: "I have a family again. I feel safe and happy at the care home.",
+            rating: 5,
+          },
+        ],
+
+        impactTitle: "Changing Lives Forever",
+        impactDescription:
+          "With proper care, children grow with dignity and step into a brighter future.",
+        impactPoints: [
+          {
+            icon: UserCheck,
+            title: "Safe Childhood",
+            description: "Children receive protection and care.",
+          },
+          {
+            icon: Heart,
+            title: "Emotional Stability",
+            description: "Healing from trauma and gaining confidence.",
+          },
+        ],
+
+        impactImage:
+          "https://www.worldvision.org/wp-content/uploads/2021/09/nepal-childcare.jpg",
+
+        ctaTitle: "Give a Child Hope",
+        ctaDescription:
+          "Your support can transform the life of a vulnerable child in Nepal.",
+        ctaDonateLink: "/donate",
+        ctaVolunteerLink: "/volunteer",
+      }
     },
     "seasonal-programs": {
       title: "Seasonal Programs",
@@ -652,7 +1355,135 @@ export default function DynamicCauses() {
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Protected from extreme heat"
         }
-      ]
+      ],
+      bannerImage:[
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+            alt: "Lake",
+            caption: "Lake Sunset",
+          }
+        ],
+      moreInfo:{
+          heroIcon: SunSnow,
+          heroTitle: "Seasonal Support Programs",
+          heroSubtitle:
+            "Providing essential support during harsh winters, festivals, and difficult seasons across Nepal.",
+          heroCtaText: "Support Seasonal Aid",
+          heroCtaLink: "/contact",
+
+          colorScheme: {
+            primary: "#8B5CF6",
+            primaryDark: "#6D28D9",
+            primaryLight: "#C4B5FD",
+          },
+
+          stats: [
+            { icon: Users, number: "12,000+", label: "Families Supported" },
+            { icon: Gift, number: "15,000+", label: "Winter Kits Distributed" },
+            { icon: Shirt, number: "8,000+", label: "Clothing Sets Given" },
+            { icon: Home, number: "40+", label: "Communities Covered" },
+          ],
+
+          aboutTitle: "About Our Seasonal Projects",
+          aboutDescription:
+            "Nepal faces extreme winter conditions in the mountains, floods during monsoons, and resource shortages during festivals. Our seasonal projects help vulnerable communities by fulfilling urgent needs during high-risk periods.",
+
+          aboutImage:
+            "https://www.unicef.org/sites/default/files/styles/large/public/UN0286358.jpg",
+
+          missionTitle: "Our Mission",
+          missionDescription:
+            "To provide timely seasonal aid that ensures warmth, dignity, and safety for communities in need.",
+
+          missionPoints: [
+            "Winter warmth protection",
+            "Festival support for poor families",
+            "Summer hydration initiatives",
+          ],
+
+          objectives: [
+            {
+              icon: Snowflake,
+              title: "Winter Warmth",
+              description: "Distribution of blankets, jackets, and heating supplies.",
+            },
+            {
+              icon: Sun,
+              title: "Summer Relief",
+              description: "Drinking water, ORS, and shade tents in heat-affected areas.",
+            },
+            {
+              icon: Gift,
+              title: "Festival Support",
+              description: "Food packs and clothing support during Dashain, Tihar, Eid.",
+            },
+          ],
+
+          programs: [
+            {
+              title: "Winterization Drive",
+              description: "Warm clothes, blankets, and heaters for high-altitude areas.",
+              beneficiaries: "7,500+ families",
+              duration: "Every Winter",
+            },
+            {
+              title: "Festival Food Pack Distribution",
+              description: "Providing rice, lentils, oil, clothes, and sweets.",
+              beneficiaries: "4,000+ families",
+              duration: "Dashain/Tihar/Eid",
+            },
+          ],
+
+          achievements: [
+            "Distributed 15,000+ winter kits in mountain districts",
+            "Provided festival support for 2,500+ poor families",
+            "Reduced winter-related child sickness rates",
+          ],
+
+          testimonials: [
+            {
+              name: "Karma Tamang",
+              role: "Villager",
+              text: "The winter jackets saved our children during the harsh snowfall.",
+              rating: 5,
+            },
+          ],
+
+          impactTitle: "Seasonal Help That Saves Lives",
+          impactDescription:
+            "Timely relief ensures protection from cold, hunger, and seasonal hardships.",
+          impactPoints: [
+            {
+              icon: ShieldCheck,
+              title: "Protection from Harsh Seasons",
+              description: "Reduced winter fatalities in mountain regions.",
+            },
+            {
+              icon: HeartHandshake,
+              title: "Community Support",
+              description: "Families celebrate festivals with dignity.",
+            },
+          ],
+
+          impactImage:
+            "https://www.concern.net/sites/default/files/styles/hero/public/2018-12/nepal-winter-clothing.jpg",
+
+          ctaTitle: "Be a Part of Seasonal Support",
+          ctaDescription:
+            "Help a family survive winter, celebrate festivals, or overcome seasonal hardship.",
+          ctaDonateLink: "/donate",
+          ctaVolunteerLink: "/volunteer",
+      }
     },
     "emergency-relief": {
       title: "Emergency & Relief",
@@ -749,7 +1580,141 @@ export default function DynamicCauses() {
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9pZ3UFdOVhRuxuYz2SDRST2Za_vwVNdM5A&s",
           achievement: "Survived and recovered after floods"
         }
-      ]
+      ],
+      bannerImage:[
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+            alt: "Lake",
+            caption: "Lake Sunset",
+          }
+        ],
+      moreInfo:{
+        heroIcon: AlertTriangle,
+        heroTitle: "Emergency & Relief",
+        heroSubtitle:
+          "Providing rapid-response assistance during earthquakes, floods, landslides, fires, and other disasters in Nepal.",
+        heroCtaText: "Support Relief Efforts",
+        heroCtaLink: "/contact",
+
+        colorScheme: {
+          primary: "#F43F5E",
+          primaryDark: "#BE123C",
+          primaryLight: "#FDA4AF",
+        },
+
+        stats: [
+          { icon: Users, number: "25,000+", label: "People Supported" },
+          { icon: Home, number: "5,000+", label: "Relief Kits Delivered" },
+          { icon: Truck, number: "150+", label: "Rescue Deliveries" },
+          { icon: MapPin, number: "40+", label: "Disaster Zones Reached" },
+        ],
+
+        aboutTitle: "About Emergency & Relief Services",
+        aboutDescription:
+          "Nepal is highly vulnerable to earthquakes, monsoon floods, and landslides. Our emergency relief program provides immediate support including food, shelter, medical aid, and rehabilitation assistance during crises.",
+
+        aboutImage:
+          "https://www.unocha.org/sites/unocha/files/styles/medium/public/Nepal-Earthquake-Response.jpg",
+
+        missionTitle: "Our Mission",
+        missionDescription:
+          "To save lives and restore dignity by responding quickly and effectively during emergencies.",
+
+        missionPoints: [
+          "Rapid response teams",
+          "Relief distribution",
+          "Community resilience building",
+        ],
+
+        objectives: [
+          {
+            icon: Truck,
+            title: "Emergency Relief Kits",
+            description: "Food, tarpaulins, blankets, and sanitation supplies.",
+          },
+          {
+            icon: Home,
+            title: "Temporary Shelter",
+            description: "Supporting families displaced by disasters.",
+          },
+          {
+            icon: Home,
+            title: "Medical Aid",
+            description: "First aid, medicine, and trauma care.",
+          },
+        ],
+
+        programs: [
+          {
+            title: "Earthquake Response",
+            description: "Immediate support to families affected by seismic events.",
+            beneficiaries: "5,000+ families",
+            duration: "Emergency based",
+          },
+          {
+            title: "Flood & Landslide Relief",
+            description: "Food packs, shelter, and rescue efforts in monsoon-hit areas.",
+            beneficiaries: "10,000+ individuals",
+            duration: "Seasonal",
+          },
+          {
+            title: "Fire & Accident Support",
+            description: "Helping families recover after house fires.",
+            beneficiaries: "800+ families",
+            duration: "As needed",
+          },
+        ],
+
+        achievements: [
+          "Reached 40+ disaster-hit districts",
+          "Delivered 5,000+ emergency shelters",
+          "Provided food to 20,000+ people during monsoon floods",
+        ],
+
+        testimonials: [
+          {
+            name: "Hari Bahadur",
+            role: "Flood Survivor",
+            text: "The relief kit arrived when we had nothing left. Thank you.",
+            rating: 5,
+          },
+        ],
+
+        impactTitle: "Saving Lives When It Matters Most",
+        impactDescription:
+          "Swift response ensures safety, dignity, and hope for disaster-affected families.",
+        impactPoints: [
+          {
+            icon: ShieldCheck,
+            title: "Lives Saved",
+            description: "Immediate support reduces trauma and loss.",
+          },
+          {
+            icon: Heart,
+            title: "Hope Restored",
+            description: "Families rebuild their lives with renewed strength.",
+          },
+        ],
+
+        impactImage:
+          "https://www.ifrc.org/sites/default/files/styles/16_9/public/2021-07/Nepal-Floods-Relief.jpg",
+
+        ctaTitle: "Help Us Respond Faster",
+        ctaDescription:
+          "Your contribution helps us reach communities immediately during crises.",
+        ctaDonateLink: "/donate",
+        ctaVolunteerLink: "/volunteer",
+      }
     },
   }
   const toggleFAQ = (index) => {
@@ -808,9 +1773,32 @@ export default function DynamicCauses() {
   console.log("current",currentCause)
   console.log("cuasestype",causeType)
 
+  const bannerImages = [
+    {
+      src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+      alt: "Mountain",
+      caption: "Beautiful Mountain",
+    },
+    {
+      src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+      alt: "Forest",
+      caption: "Forest Path",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+      alt: "Lake",
+      caption: "Lake Sunset",
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50/30 to-orange-50 mt-0 md:mt-9 ">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50/30 to-orange-50 mt-0 md:mt-9">
+      <div className="h-[235px] md:h-[500px] md:mt-28 mt-18 mb-4  ">
+        <ImageSlider
+           images={currentCause.bannerImage}
+      />
+      </div>
+      {/* <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             x: [0, 30, 0],
@@ -842,9 +1830,10 @@ export default function DynamicCauses() {
         <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-amber-500/20 rounded-full animate-ping" />
         <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-yellow-500/20 rounded-full animate-pulse" />
         <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-orange-400/30 rounded-full animate-bounce" />
-      </div>
+      </div> */}
+      
 
-      <div className="relative bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-white py-24 overflow-hidden">
+      {/* <div className="relative bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
 
         <div className="absolute top-0 left-0 w-full h-full">
@@ -951,7 +1940,7 @@ export default function DynamicCauses() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-40 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -986,6 +1975,7 @@ export default function DynamicCauses() {
           </div>
         </div>
       </div>
+      
 
       {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -1296,61 +2286,118 @@ export default function DynamicCauses() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className=" py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-yellow-50 px-4 py-2 rounded-full mb-4">
-              <HelpCircle className="w-5 h-5 mr-2 text-amber-600" />
-              <span className="text-sm font-medium text-amber-600">Got Questions?</span>
-            </div>
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our organization, donations, volunteering, and more.
-            </p>
-          </div>
+       
+      </div>
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-yellow-200 transition-colors">
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-yellow-50 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-800 pr-4">{faq.question}</h3>
-                  {openFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-amber-600 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                  )}
-                </button>
-                {openFAQ === index && (
-                  <div className="px-6 pb-4">
-                    <div className="border-t border-gray-200 pt-4">
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </div>
-                )}
+      <div>
+        <ProjectPage
+          // Hero Props
+          heroIcon={currentCause.moreInfo.heroIcon}
+          heroTitle={currentCause.moreInfo.heroTitle}
+          heroSubtitle={currentCause.moreInfo.heroSubtitle}
+          heroCtaText={currentCause.moreInfo.heroCtaText}
+          heroCtaLink="/contact"
+          
+          // Color Scheme (Golden Yellow)
+          colorScheme={{
+            primary: "#F59E0B",
+            primaryDark: "#D97706",
+            primaryLight: "#FCD34D",
+          }}
+          
+          // Stats
+          stats={currentCause.moreInfo.stats}
+          
+          // About Section
+          aboutTitle={currentCause.moreInfo.aboutTitle}
+          aboutDescription={currentCause.moreInfo.aboutDescription}
+          aboutImage={currentCause.moreInfo.aboutImage}
+          missionTitle={currentCause.moreInfo.missionTitle}
+          missionDescription={currentCause.moreInfo.missionDescription}
+          missionPoints={currentCause.moreInfo.missionPoints}
+          
+          // Objectives
+          objectives={currentCause.moreInfo.objectives}
+          
+          // Programs
+          programs={currentCause.moreInfo.programs}
+          
+          // Achievements
+          achievements={currentCause.moreInfo.achievements}
+          
+          // Testimonials
+          testimonials={currentCause.moreInfo.testimonials}
+          
+          // Impact Section
+          impactTitle={currentCause.moreInfo.impactTitle}
+          impactDescription={currentCause.moreInfo.impactDescription}
+          impactPoints={currentCause.moreInfo.impactPoints}
+          impactImage={currentCause.moreInfo.impactImage}
+          
+          // CTA Section
+          ctaTitle={currentCause.moreInfo.ctaTitle}
+          ctaDescription={currentCause.moreInfo.ctaDescription}
+          ctaDonateLink="/donate"
+          ctaVolunteerLink="/volunteer"
+        />
+      </div>
+
+       <div className=" py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center bg-yellow-50 px-4 py-2 rounded-full mb-4">
+                  <HelpCircle className="w-5 h-5 mr-2 text-amber-600" />
+                  <span className="text-sm font-medium text-amber-600">Got Questions?</span>
+                </div>
+                <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Find answers to common questions about our organization, donations, volunteering, and more.
+                </p>
               </div>
-            ))}
-          </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Still have questions?</p>
-            <a
-              href="mailto:info@hro.org.np?subject=Support%20Request&body=Hello%20Support%2C%0A%0AI%20have%20a%20question%20regarding..."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
-                Contact Our Support Team
-              </button>
-            </a>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-yellow-200 transition-colors">
+                    <button
+                      onClick={() => toggleFAQ(index)}
+                      className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-yellow-50 transition-colors"
+                    >
+                      <h3 className="font-semibold text-gray-800 pr-4">{faq.question}</h3>
+                      {openFAQ === index ? (
+                        <ChevronUp className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                      )}
+                    </button>
+                    {openFAQ === index && (
+                      <div className="px-6 pb-4">
+                        <div className="border-t border-gray-200 pt-4">
+                          <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center mt-12">
+                <p className="text-gray-600 mb-4">Still have questions?</p>
+                <a
+                  href="mailto:info@hro.org.np?subject=Support%20Request&body=Hello%20Support%2C%0A%0AI%20have%20a%20question%20regarding..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors">
+                    Contact Our Support Team
+                  </button>
+                </a>
+              </div>
           </div>
-        </div>
       </div>
-      </div>
+      
+      
       
     </div>
   )

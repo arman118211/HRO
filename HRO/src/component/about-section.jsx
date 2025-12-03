@@ -8,7 +8,7 @@ export default function AboutSection() {
   const stats = [
     { icon: Users, number: "50K+", label: "Lives Impacted" },
     { icon: Heart, number: "1M+", label: "Donations Received" },
-    { icon: Globe, number: "25+", label: "Countries Served" },
+    { icon: Globe, number: "8+", label: "Countries Served" },
     { icon: Award, number: "15+", label: "Years of Service" },
   ]
 

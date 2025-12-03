@@ -106,12 +106,12 @@ export default function PartnerAffiliatesSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">
-              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">14+</div>
-              <div className="text-gray-600 font-medium">Global Partners</div>
+              <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">8+</div>
+              <div className="text-gray-600 font-medium">Countries Reached</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">
               <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">8+</div>
-              <div className="text-gray-600 font-medium">Countries Reached</div>
+              <div className="text-gray-600 font-medium">Districts reached</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-amber-100">
               <div className="text-2xl md:text-3xl font-bold text-amber-600 mb-2">10M+</div>

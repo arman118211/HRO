@@ -17,33 +17,39 @@ import CareersPage from "./component/CareersPage"
 import DonationPage from "./component/DonationPage"
 import LanguageSelector from "./component/LanguageSelector"
 import ShareButton from "./component/ShareButton"
+import PrivacyPolicy from "./component/PrivacyPolicy"
+import TermsOfService from "./component/TermsOfService"
 
 export default function App() {
   return (
     <Router>
       <Navbar />
-      <LanguageSelector/>
-      <ShareButton/>
-      <ScrollToTop/>
+      <LanguageSelector />
+      <ShareButton />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/program/:id" element={<ProgramDetail />} />
         <Route path="/causes/:causeType" element={<DynamicCauses />} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path="/campaign/:campaignId" element={<CampaignDetailPage/>} />
-        <Route path="/volunteer" element={<VolunteerPage/>} />
-        <Route path="/fundraiser" element={<FundRaiser/>} />
-        <Route path="/blog&news" element={<BlogNewsPage/>} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/campaign/:campaignId" element={<CampaignDetailPage />} />
+        <Route path="/volunteer" element={<VolunteerPage />} />
+        <Route path="/fundraiser" element={<FundRaiser />} />
+        <Route path="/blog&news" element={<BlogNewsPage />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
         <Route path="/reports" element={<AnnualReports />} />
-        <Route path="/career" element={<CareersPage/>} />
-        <Route path="/donate" element={<DonationPage/>} />
+        <Route path="/career" element={<CareersPage />} />
+        <Route path="/donate" element={<DonationPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
 
-        
-        
-        
-        
+
+
+
+
+
+
       </Routes>
       <Footer />
     </Router>

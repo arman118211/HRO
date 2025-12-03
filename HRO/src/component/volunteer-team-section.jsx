@@ -221,7 +221,7 @@ export default function VolunteerTeamSection() {
           {[
             { number: "50+", label: "Active Volunteers", icon: Users },
             { number: "10K+", label: "Lives Impacted", icon: Heart },
-            { number: "8+", label: "Districts  + covered", icon: Globe },
+            { number: "8+", label: "Countries", icon: Globe },
             { number: "100+", label: "Projects Completed", icon: Award },
           ].map((stat, index) => (
             <div key={index} className="text-center group">

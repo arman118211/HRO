@@ -1,6 +1,7 @@
 "use client"
 
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Play } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
   const socialLinks = [
@@ -121,12 +122,12 @@ export default function Footer() {
               © 2023 Human Relief Organization Nepal. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-background transition-colors duration-200">
+              <Link to="/privacy-policy" className="text-background/60 hover:text-background transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-background/60 hover:text-background transition-colors duration-200">
+              </Link>
+              <Link to="/terms-of-service" className="text-background/60 hover:text-background transition-colors duration-200">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
