@@ -45,7 +45,7 @@ export default function VolunteerForm() {
       )
 
       setSubmitted(true)
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -72,7 +72,7 @@ export default function VolunteerForm() {
       <div className="absolute top-10 right-1/4 w-72 h-72 bg-gradient-to-r from-[#D4AF37]/6 to-yellow-300/6 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 left-1/4 w-64 h-64 bg-gradient-to-l from-yellow-200/8 to-[#D4AF37]/8 rounded-full blur-2xl"></div>
       <div className="absolute top-1/3 left-10 w-48 h-48 bg-gradient-to-r from-yellow-100/5 to-[#D4AF37]/5 rounded-full blur-2xl"></div>
-      
+
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-30"></div>
 
@@ -93,13 +93,13 @@ export default function VolunteerForm() {
         <form onSubmit={onSubmit} className="relative rounded-3xl border-2 border-[#D4AF37]/15 bg-gradient-to-br from-white via-amber-50/10 to-yellow-50/15 p-8 sm:p-12 lg:p-16 shadow-xl hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-500 overflow-hidden">
           {/* Form background glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/3 to-yellow-200/3 opacity-50 rounded-3xl "></div>
-          
+
           {/* Decorative corner elements */}
           <div className="absolute top-6 left-6 w-8 h-8 border-l-2 border-t-2 border-[#D4AF37]/30 rounded-tl-lg"></div>
           <div className="absolute top-6 right-6 w-8 h-8 border-r-2 border-t-2 border-[#D4AF37]/30 rounded-tr-lg"></div>
           <div className="absolute bottom-6 left-6 w-8 h-8 border-l-2 border-b-2 border-[#D4AF37]/30 rounded-bl-lg"></div>
           <div className="absolute bottom-6 right-6 w-8 h-8 border-r-2 border-b-2 border-[#D4AF37]/30 rounded-br-lg"></div>
-          
+
           <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
@@ -108,7 +108,7 @@ export default function VolunteerForm() {
                 </label>
                 <input
                   id="name"
-                  name="from_name"
+                  name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
@@ -116,7 +116,7 @@ export default function VolunteerForm() {
                   placeholder="Your full name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-base font-semibold text-[#111827] mb-3">
                   Email Address *
@@ -126,7 +126,7 @@ export default function VolunteerForm() {
                   <input
                     id="email"
                     type="email"
-                    name="from_email"
+                    name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -135,7 +135,7 @@ export default function VolunteerForm() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="phone" className="block text-base font-semibold text-[#111827] mb-3">
                   Phone Number
@@ -152,7 +152,7 @@ export default function VolunteerForm() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="location" className="block text-base font-semibold text-[#111827] mb-3">
                   Location
@@ -197,7 +197,7 @@ export default function VolunteerForm() {
                   <option>Advocacy</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="availability" className="block text-base font-semibold text-[#111827] mb-3">
                   Availability *
@@ -220,7 +220,7 @@ export default function VolunteerForm() {
                   <option>Remote</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="hours" className="block text-base font-semibold text-[#111827] mb-3">
                   Hours per Week *
@@ -238,7 +238,7 @@ export default function VolunteerForm() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-base font-semibold text-[#111827] mb-3">
                   Tell Us More About Yourself
@@ -263,7 +263,7 @@ export default function VolunteerForm() {
                 By applying, you agree to our code of conduct and safety guidelines.
               </p>
             </div>
-            
+
             <button
               type="submit"
               disabled={submitting || submitted}
@@ -271,7 +271,7 @@ export default function VolunteerForm() {
             >
               {/* Button background animation */}
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               <span className="relative z-10 flex items-center gap-3">
                 {submitted ? (
                   <>
@@ -296,12 +296,12 @@ export default function VolunteerForm() {
                   </>
                 )}
               </span>
-              
+
               {/* Sparkle effects on success */}
               {submitted && (
                 <div className="absolute inset-0 pointer-events-none">
                   <Sparkles className="absolute top-3 right-3 h-5 w-5 text-yellow-400 animate-pulse" />
-                  <Sparkles className="absolute bottom-3 left-3 h-4 w-4 text-[#D4AF37] animate-pulse" style={{animationDelay: '0.5s'}} />
+                  <Sparkles className="absolute bottom-3 left-3 h-4 w-4 text-[#D4AF37] animate-pulse" style={{ animationDelay: '0.5s' }} />
                 </div>
               )}
             </button>

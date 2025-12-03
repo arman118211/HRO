@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send, 
-  User, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  User,
   MessageSquare,
   Heart,
   Users,
@@ -67,7 +67,7 @@ const ContactPage = () => {
       );
 
       setIsSubmitted(true);
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -97,13 +97,13 @@ const ContactPage = () => {
 
   // Carousel navigation functions
   const nextTestimonial = () => {
-    setCurrentTestimonialIndex((prevIndex) => 
+    setCurrentTestimonialIndex((prevIndex) =>
       prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
     );
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonialIndex((prevIndex) => 
+    setCurrentTestimonialIndex((prevIndex) =>
       prevIndex - 3 < 0 ? Math.floor((testimonials.length - 1) / 3) * 3 : prevIndex - 3
     );
   };
@@ -204,7 +204,7 @@ const ContactPage = () => {
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -translate-y-32 translate-x-32"></div>
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-white opacity-5 rounded-full translate-y-32 -translate-x-32"></div>
-        
+
         <div className="relative max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Heart className="w-5 h-5 mr-2 text-red-300" />
@@ -238,7 +238,7 @@ const ContactPage = () => {
                 Let's Start a Conversation
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Fill out the form below and our team will get back to you within 24 hours. 
+                Fill out the form below and our team will get back to you within 24 hours.
                 We're excited to hear about your ideas and how we can work together.
               </p>
             </div>
@@ -251,7 +251,7 @@ const ContactPage = () => {
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="text"
-                      name="from_name"
+                      name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
@@ -260,14 +260,14 @@ const ContactPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Email Address *</label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="email"
-                      name="from_email"
+                      name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-amber-500 focus:ring-2 focus:ring-yellow-100 transition-all duration-200 outline-none"
@@ -293,7 +293,7 @@ const ContactPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-gray-700">Subject *</label>
                   <select
@@ -366,7 +366,7 @@ const ContactPage = () => {
                 )}
               </button>
             </form>
-            
+
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold mb-3">Emergency Contact</h3>
               <p className="mb-4 opacity-90">
@@ -406,7 +406,7 @@ const ContactPage = () => {
                     <p className="text-gray-600">Ward No. 02, District: Kapilvastu Lumbini, Nepal</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4 p-4 bg-green-50 rounded-xl">
                   <div className="bg-green-500 p-3 rounded-full">
                     <Phone className="w-6 h-6 text-white" />
@@ -417,7 +417,7 @@ const ContactPage = () => {
                     <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4 p-4 bg-amber-50 rounded-xl">
                   <div className="bg-amber-600 p-3 rounded-full">
                     <Mail className="w-6 h-6 text-white" />
@@ -428,7 +428,7 @@ const ContactPage = () => {
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4 p-4 bg-orange-50 rounded-xl">
                   <div className="bg-orange-500 p-3 rounded-full">
                     <Clock className="w-6 h-6 text-white" />
@@ -559,7 +559,7 @@ const ContactPage = () => {
             >
               <ChevronLeft className="w-6 h-6 text-amber-600" />
             </button>
-            
+
             <button
               onClick={nextTestimonial}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-amber-50 transition-colors z-10"
@@ -571,8 +571,8 @@ const ContactPage = () => {
             {/* Testimonials Grid */}
             <div className="grid md:grid-cols-3 gap-8 px-4">
               {currentTestimonials.map((testimonial, index) => (
-                <div 
-                  key={currentTestimonialIndex + index} 
+                <div
+                  key={currentTestimonialIndex + index}
                   className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -595,11 +595,10 @@ const ContactPage = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonialIndex(index * 3)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    currentTestimonialIndex === index * 3 
-                      ? 'bg-amber-500' 
-                      : 'bg-gray-300 hover:bg-amber-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors ${currentTestimonialIndex === index * 3
+                    ? 'bg-amber-500'
+                    : 'bg-gray-300 hover:bg-amber-300'
+                    }`}
                   aria-label={`Go to testimonial group ${index + 1}`}
                 />
               ))}
