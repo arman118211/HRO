@@ -24,7 +24,17 @@ import {
   Sparkles,
   Home,
   Droplets,
-  Book
+  Book,
+  Snowflake,
+  Scissors ,
+  School ,
+  Building ,
+  Stethoscope ,
+  Eye ,
+  Bus ,
+
+
+  
 } from "lucide-react"
 
 // Mock data - in real app, this would come from your API/database
@@ -382,6 +392,417 @@ const campaignsData = {
       }
     ]
   },
+  "winter-relief": {
+  id: "winter-relief",
+  title: "Winter Relief Appeal",
+  subtitle: "Bring Warmth and Hope",
+  description:
+    "Provide blankets, warm clothing, and emergency aid to vulnerable families facing harsh winters.",
+  icon: Snowflake,
+  heroImage: "/mobile_view/12.Mobile.webp",
+  fullDescription:
+    "Winters in high-altitude and poor regions can be deadly for families without proper clothing or shelter. Your support delivers blankets, jackets, food kits, and heating supplies to protect families from life-threatening cold.",
+
+  goalAmount: 70000,
+  raisedAmount: 38900,
+  donorsCount: 310,
+  daysLeft: 38,
+
+  impact: {
+    current: "Over 10,000 families supported during winter emergencies",
+    stats: [
+      { label: "Blankets Distributed", value: "20,000+" },
+      { label: "Warm Clothing Kits", value: "12,000+" },
+      { label: "Villages Helped", value: "80+" },
+      { label: "Emergency Food Kits", value: "5,500+" }
+    ]
+  },
+
+  location: "Cold Regions of Nepal & Northern India",
+  startDate: "November 2024",
+  endDate: "March 2025",
+
+  provisions: [
+    "Thermal blankets",
+    "Woolen sweaters and jackets",
+    "Children’s winter kits",
+    "Emergency food supplies",
+    "Firewood & heating support"
+  ],
+
+  stories: [
+    {
+      name: "Rahim",
+      age: 45,
+      story:
+        "The winter kit arrived just in time. It helped protect my children during freezing nights.",
+      image:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 27, 2025",
+      title: "Winter Kit Preparation Started",
+      content:
+        "Our team has begun assembling kits for the upcoming winter season."
+    }
+  ]
+},
+"sewing-skills-women": {
+  id: "sewing-skills-women",
+  title: "Sewing Skills for Women",
+  subtitle: "Empowering Women Through Livelihood Training",
+  description:
+    "Provide sewing training and tools to help women achieve financial independence.",
+  icon: Scissors,
+  heroImage: "/mobile_view/09.Mobile.webp",
+  fullDescription:
+    "Women in low-income communities often lack access to income opportunities. This program offers sewing training, materials, and startup support, enabling women to earn from home or start small tailoring shops.",
+
+  goalAmount: 30000,
+  raisedAmount: 17400,
+  donorsCount: 160,
+  daysLeft: 48,
+
+  impact: {
+    current: "Over 1,500 women trained in tailoring & small business skills",
+    stats: [
+      { label: "Women Trained", value: "1,500+" },
+      { label: "Machines Distributed", value: "600+" },
+      { label: "Business Startups", value: "300+" },
+      { label: "Communities Reached", value: "45" }
+    ]
+  },
+
+  location: "Women’s Centers in Nepal & India",
+  startDate: "February 2024",
+  endDate: "January 2025",
+
+  provisions: [
+    "Professional sewing courses",
+    "Sewing machines for graduates",
+    "Cloth & training supplies",
+    "Business and marketing guidance",
+    "Ongoing mentorship support"
+  ],
+
+  stories: [
+    {
+      name: "Shanti",
+      age: 28,
+      story:
+        "Learning sewing helped me support my children and start my own small tailoring service.",
+      image:
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 20, 2025",
+      title: "New Batch Started",
+      content:
+        "A new batch of 80 women began their training this week at our community center."
+    }
+  ]
+},
+"educate-child": {
+  id: "educate-child",
+  title: "Educate a Child",
+  subtitle: "Empower a Generation Through Knowledge",
+  description:
+    "Sponsor a child's education and give them the opportunity to break the cycle of poverty.",
+  icon: School,
+  heroImage: "/mobile_view/07.Mobile.webp",
+  fullDescription:
+    "Thousands of children dream of education but lack the most basic resources. Your sponsorship covers school fees, uniforms, books, meals, and a supportive environment for children to flourish.",
+
+  goalAmount: 40000,
+  raisedAmount: 26450,
+  donorsCount: 280,
+  daysLeft: 55,
+
+  impact: {
+    current: "Over 3,000 children sponsored across three countries",
+    stats: [
+      { label: "Children Sponsored", value: "3,000+" },
+      { label: "Meals Provided", value: "500,000+" },
+      { label: "Scholarships Awarded", value: "450+" },
+      { label: "After-School Centers", value: "20+" }
+    ]
+  },
+
+  location: "Nepal, India & Bangladesh",
+  startDate: "January 2024",
+  endDate: "December 2024",
+
+  provisions: [
+    "School uniforms & shoes",
+    "Books, stationery, and learning materials",
+    "Tuition fees",
+    "Nutritious mid-day meals",
+    "After-school mentorship"
+  ],
+
+  stories: [
+    {
+      name: "Farhan",
+      age: 9,
+      story:
+        "I want to become a pilot one day. Sponsorship helped me go to school regularly and dream bigger.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 22, 2025",
+      title: "New Learning Center Opened",
+      content:
+        "A new after-school center was inaugurated to support 120 children with daily tutoring."
+    }
+  ]
+},
+"build-a-school": {
+  id: "build-a-school",
+  title: "Build a School",
+  subtitle: "Empower a Generation Through Education",
+  description:
+    "Help construct fully equipped schools that uplift entire communities.",
+  icon: Building,
+  heroImage: "/mobile_view/02.Mobile.webp",
+  fullDescription:
+    "Many villages lack proper school buildings, forcing children to learn in unsafe or temporary spaces. Your support helps us build durable, modern schools with classrooms, libraries, and sanitation facilities.",
+
+  goalAmount: 150000,
+  raisedAmount: 82400,
+  donorsCount: 410,
+  daysLeft: 90,
+
+  impact: {
+    current: "12 schools built, impacting more than 7,000 children",
+    stats: [
+      { label: "Schools Built", value: "12" },
+      { label: "Students Enrolled", value: "7,000+" },
+      { label: "Classrooms Constructed", value: "85+" },
+      { label: "Communities Impacted", value: "20+" }
+    ]
+  },
+
+  location: "Rural Nepal & Himalayan Regions",
+  startDate: "May 2024",
+  endDate: "May 2026",
+
+  provisions: [
+    "New classroom construction",
+    "Sanitation and clean water facilities",
+    "Libraries and reading corners",
+    "Playgrounds and activity areas",
+    "Teacher training & school management support"
+  ],
+
+  stories: [
+    {
+      name: "Teacher Lakshmi",
+      age: 40,
+      story:
+        "Teaching in a proper classroom with resources has transformed learning for our village children.",
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616c0763c52?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 30, 2025",
+      title: "New Foundation Laid",
+      content:
+        "Construction for a new school building has started in a remote mountain village."
+    }
+  ]
+},
+"medical-camp-support": {
+  id: "medical-camp-support",
+  title: "Sponsor a Patient at a Free Medical Camp",
+  subtitle: "Healthcare for the Unreachable",
+  description:
+    "Provide essential medical checkups, medicines, and treatments for underserved communities.",
+  icon: Stethoscope,
+  heroImage: "/mobile_view/06.Mobile.webp",
+  fullDescription:
+    "Millions lack access to basic healthcare. Our free medical camps bring doctors, medicines, and diagnostic services to remote areas. By sponsoring a patient, you help save lives, prevent diseases, and improve long-term health outcomes.",
+
+  goalAmount: 50000,
+  raisedAmount: 28800,
+  donorsCount: 190,
+  daysLeft: 70,
+
+  impact: {
+    current: "Over 20,000 individuals treated through free medical camps",
+    stats: [
+      { label: "Patients Treated", value: "20,000+" },
+      { label: "Medicines Provided", value: "50,000+" },
+      { label: "Camps Organized", value: "85" },
+      { label: "Doctors & Volunteers", value: "200+" }
+    ]
+  },
+
+  location: "Remote Villages in Nepal & Bihar",
+  startDate: "March 2024",
+  endDate: "March 2025",
+
+  provisions: [
+    "General health checkups",
+    "Free medicines and prescriptions",
+    "Basic diagnostic tests",
+    "Emergency treatments",
+    "Women & child care services"
+  ],
+
+  stories: [
+    {
+      name: "Rashida",
+      age: 29,
+      story:
+        "The medical camp identified my anemia early and provided treatment. It saved my life.",
+      image:
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 18, 2025",
+      title: "Free Camp Treats 600+ Patients",
+      content:
+        "A major camp was conducted in a flood-affected village providing medical help to over 600 patients."
+    }
+  ]
+},
+"cataract-surgery": {
+  id: "cataract-surgery",
+  title: "Sponsor a Cataract Surgery",
+  subtitle: "Restore Sight, Restore Hope",
+  description: "Help restore vision for those suffering from cataracts by sponsoring life-changing surgery.",
+  icon: Eye,
+  heroImage: "/mobile_view/04.Mobile.webp",
+  fullDescription:
+    "Cataracts are the leading cause of blindness in low-income communities, yet the cure is simple and affordable. Your sponsorship provides free cataract surgeries, restoring sight and independence to elderly and low-income individuals.",
+
+  goalAmount: 60000,
+  raisedAmount: 41800,
+  donorsCount: 340,
+  daysLeft: 40,
+
+  impact: {
+    current: "Over 900 successful cataract surgeries completed",
+    stats: [
+      { label: "Surgeries Sponsored", value: "900+" },
+      { label: "Vision Restored", value: "900+" },
+      { label: "Medical Camps Held", value: "50+" },
+      { label: "Volunteer Doctors", value: "30+" }
+    ]
+  },
+
+  location: "Rural Clinics in Nepal & India",
+  startDate: "January 2024",
+  endDate: "December 2024",
+
+  provisions: [
+    "Free eye checkups",
+    "Cataract removal surgery",
+    "Post-surgery medication",
+    "Transport for patients",
+    "Follow-up care and vision monitoring"
+  ],
+
+  stories: [
+    {
+      name: "Kamala Devi",
+      age: 62,
+      story:
+        "I had lost hope of seeing my grandchildren clearly. After surgery, my life feels bright again.",
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616c0763c52?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  updates: [
+    {
+      date: "Aug 23, 2025",
+      title: "150 New Surgeries Completed",
+      content:
+        "A two-day medical camp successfully restored sight to 150 patients."
+    }
+  ]
+},
+"school-bus-support": {
+  id: "school-bus-support",
+  title: "Sponsor a School Bus",
+  subtitle: "Help Children Reach School Safely",
+  description: "Ensure safe and reliable transportation so children can reach school without barriers.",
+  icon: Bus,
+  heroImage: "/mobile_view/08.Mobile.webp",
+  fullDescription:
+    "Many children walk long distances through unsafe routes just to reach school. Your sponsorship helps provide buses that ensure children arrive safely, on time, and ready to learn. A school bus doesn't just transport children—it protects their dreams.",
+
+  // Financial details
+  goalAmount: 85000,
+  raisedAmount: 39200,
+  donorsCount: 214,
+  daysLeft: 58,
+
+  // Impact
+  impact: {
+    current: "Over 1,200 children now travel safely to school every day",
+    stats: [
+      { label: "Buses Sponsored", value: "18" },
+      { label: "Daily Riders", value: "1,200+" },
+      { label: "Villages Covered", value: "35+" },
+      { label: "Accidents Prevented", value: "100+" }
+    ]
+  },
+
+  // Location & Time
+  location: "Hilly & Rural Routes in Nepal",
+  startDate: "April 2024",
+  endDate: "April 2025",
+
+  // Provisions
+  provisions: [
+    "Safe and comfortable transportation",
+    "Trained and responsible drivers",
+    "Fuel and maintenance support",
+    "Pickup and drop-off for remote villages",
+    "Special access routes for underserved communities"
+  ],
+
+  // Stories
+  stories: [
+    {
+      name: "Suman",
+      age: 10,
+      story:
+        "I used to walk 6 km to school every day. With the new school bus, I reach safely and have more energy to study.",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+
+  // Updates
+  updates: [
+    {
+      date: "Aug 26, 2025",
+      title: "New Bus Route Started",
+      content:
+        "A new transportation route was launched to cover 5 additional remote villages."
+    }
+  ]
+},
+
 
 }
 
@@ -508,12 +929,12 @@ export default function CampaignDetailPage() {
               <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-r from-amber-300/30 to-orange-300/30 rounded-full blur-2xl animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-r from-orange-300/30 to-amber-300/30 rounded-full blur-xl animate-pulse delay-75"></div>
               
-              <div className="relative group">
+              <div className="relative group ">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
                 <img
                   src={campaign.heroImage}
                   alt={campaign.title}
-                  className="relative w-full h-72 lg:h-96 object-cover rounded-3xl shadow-2xl transition-transform group-hover:scale-[1.02]"
+                  className="relative w-full h-auto  object-cover rounded-3xl shadow-2xl transition-transform group-hover:scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-3xl" />
                 

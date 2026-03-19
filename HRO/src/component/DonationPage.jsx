@@ -1671,7 +1671,7 @@ const DonationPage = () => {
                   </motion.div>
                 )}
 
-                <div className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-xl">
+                <div className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-xl ">
                   <span className="text-gray-600">Processing Fee</span>
                   <span className="text-gray-600 font-medium">$0</span>
                 </div>

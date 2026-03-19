@@ -10,11 +10,12 @@ export default function PartnerAffiliatesSection() {
     { name: "Oxfam", logo: "/partner/part7.png" },
     { name: "Save the Children", logo: "/partner/part8.jpg" },
     { name: "World Vision", logo: "/partner/part9.jpg" },
-    { name: "Habitat for Humanity", logo: "/partner/part11.png" },
-    { name: "Feeding America", logo: "/partner/part12.png" },
+    
+    
     { name: "United Way", logo: "/partner/part13.png" },
-    { name: "Amnesty International", logo: "/partner/part14.png" },
-    { name: "Greenpeace", logo: "/partner/part15.png" },
+
+    // { name: "Habitat for Humanity", logo: "/partner/part11.png" },
+    
   ]
 
   const duplicatedPartners = [...partners, ...partners, ...partners]

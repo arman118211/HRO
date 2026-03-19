@@ -19,6 +19,8 @@ import LanguageSelector from "./component/LanguageSelector"
 import ShareButton from "./component/ShareButton"
 import PrivacyPolicy from "./component/PrivacyPolicy"
 import TermsOfService from "./component/TermsOfService"
+import SponsorshipPage from "./component/SponserShip"
+import SponsorshipDetail from "./component/SponserDetailPage"
 
 export default function App() {
   return (
@@ -43,6 +45,10 @@ export default function App() {
         <Route path="/donate" element={<DonationPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/sponsorship" element={<SponsorshipPage />} />
+        <Route path="/sponsorship/:id" element={<SponsorshipDetail />} />
+
+
 
 
 

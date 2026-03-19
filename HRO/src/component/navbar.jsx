@@ -43,6 +43,7 @@ export default function Navbar() {
   const involvedDropdown = [
     { name: "Volunteer", href: "/volunteer" },
     { name: "Fundraiser", href: "/fundraiser" },
+    { name: "sponsorship", href: "/sponsorship" },
     
   ]
 
@@ -163,13 +164,13 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 "
+                    className="absolute top-full left-0 mt-0 w-56 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 "
                   >
                     {item.dropdown.map((dropItem) => (
                       <Link
                         key={dropItem.name}
                         to={dropItem.href}
-                        className="block px-4 py-2 text-slate-600 hover:text-yellow-600 hover:bg-yellow-50 transition-colors duration-200"
+                        className="block px-4 py-2 text-slate-600 hover:text-yellow-600 hover:bg-yellow-50 transition-colors duration-200 "
                         onClick={() => setActiveDropdown(null)}
                       >
                         {dropItem.name}
@@ -208,7 +209,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden bg-white border-t border-slate-200 max-h-[calc(100vh-4rem)] overflow-y-auto"
             >
-              <div className="py-4 px-4 space-y-2">
+              <div className="py-4 px-4 space-y-2 ">
                 {navItems.map((item) => (
                   <div key={item.name} className="border-b border-slate-100 pb-2 last:border-b-0">
                     {item.dropdown ? (

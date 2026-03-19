@@ -89,7 +89,7 @@ export default function ProgramsSection() {
             viewport={{ once: true }}
             className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
           >
-            We focus on four key areas that create lasting change and sustainable development in communities worldwide.
+            We focus on four key areas that create lasting change and sustainable development in communities of the Nepal.
           </motion.p>
         </div>
 

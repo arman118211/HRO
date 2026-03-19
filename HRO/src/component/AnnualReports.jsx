@@ -166,7 +166,7 @@ const AnnualReports = () => {
             >
               Embark on a journey through our <span className="text-yellow-600 font-bold">transformative impact</span>, 
               unwavering transparency, and relentless dedication to creating 
-              <span className="text-amber-600 font-bold"> positive change</span> in communities worldwide.
+              <span className="text-amber-600 font-bold"> positive change</span> in communities in the Nepal.
             </motion.p>
 
             <motion.div
@@ -392,7 +392,7 @@ const AnnualReports = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.4, duration: 0.8 }}
           >
-            Be the first to receive our latest reports, impact stories, and updates on groundbreaking initiatives that are changing lives around the world.
+            Be the first to receive our latest reports, impact stories, and updates on groundbreaking initiatives that are changing lives around the Nepal.
           </motion.p>
           
           <Link to='/contact'>

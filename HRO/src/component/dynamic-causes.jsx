@@ -234,7 +234,7 @@ export default function DynamicCauses() {
           "Our Education for All project focuses on providing accessible and equitable education to children in rural and marginalized communities of Nepal. We work to remove barriers such as poverty, distance, and lack of educational infrastructure.",
 
         aboutImage:
-          "https://oecdedutoday.com/wp-content/uploads/2021/06/Skills-outlook-2021-blog.jpg",
+          "/Education/School Funds.6.png",
 
         missionTitle: "Our Mission",
         missionDescription:
@@ -340,7 +340,7 @@ export default function DynamicCauses() {
         ],
 
         impactImage:
-          "https://cdn.teachstarter.com/fileserver/2019/07/kids-celebrating.jpg",
+          "/Education/School Funds.2.png",
 
         ctaTitle: "Help Us Educate Every Child",
         ctaDescription:
@@ -443,7 +443,7 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
         {
-          src: "https://www.cry.org/wp-content/themes/cry/images/child-health-and-nutrition/child-health-and-nutrition.jpg",
+          src: "/desktop_img/6.desktop.webp",
           alt: "Mountain",
           caption: "Beautiful Mountain",
           
@@ -485,7 +485,7 @@ export default function DynamicCauses() {
           "Many communities in Nepal lack basic medical facilities. Our healthcare project brings essential medical services directly to rural villages through mobile health camps, awareness programs, and preventive care initiatives.",
 
         aboutImage:
-          "https://www.unicef.org/sites/default/files/styles/media_large_image/public/UN0513076.jpg",
+          "/HealthCare/HealthCare1.png",
 
         missionTitle: "Our Mission",
         missionDescription:
@@ -568,7 +568,7 @@ export default function DynamicCauses() {
         ],
 
         impactImage:
-          "https://www.concernusa.org/wp-content/uploads/2020/09/nepal-768x439.jpg",
+          "/HealthCare/Untitled design (6).png  ",
 
         ctaTitle: "Support Healthcare in Nepal",
         ctaDescription:
@@ -709,7 +709,7 @@ export default function DynamicCauses() {
           "In Nepal, unemployment and migration are major challenges. Our livelihood initiative helps individuals gain practical skills to secure stable income and build sustainable communities.",
 
         aboutImage:
-          "https://www.ilo.org/global/photos/WCMS_348349/lang--en/index.htm",
+          "/Skill Development/8.png",
 
         missionTitle: "Our Mission",
         missionDescription:
@@ -782,7 +782,7 @@ export default function DynamicCauses() {
         ],
 
         impactImage:
-          "https://www.worldvision.org/wp-content/uploads/nepal-skills-training.jpg",
+          "/Skill Development/3.png",
 
         ctaTitle: "Support Skill Training",
         ctaDescription:
@@ -889,19 +889,14 @@ export default function DynamicCauses() {
         ],
         bannerImage:[
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            src: "/desktop_img/12.desktop.webp",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            src: "https://worldwaterreserve.com/wp-content/uploads/2018/05/lifewater.jpg",
             alt: "Forest",
             caption: "Forest Path",
-          },
-          {
-            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
-            alt: "Lake",
-            caption: "Lake Sunset",
           }
         ],
         moreInfo:{
@@ -930,7 +925,7 @@ export default function DynamicCauses() {
             "Access to clean water is a challenge in many parts of Nepal, especially in hill and mountain regions. Our Water for Life project provides safe drinking water, water tanks, filtration systems, and hygiene education.",
 
           aboutImage:
-            "https://www.unicef.org/sites/default/files/styles/media_large_image/public/UN0686654.jpg",
+            "/Water 4 Life/5cd77c86-7edd-4eae-b8e1-a21f92150907.png",
 
           missionTitle: "Our Mission",
           missionDescription:
@@ -1007,7 +1002,7 @@ export default function DynamicCauses() {
           ],
 
           impactImage:
-            "https://www.wateraid.org/sites/g/files/jkxoof211/files/2023-03/Nepal-clean-water.jpg",
+            "/Water 4 Life/a41fd61a-a3c7-4f8b-baca-29ddb57eb612.png",
 
           ctaTitle: "Bring Water to a Village",
           ctaDescription:
@@ -1115,7 +1110,7 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
           {
-            src: "https://sadgurufoundation.com/static/images/backgrounds/Orphanage-Banner-2.webp",
+            src: "/desktop_img/10.desktop.webp",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
@@ -1123,11 +1118,6 @@ export default function DynamicCauses() {
             src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
             alt: "Forest",
             caption: "Forest Path",
-          },
-          {
-            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
-            alt: "Lake",
-            caption: "Lake Sunset",
           }
         ],
       moreInfo:{
@@ -1156,7 +1146,7 @@ export default function DynamicCauses() {
           "Many children in Nepal lose parental care due to poverty, disasters, or social challenges. Our program provides a safe environment, education, emotional support, and basic needs so every child can grow with dignity.",
 
         aboutImage:
-          "https://www.savethechildren.org/content/dam/global/photos/countries/nepal/nepal-children.jpg",
+          "/OSP/1 (12).png",
 
         missionTitle: "Our Mission",
         missionDescription:
@@ -1251,7 +1241,7 @@ export default function DynamicCauses() {
         ],
 
         impactImage:
-          "https://www.worldvision.org/wp-content/uploads/2021/09/nepal-childcare.jpg",
+          "/OSP/1 (3).png",
 
         ctaTitle: "Give a Child Hope",
         ctaDescription:
@@ -1358,17 +1348,12 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            src: "/desktop_img/1.desktop.webp",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
-            alt: "Forest",
-            caption: "Forest Path",
-          },
-          {
-            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
+            src: "/desktop_img/3.desktop.webp",
             alt: "Lake",
             caption: "Lake Sunset",
           }
@@ -1399,7 +1384,7 @@ export default function DynamicCauses() {
             "Nepal faces extreme winter conditions in the mountains, floods during monsoons, and resource shortages during festivals. Our seasonal projects help vulnerable communities by fulfilling urgent needs during high-risk periods.",
 
           aboutImage:
-            "https://www.unicef.org/sites/default/files/styles/large/public/UN0286358.jpg",
+            "/Seasionals/127.png",
 
           missionTitle: "Our Mission",
           missionDescription:
@@ -1476,7 +1461,7 @@ export default function DynamicCauses() {
           ],
 
           impactImage:
-            "https://www.concern.net/sites/default/files/styles/hero/public/2018-12/nepal-winter-clothing.jpg",
+            "/Seasionals/Picture3 (1).png",
 
           ctaTitle: "Be a Part of Seasonal Support",
           ctaDescription:
@@ -1583,19 +1568,14 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-wide-banner.jpg",
+            src: "https://www.mmpc.in/wp-content/uploads/2023/06/disasters-banner.png",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvpC_LbiSgiIG7RBZDh01q7dpxVYKlFtd-ww&s",
             alt: "Forest",
             caption: "Forest Path",
-          },
-          {
-            src: "https://lh3.googleusercontent.com/proxy/WfMLbLiMzdoD5RmTGIu5SrtyCB8CzpBmZJeid0F36vOgtyfrcNE-Z_2_6VXoiuKNX8AuHS0DPiwm0DYiSX0Ml8295PLEyOMSCXbsIfBvQFAMbScMSamuP3GbhMymfnRm9SWc1w",
-            alt: "Lake",
-            caption: "Lake Sunset",
           }
         ],
       moreInfo:{
@@ -1624,7 +1604,7 @@ export default function DynamicCauses() {
           "Nepal is highly vulnerable to earthquakes, monsoon floods, and landslides. Our emergency relief program provides immediate support including food, shelter, medical aid, and rehabilitation assistance during crises.",
 
         aboutImage:
-          "https://www.unocha.org/sites/unocha/files/styles/medium/public/Nepal-Earthquake-Response.jpg",
+          "/Emergency Response/Nepal Earthquake10.JPG",
 
         missionTitle: "Our Mission",
         missionDescription:
@@ -1707,7 +1687,7 @@ export default function DynamicCauses() {
         ],
 
         impactImage:
-          "https://www.ifrc.org/sites/default/files/styles/16_9/public/2021-07/Nepal-Floods-Relief.jpg",
+          "/Emergency Response/1 (1).png",
 
         ctaTitle: "Help Us Respond Faster",
         ctaDescription:
@@ -1728,19 +1708,29 @@ export default function DynamicCauses() {
       "/HRO-2-img-41.png",
     ],
     healthcare: [
-      "/healthcare-program-hero-image.png",
-      "/emergency-relief-program-hero-image.png",
+      "/HealthCare/HealthCare4.png",
+      "/HealthCare/HealthCare5.png",
+      "/HealthCare/Untitled design (8).png",
       
     ],
     "skill-development": [
-      "/skill-development-program-hero-image.png",
-      "/seasonal-programs-program-hero-image.png",
-      "/HRO-2-img-41.png",
+      "/Skill Development/1.png",
+      "/Skill Development/4.png",
+      "/Skill Development/13.png",
+      "/Skill Development/10.png",
+      "/Skill Development/8.png",
+      "/Skill Development/7.png",
     ],
     "orphans-destitute-children": [
-      "/Orphans-Support-.1.png",
-      "/Seasonal-projects.jpg",
-      "/hr4.png",
+      "/OSP/1 (1).png",
+      "/OSP/1 (5).png",
+      "/OSP/1 (9).png",
+      "/OSP/1 (13).png",
+      "/OSP/1 (14).png",
+
+
+
+      
     ],
     "seasonal-programs": [
       "/Seasonal-projects.jpg",

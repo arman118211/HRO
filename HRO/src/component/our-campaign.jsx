@@ -10,6 +10,13 @@ import {
   ArrowUpRight,
   ChevronLeft,
   ChevronRight,
+  Bus,
+  Eye ,
+  Stethoscope ,
+  Building ,
+  School ,
+  Scissors ,
+  Snowflake 
 } from "lucide-react"
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
@@ -17,35 +24,96 @@ import { Link, useNavigate } from "react-router-dom"
 const campaigns = [
   {
     id: "education-fund",
-    title: "Education Fund",
-    description: "Provide books, tuition, and mentorship so children can learn, grow, and lead brighter futures.",
+    title: "Adopt a School, Educate a Generation",
+    description:
+      "Provide books, tuition, and mentorship so children can learn, grow, and lead brighter futures.",
     icon: BookOpen,
   },
   {
     id: "school-fund",
     title: "School Fund",
-    description: "Equip classrooms and support teachers with essential resources for quality education.",
+    description:
+      "Equip classrooms and support teachers with essential resources for quality education.",
     icon: GraduationCap,
   },
   {
     id: "orphan-support",
     title: "Orphan Support",
-    description: "Offer care, stability, and long-term support to orphans in need across our communities.",
+    description:
+      "Offer care, stability, and long-term support to orphans in need across our communities.",
     icon: HeartHandshake,
   },
   {
     id: "water-for-life",
     title: "Water for Life",
-    description: "Build and maintain wells to ensure safe, reliable water for families and villages.",
+    description:
+      "Build and maintain wells to ensure safe, reliable water for families and villages.",
     icon: Droplet,
   },
   {
     id: "sponsor-hafij-quran",
-    title: "Sponsor a Hafij Quran",
-    description: "Support students in memorizing the Quran by sponsoring education, lodging, and materials.",
+    title: "Sponsor a Hafiz of the Holy Quran",
+    description:
+      "Support students in memorizing the Quran by sponsoring education, lodging, and materials.",
     icon: BookMarked,
   },
-]
+  {
+    id: "school-bus-support",
+    title: "Help Children Reach School Safely – Sponsor a Bus",
+    description:
+      "Ensure safe and reliable transportation so children can access education without barriers.",
+    icon: Bus, // Lucide icon
+  },
+
+  {
+    id: "cataract-surgery",
+    title: "Sponsor a Cataract Surgery, Restore Sight",
+    description:
+      "Help restore vision for those suffering from cataracts by sponsoring life-changing surgery.",
+    icon: Eye, // Lucide icon
+  },
+
+  {
+    id: "medical-camp-support",
+    title: "Sponsor a Patient at a Free Medical Camp",
+    description:
+      "Provide essential medical checkups, medicines, and treatments for patients in underserved areas.",
+    icon: Stethoscope, // Lucide icon
+  },
+
+  {
+    id: "build-a-school",
+    title: "Build a School, Empower a Generation",
+    description:
+      "Contribute to constructing modern, fully equipped schools that transform entire communities.",
+    icon: Building, // Lucide icon
+  },
+
+  {
+    id: "educate-child",
+    title: "Educate a Child, Empower a Generation",
+    description:
+      "Sponsor a child's education and give them the opportunity to break the cycle of poverty.",
+    icon: School, // Lucide icon
+  },
+
+  {
+    id: "sewing-skills-women",
+    title: "Sewing Skills, Stronger Women",
+    description:
+      "Empower women with vocational sewing training, helping them achieve independence and income.",
+    icon: Scissors, // Lucide icon
+  },
+
+  {
+    id: "winter-relief",
+    title: "Winter Relief Appeal – Bring Warmth and Hope",
+    description:
+      "Provide blankets, warm clothing, and emergency aid to families struggling through harsh winters.",
+    icon: Snowflake, // Lucide icon
+  },
+];
+
 
 export default function OurCampaignSection() {
   const navigate = useNavigate()
