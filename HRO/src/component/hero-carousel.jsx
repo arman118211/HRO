@@ -11,7 +11,7 @@ export default function HeroCarousel() {
     {
       image: "./slider-p-1-2.png",
       title: "Education for All",
-      description: "Providing quality education to children in underserved communities worldwide.",
+      description: "Providing quality education to children in underserved communities Nepal.",
     },
     {
       image: "https://www.wikiimpact.com/wp-content/uploads/2022/03/joshua-lanzarini-JQwzKcHLHoc-unsplash-scaled-1.jpg",
@@ -104,7 +104,7 @@ export default function HeroCarousel() {
                 </h1>
 
                 <p className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl">
-                  Join our mission to create lasting change in communities worldwide. Every donation, every volunteer
+                  Join our mission to create lasting change in communities Nepal. Every donation, every volunteer
                   hour, every shared story brings hope to those who need it most.
                 </p>
               </motion.div>

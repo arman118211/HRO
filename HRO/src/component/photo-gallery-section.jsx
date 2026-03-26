@@ -53,7 +53,7 @@ export default function PartnerAffiliatesSection() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mt-6"
           >
-            Working together with leading organizations worldwide to create lasting impact and positive change in
+            Working together with leading organizations Nepal to create lasting impact and positive change in
             communities everywhere.
           </motion.p>
         </div>

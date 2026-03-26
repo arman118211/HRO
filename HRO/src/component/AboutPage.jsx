@@ -958,7 +958,7 @@ const AboutPage = () => {
 						</h2>
 						<p className="text-lg text-gray-600 max-w-3xl mx-auto">
 							Our commitment to excellence and transparency has been recognized
-							by leading organizations worldwide.
+							by leading organizations Nepal.
 						</p>
 					</div>
 

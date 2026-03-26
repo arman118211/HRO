@@ -1030,7 +1030,7 @@ const DonationSection = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600"> Donate</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Join thousands of changemakers creating lasting impact in communities worldwide. Every donation, no matter
+              Join thousands of changemakers creating lasting impact in communities Nepal. Every donation, no matter
               the size, transforms lives.
             </p>
           </motion.div>

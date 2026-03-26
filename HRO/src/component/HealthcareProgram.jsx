@@ -64,7 +64,7 @@ export default function HealthcareProgram() {
     {
       name: "Priya Sharma", // Updated with maternal health success story
       age: 26,
-      location: "India",
+      location: "Nepal",
       story:
         "The maternal health program provided prenatal care throughout my pregnancy. Both my twins were born healthy, and I received postnatal support that ensured our complete recovery.",
       image: "/patient-priya-india-maternal.png",
@@ -184,7 +184,7 @@ export default function HealthcareProgram() {
                   >
                     <Sparkles className="h-6 w-6 text-yellow-300" />
                   </motion.div>
-                  <span className="text-blue-100 font-medium">Healing Communities Worldwide</span>
+                  <span className="text-blue-100 font-medium">Healing Communities Nepal</span>
                 </div>
 
                 <h1 className="text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent leading-tight">
@@ -467,7 +467,7 @@ export default function HealthcareProgram() {
                   Comprehensive <span className="text-[#2979FF]">Healthcare Solutions</span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Evidence-based healthcare initiatives designed to create sustainable health improvements in communities worldwide. Each program addresses specific health challenges with proven medical interventions and community engagement strategies.
+                  Evidence-based healthcare initiatives designed to create sustainable health improvements in communities Nepal. Each program addresses specific health challenges with proven medical interventions and community engagement strategies.
                 </p>
               </motion.div>
             </div>

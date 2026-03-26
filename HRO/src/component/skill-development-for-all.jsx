@@ -70,7 +70,7 @@ export default function SkillDevelopmentForAll() {
     {
       name: "Ahmed Hassan",
       age: 14,
-      location: "Kenya",
+      location: "Nepal",
       story: "The mobile library brought books to our village. Now I read every day and want to become a teacher.",
       image: "/student-ahmed-kenya-mobile-library.png",
       achievement: "Future Teacher",
@@ -78,7 +78,7 @@ export default function SkillDevelopmentForAll() {
     {
       name: "Priya Sharma",
       age: 17,
-      location: "India",
+      location: "Nepal",
       story: "The computer lab at our school opened new possibilities. I'm learning coding and web development.",
       image: "/student-priya-india-computer-lab.png",
       achievement: "Web Developer",
@@ -488,7 +488,7 @@ export default function SkillDevelopmentForAll() {
                   Comprehensive <span className="text-[#2979FF]">Education Solutions</span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Comprehensive initiatives designed to create lasting impact in education across communities worldwide.
+                  Comprehensive initiatives designed to create lasting impact in education across communities Nepal.
                   Each program is carefully crafted to address specific educational challenges.
                 </p>
               </motion.div>

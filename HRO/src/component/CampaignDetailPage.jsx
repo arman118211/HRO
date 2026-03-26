@@ -418,7 +418,7 @@ const campaignsData = {
     ]
   },
 
-  location: "Cold Regions of Nepal & Northern India",
+  location: "Cold Regions of Nepal ",
   startDate: "November 2024",
   endDate: "March 2025",
 
@@ -476,7 +476,7 @@ const campaignsData = {
     ]
   },
 
-  location: "Women’s Centers in Nepal & India",
+  location: "Women’s Centers in Nepal ",
   startDate: "February 2024",
   endDate: "January 2025",
 
@@ -534,7 +534,7 @@ const campaignsData = {
     ]
   },
 
-  location: "Nepal, India & Bangladesh",
+  location: "Nepal",
   startDate: "January 2024",
   endDate: "December 2024",
 
@@ -707,7 +707,7 @@ const campaignsData = {
     ]
   },
 
-  location: "Rural Clinics in Nepal & India",
+  location: "Rural Clinics in Nepal ",
   startDate: "January 2024",
   endDate: "December 2024",
 

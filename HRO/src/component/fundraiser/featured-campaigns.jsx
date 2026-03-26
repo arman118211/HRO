@@ -9,7 +9,7 @@ const campaigns = [
   {
     id: "c1",
     title: "Clean Water for Rural Schools",
-    location: "Kisumu, Kenya",
+    location: "Kisumu, Nepal",
     goal: 25000,
     raised: 18400,
     image: "/water-for-life-program-hero-image.png",

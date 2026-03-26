@@ -49,7 +49,7 @@ export default function ProgramDetail() {
         "Offer scholarships for higher education",
         "Implement adult literacy programs",
       ],
-      locations: ["Rural Bangladesh", "Northern Kenya", "Eastern Guatemala"],
+      locations: ["Rural Bangladesh", "Northern Nepal", "Eastern Guatemala"],
       timeline: "2024-2026",
       budget: "$100,000",
       achievements: [
@@ -75,7 +75,7 @@ export default function ProgramDetail() {
         "Educate communities on water safety",
         "Establish water committees for sustainability",
       ],
-      locations: ["Sub-Saharan Africa", "Rural India", "Remote Philippines"],
+      locations: ["Sub-Saharan Africa", "Rural Nepal", "Remote Philippines"],
       timeline: "2024-2025",
       budget: "$80,000",
       achievements: [
@@ -128,8 +128,8 @@ export default function ProgramDetail() {
         "Support pregnant and lactating women with specialized nutrition packages"
       ],
       locations: [
-        "Rural communities in Maharashtra, India",
-        "Slum areas of Kolkata, India",
+        "Rural communities in Nepal",
+        "Slum areas of Nepal",
         "Underserved villages in Sindh, Pakistan"
       ],
       timeline: "2024-2026",

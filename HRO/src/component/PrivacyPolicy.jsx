@@ -230,7 +230,7 @@ export default function PrivacyPolicy() {
               At our organization, safeguarding your privacy isn't just a legal obligation—it's a fundamental value that guides everything we do. We believe that supporting our cause should never come at the expense of your personal security and privacy.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-              This comprehensive Privacy Policy explains in clear terms how we collect, use, protect, and respect your personal information. We encourage you to read through each section to understand your rights and our responsibilities. Your trust empowers us to create meaningful change in communities worldwide.
+              This comprehensive Privacy Policy explains in clear terms how we collect, use, protect, and respect your personal information. We encourage you to read through each section to understand your rights and our responsibilities. Your trust empowers us to create meaningful change in communities Nepal.
             </p>
           </div>
         </motion.div>

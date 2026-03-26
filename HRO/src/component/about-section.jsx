@@ -3,6 +3,7 @@
 import { Users, Heart, Globe, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ReadMore from "./helper/ReadMore";
 
 export default function AboutSection() {
 	const stats = [
@@ -39,7 +40,7 @@ export default function AboutSection() {
 						viewport={{ once: true }}
 						className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
 					>
-						Human Relief Organization Nepal (HRO Nepal) is a dedicated
+						<ReadMore text="Human Relief Organization Nepal (HRO Nepal) is a dedicated
 						non-governmental, non-commercial entity committed to enhancing the
 						lives of marginalized communities across Nepal. With a focus on
 						creating sustainable and positive change, HRO Nepal operates through
@@ -50,7 +51,7 @@ export default function AboutSection() {
 						malnutrition and food insecurity, offer free medical services,
 						support healthcare facilities, and respond to crises and natural
 						disasters. By tackling these critical areas, HRO Nepal strives to
-						uplift communities and foster a brighter, healthier future for all.
+						uplift communities and foster a brighter, healthier future for all." maxLength={250}/>
 					</motion.p>
 				</div>
 

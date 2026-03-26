@@ -125,7 +125,7 @@ export default function VolunteerTeamSection() {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our dedicated volunteers are the heart of our mission. Each brings unique skills, passion, and commitment to
-            creating positive change in communities worldwide.
+            creating positive change in communities Nepal.
           </p>
         </div>
 

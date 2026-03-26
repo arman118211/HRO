@@ -2562,7 +2562,7 @@ const DonationPage = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg sm:text-xl text-gray-600 leading-relaxed px-4"
             >
-              Join thousands of changemakers creating lasting impact in communities worldwide. Every donation, no matter
+              Join thousands of changemakers creating lasting impact in communities Nepal. Every donation, no matter
               the size, transforms lives.
             </motion.p>
           </motion.div>
