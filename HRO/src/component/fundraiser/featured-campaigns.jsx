@@ -11,7 +11,7 @@ const campaigns = [
     title: "Clean Water for Rural Schools",
     location: "Kisumu, Nepal",
     goal: 25000,
-    raised: 18400,
+    raised: 0,
     image: "/water-for-life-program-hero-image.png",
     path:"/causes/water-for-life"
   },
@@ -20,7 +20,7 @@ const campaigns = [
     title: "Emergency Relief Kits",
     location: "Hetauda, Nepal",
     goal: 40000,
-    raised: 29250,
+    raised: 0,
     image: "/f.png",
     path:"/causes/emergency-relief"
 
@@ -30,7 +30,7 @@ const campaigns = [
     title: "Education For All",
     location: "Niger State, Nigeria",
     goal: 30000,
-    raised: 22100,
+    raised: 0,
     image: "/p2.png",
     path:"/causes/education"
   },

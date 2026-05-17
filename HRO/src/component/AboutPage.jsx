@@ -334,18 +334,94 @@ const AboutPage = () => {
 		},
 	];
 	const partners = [
-		{ name: "UNICEF", logo: "/partner/part3.jpeg" },
-		{ name: "World Health Organization", logo: "/partner/part4.jpg" },
-		{ name: "Red Cross", logo: "/partner/part5.jpg" },
-		{ name: "Doctors Without Borders", logo: "/partner/part6.png" },
-		{ name: "Oxfam", logo: "/partner/part7.png" },
-		{ name: "Save the Children", logo: "/partner/part8.jpg" },
-		{ name: "World Vision", logo: "/partner/part9.jpg" },
-		// { name: "Habitat for Humanity", logo: "/partner/part11.png" },
-		{ name: "Feeding America", logo: "/partner/part12.png" },
-		{ name: "United Way", logo: "/partner/part13.png" },
-		// { name: "Amnesty International", logo: "/partner/part14.png" },
-		// { name: "Greenpeace", logo: "/partner/part15.png" },
+		{
+			name: "Al-I'tisam Relief Program Association, Malaysia",
+			logo: "/Partners/Al-I_tisam Relief Program Association, MALAYSIA.png",
+		},
+		{
+			name: "Bakhshin Charitable Foundation, Iraq",
+			logo: "/Partners/Bakhshin Charitable Foundation, Iraq.png",
+		},
+		{
+			name: "Children of Hope, Canada",
+			logo: "/Partners/Children of Hope, Canada.png",
+		},
+		{
+			name: "Children of Islamic Nation, Canada",
+			logo: "/Partners/Children of Islamic Nation, Canada.png",
+		},
+		{
+			name: "Danish Muslim Aid, Denmark",
+			logo: "/Partners/Danish Muslim Aid, Denmark.png",
+		},
+		{
+			name: "Doctors World Wide, Türkiye",
+			logo: "/Partners/Doctors World Wide, Türkiye.png",
+		},
+		{
+			name: "Global Ehsan Relief Malaysia",
+			logo: "/Partners/Global Ehsan Relief Malaysia.jpeg",
+		},
+		{
+			name: "Global Ehsan Relief Singapore",
+			logo: "/Partners/Global Ehsan Relief Singapore.png",
+		},
+		{
+			name: "Global Ehsan Relief Worldwide, UK",
+			logo: "/Partners/Global Ehsan Relief Worldwide, UK.png",
+		},
+		{
+			name: "Hayrat Aid Association, Türkiye",
+			logo: "/Partners/Hayrat Aid Association, Türkiye.png",
+		},
+		{
+			name: "Helping Hand for Relief and Development, USA",
+			logo: "/Partners/Helping Hand for Relief and Development USA.png",
+		},
+		{
+			name: "Hidaya Foundation, USA",
+			logo: "/Partners/Hidaya Foundation, USA.png",
+		},
+		{
+			name: "Human Concern International, Canada",
+			logo: "/Partners/Human concern International, Canada.png",
+		},
+		{
+			name: "ICNA Relief Canada",
+			logo: "/Partners/ICNA Relief Canada.png",
+		},
+		{
+			name: "International Humanity Relief, UK",
+			logo: "/Partners/International Humanity Relief UK.jpg",
+		},
+		{
+			name: "Life for Relief and Development, USA",
+			logo: "/Partners/Life for Relief and Development, USA.png",
+		},
+		{
+			name: "Muslim Poverty Relief, UK",
+			logo: "/Partners/Muslim Poverty Relief, U.K.png",
+		},
+		{
+			name: "North American Muslim Foundation, Canada",
+			logo: "\Partners/North American Muslim Foundation, Canada..png",
+		},
+		{
+			name: "Serving Humanity, USA",
+			logo: "/Partners/Serving Humanity, USA.png",
+		},
+		{
+			name: "The Lady Fatimah Charitable Trust, UK",
+			logo: "/Partners/The Lady Fatimah Charitable Trust, U.K.png",
+		},
+		{
+			name: "UK Islamic Mission, UK",
+			logo: "/Partners/UK Islamic Mission, U.K..JPG",
+		},
+		{
+			name: "World Assembly of Muslim Youth, K.S.A.",
+			logo: "\Partners/World Assembly of Muslim Youth, K. S. A..png",
+		},
 	];
 
 	const partnerships = [

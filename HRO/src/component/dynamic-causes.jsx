@@ -897,6 +897,11 @@ export default function DynamicCauses() {
             src: "https://worldwaterreserve.com/wp-content/uploads/2018/05/lifewater.jpg",
             alt: "Forest",
             caption: "Forest Path",
+          },
+          {
+            src: "/water1.png",
+            alt: "Forest",
+            caption: "Forest Path",
           }
         ],
         moreInfo:{
@@ -1110,12 +1115,22 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
           {
-            src: "/desktop_img/10.desktop.webp",
+            src: "/OSP/1 (1).png",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
           {
-            src: "https://www.cry.org/wp-content/themes/cry/images/children-banner.jpg",
+            src: "/OSP/1 (5).png",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "/OSP/1 (9).png",
+            alt: "Forest",
+            caption: "Forest Path",
+          },
+          {
+            src: "/OSP/1 (13).png",
             alt: "Forest",
             caption: "Forest Path",
           }
@@ -1348,12 +1363,17 @@ export default function DynamicCauses() {
       ],
       bannerImage:[
           {
-            src: "/desktop_img/1.desktop.webp",
+            src: "/Seasonal-projects.jpg",
             alt: "Mountain",
             caption: "Beautiful Mountain",
           },
           {
-            src: "/desktop_img/3.desktop.webp",
+            src: "/seasonal-programs-program-hero-image.png",
+            alt: "Lake",
+            caption: "Lake Sunset",
+          },
+          {
+            src: "/hr5.png",
             alt: "Lake",
             caption: "Lake Sunset",
           }
@@ -1567,6 +1587,21 @@ export default function DynamicCauses() {
         }
       ],
       bannerImage:[
+         {
+            src: "/emergency-relief-program-hero-image.png",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "/d.png",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
+          {
+            src: "/Seasonal-projects.jpg",
+            alt: "Mountain",
+            caption: "Beautiful Mountain",
+          },
           {
             src: "https://www.mmpc.in/wp-content/uploads/2023/06/disasters-banner.png",
             alt: "Mountain",

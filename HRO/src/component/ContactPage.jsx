@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import StayConnected from './StayConnected';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -633,6 +634,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <StayConnected/>
     </div>
   );
 };

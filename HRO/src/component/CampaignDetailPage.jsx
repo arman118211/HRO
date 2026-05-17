@@ -50,7 +50,7 @@ const campaignsData = {
     
     // Financial details
     goalAmount: 50000,
-    raisedAmount: 32750,
+    raisedAmount: 0,
     donorsCount: 247,
     daysLeft: 45,
     
@@ -125,7 +125,7 @@ const campaignsData = {
     heroImage: "/Slider/Picture6a.jpg",
     fullDescription: "The School Fund focuses on improving educational infrastructure and supporting teachers with the resources they need. We renovate classrooms, provide teaching materials, and offer professional development opportunities for educators to ensure every child receives quality education.",
     goalAmount: 75000,
-    raisedAmount: 45200,
+    raisedAmount: 0,
     donorsCount: 156,
     daysLeft: 62,
     impact: {
@@ -175,7 +175,7 @@ const campaignsData = {
     
     // Financial details
     goalAmount: 75000,
-    raisedAmount: 41200,
+    raisedAmount: 0,
     donorsCount: 318,
     daysLeft: 60,
     
@@ -251,7 +251,7 @@ const campaignsData = {
     
     // Financial details
     goalAmount: 100000,
-    raisedAmount: 67850,
+    raisedAmount: 0,
     donorsCount: 524,
     daysLeft: 75,
     
@@ -327,7 +327,7 @@ const campaignsData = {
     
     // Financial details
     goalAmount: 60000,
-    raisedAmount: 35800,
+    raisedAmount: 0,
     donorsCount: 290,
     daysLeft: 50,
     
@@ -404,7 +404,7 @@ const campaignsData = {
     "Winters in high-altitude and poor regions can be deadly for families without proper clothing or shelter. Your support delivers blankets, jackets, food kits, and heating supplies to protect families from life-threatening cold.",
 
   goalAmount: 70000,
-  raisedAmount: 38900,
+  raisedAmount: 0,
   donorsCount: 310,
   daysLeft: 38,
 
@@ -462,7 +462,7 @@ const campaignsData = {
     "Women in low-income communities often lack access to income opportunities. This program offers sewing training, materials, and startup support, enabling women to earn from home or start small tailoring shops.",
 
   goalAmount: 30000,
-  raisedAmount: 17400,
+  raisedAmount: 0,
   donorsCount: 160,
   daysLeft: 48,
 
@@ -520,7 +520,7 @@ const campaignsData = {
     "Thousands of children dream of education but lack the most basic resources. Your sponsorship covers school fees, uniforms, books, meals, and a supportive environment for children to flourish.",
 
   goalAmount: 40000,
-  raisedAmount: 26450,
+  raisedAmount: 0,
   donorsCount: 280,
   daysLeft: 55,
 
@@ -578,7 +578,7 @@ const campaignsData = {
     "Many villages lack proper school buildings, forcing children to learn in unsafe or temporary spaces. Your support helps us build durable, modern schools with classrooms, libraries, and sanitation facilities.",
 
   goalAmount: 150000,
-  raisedAmount: 82400,
+  raisedAmount: 0,
   donorsCount: 410,
   daysLeft: 90,
 
@@ -636,7 +636,7 @@ const campaignsData = {
     "Millions lack access to basic healthcare. Our free medical camps bring doctors, medicines, and diagnostic services to remote areas. By sponsoring a patient, you help save lives, prevent diseases, and improve long-term health outcomes.",
 
   goalAmount: 50000,
-  raisedAmount: 28800,
+  raisedAmount: 0,
   donorsCount: 190,
   daysLeft: 70,
 
@@ -693,7 +693,7 @@ const campaignsData = {
     "Cataracts are the leading cause of blindness in low-income communities, yet the cure is simple and affordable. Your sponsorship provides free cataract surgeries, restoring sight and independence to elderly and low-income individuals.",
 
   goalAmount: 60000,
-  raisedAmount: 41800,
+  raisedAmount: 0,
   donorsCount: 340,
   daysLeft: 40,
 
@@ -751,7 +751,7 @@ const campaignsData = {
 
   // Financial details
   goalAmount: 85000,
-  raisedAmount: 39200,
+  raisedAmount: 0,
   donorsCount: 214,
   daysLeft: 58,
 

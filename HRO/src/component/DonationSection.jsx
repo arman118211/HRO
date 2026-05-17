@@ -1294,8 +1294,8 @@ const DonationSection = () => {
                   </div>
                   <div>
                     <Globe className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                    <div className="font-bold text-lg text-green-700">40+</div>
-                    <div className="text-xs text-green-600">Countries</div>
+                    <div className="font-bold text-lg text-green-700">9+</div>
+                    <div className="text-xs text-green-600">Districts</div>
                   </div>
                   <div>
                     <Award className="w-6 h-6 text-green-600 mx-auto mb-2" />
