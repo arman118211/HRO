@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+import { trackEvent } from "../utills/analytics";
 
 export default function Footer() {
 	const socialLinks = [
@@ -85,6 +86,11 @@ export default function Footer() {
 									key={index}
 									href={social.href}
 									aria-label={social.label}
+									onClick={() =>
+										trackEvent("footer_social_click", {
+											platform: social.label,
+										})
+									}
 									className="bg-background/10 hover:bg-primary p-2 rounded-lg transition-colors duration-200"
 								>
 									<social.icon className="h-5 w-5" />
@@ -101,6 +107,12 @@ export default function Footer() {
 								<li key={index}>
 									<a
 										href={link.href}
+										onClick={() =>
+											trackEvent("footer_quick_link_click", {
+												link_name: link.name,
+												destination: link.href,
+											})
+										}
 										className="text-background/80 hover:text-background transition-colors duration-200"
 									>
 										{link.name}
@@ -118,6 +130,12 @@ export default function Footer() {
 								<li key={index}>
 									<a
 										href={link.href}
+										onClick={() =>
+											trackEvent("footer_support_link_click", {
+												link_name: link.name,
+												destination: link.href,
+											})
+										}
 										className="text-background/80 hover:text-background transition-colors duration-200"
 									>
 										{link.name}
@@ -145,6 +163,11 @@ export default function Footer() {
 									target="_blank"
 									rel="noopener noreferrer"
 									className="text-background/80 hover:text-green-400 transition-colors duration-200"
+									onClick={() =>
+										trackEvent("whatsapp_click", {
+											location: "footer",
+										})
+									}
 								>
 									+977 984-7040404
 								</a>
@@ -166,12 +189,22 @@ export default function Footer() {
 							<Link
 								to="/privacy-policy"
 								className="text-background/60 hover:text-background transition-colors duration-200"
+								onClick={() =>
+									trackEvent("footer_policy_click", {
+										page: "privacy_policy",
+									})
+								}
 							>
 								Privacy Policy
 							</Link>
 							<Link
 								to="/terms-of-service"
 								className="text-background/60 hover:text-background transition-colors duration-200"
+								onClick={() =>
+									trackEvent("footer_policy_click", {
+										page: "terms_of_service",
+									})
+								}
 							>
 								Terms of Service
 							</Link>

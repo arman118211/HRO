@@ -1,0 +1,49 @@
+import { Helmet } from "react-helmet-async";
+
+export default function SEO({
+  title,
+  description,
+  keywords,
+  url,
+  image,
+}) {
+  return (
+    <Helmet>
+      <title>{title}</title>
+
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+
+      <link rel="canonical" href={url} />
+
+      {/* NGO Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "NGO",
+          name: "Human Relief Organization Nepal",
+          url: "https://hro.org.np",
+          logo: "https://hro.org.np/logo.png",
+          description:
+            "Human Relief Organization Nepal supports education, healthcare, sponsorship programs, orphan care and community development.",
+          email: "info@hro.org.np",
+          telephone: "+9779847040404",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "Nepal",
+          },
+        })}
+      </script>
+    </Helmet>
+  );
+}

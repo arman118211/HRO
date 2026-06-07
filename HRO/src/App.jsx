@@ -21,10 +21,12 @@ import PrivacyPolicy from "./component/PrivacyPolicy"
 import TermsOfService from "./component/TermsOfService"
 import SponsorshipPage from "./component/SponserShip"
 import SponsorshipDetail from "./component/SponserDetailPage"
+import AnalyticsTracker from "./component/AnalyticsTracker"
 
 export default function App() {
   return (
     <Router>
+      <AnalyticsTracker />
       <Navbar />
       <LanguageSelector />
       <ShareButton />

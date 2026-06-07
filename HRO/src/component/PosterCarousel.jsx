@@ -102,11 +102,23 @@ const PosterCarousel = () => {
 		return () => clearInterval(interval);
 	}, [posters.length]);
 
+	useEffect(() => {
+		const currentPoster = posters[currentSlide];
+
+		window.gtag?.("event", "banner_view", {
+			banner_id: currentPoster.id,
+			banner_name: currentPoster.alt,
+			campaign_link: currentPoster.link,
+		});
+	}, [currentSlide]);
+
 	const nextSlide = () => {
+		window.gtag?.("event", "carousel_next_click");
 		setCurrentSlide((prev) => (prev + 1) % posters.length);
 	};
 
 	const prevSlide = () => {
+		window.gtag?.("event", "carousel_previous_click");
 		setCurrentSlide((prev) => (prev - 1 + posters.length) % posters.length);
 	};
 
@@ -125,7 +137,16 @@ const PosterCarousel = () => {
 				>
 					{posters.map((poster) => (
 						<div key={poster.id} className="w-full flex-shrink-0">
-							<Link to={poster.link}>
+							<Link
+								to={poster.link}
+								onClick={() => {
+									window.gtag?.("event", "banner_click", {
+										banner_id: poster.id,
+										banner_name: poster.alt,
+										campaign_link: poster.link,
+									});
+								}}
+							>
 								{/* Desktop Image */}
 								<img
 									src={poster.desktopImage}
