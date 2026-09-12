@@ -3,123 +3,162 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import SectionHeader from "./section-header"
-import { CheckCircle } from "lucide-react"
+import { Check, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const tiers = [
-  { id: "basic", amount: 25, impact: ["1 hygiene kit", "Local sourcing", "Field report"] },
-  { id: "supporter", amount: 50, impact: ["2 hygiene kits", "Photo update", "Impact breakdown"] },
-  { id: "advocate", amount: 100, impact: ["Safe water for 5 people", "Project updates", "Thank-you letter"] },
-  { id: "champion", amount: 250, impact: ["Scholarship support", "Quarterly reports", "Recognition badge"] },
+  { 
+    id: "basic", 
+    amount: 25, 
+    name: "Essential", 
+    impact: ["1 verified hygiene & care kit", "Locally sourced supplies", "Digital field impact report"] 
+  },
+  { 
+    id: "supporter", 
+    amount: 50, 
+    name: "Supporter", 
+    popular: true,
+    impact: ["2 complete emergency kits", "Verified photo updates", "Itemized expenditure audit"] 
+  },
+  { 
+    id: "advocate", 
+    amount: 100, 
+    name: "Advocate", 
+    impact: ["Clean water access for 5 people", "Direct field coordinator notes", "Official thank-you letter"] 
+  },
+  { 
+    id: "champion", 
+    amount: 250, 
+    name: "Champion", 
+    impact: ["Full community scholarship aid", "Quarterly milestone audits", "Honor roll recognition"] 
+  },
 ]
 
 export default function DonationTiers() {
   const [selected, setSelected] = useState("supporter")
 
   return (
-    <section id="donate" className="relative bg-gradient-to-b from-yellow-50 via-amber-50 to-yellow-50">
-      {/* Golden decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute top-20 left-16 w-48 h-48 bg-gradient-to-br from-yellow-300/15 to-amber-400/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-16 w-36 h-36 bg-gradient-to-tl from-amber-300/15 to-yellow-400/15 rounded-full blur-2xl" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/8 to-transparent" />
+    <section id="donate" className="relative bg-[#FCFBF7] py-20 lg:py-28 overflow-hidden">
+      {/* Ambient warm gold lighting */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-amber-200/20 via-yellow-100/10 to-transparent blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-amber-100/30 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-12">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Centered Header */}
+        <div className="mx-auto max-w-2xl text-center mb-14">
           <SectionHeader
-            eyebrow="Donate"
-            title="Choose a giving level"
-            subtitle="Every amount makes a difference. Select a tier to see how your support helps on the ground."
+            eyebrow="Direct Giving"
+            title="Choose your impact level"
+            subtitle="Every dollar goes directly into field operations with zero guesswork and transparent receipts."
           />
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Tier Cards Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {tiers.map((t, idx) => {
-            const active = selected === t.id
+            const isSelected = selected === t.id
+
             return (
-              <motion.button
+              <motion.div
                 key={t.id}
-                type="button"
-                onClick={() => setSelected(t.id)}
-                aria-pressed={active}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`group relative flex flex-col gap-5 rounded-xl p-6 text-left transition-all duration-300 hover:scale-105  ${
-                  active
-                    ? "bg-gradient-to-br from-yellow-400 via-amber-400 to-yellow-500 border-3 border-yellow-300 shadow-2xl shadow-yellow-500/40 transform scale-105"
-                    : "bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-300/50 shadow-xl shadow-yellow-400/20 hover:shadow-2xl hover:shadow-yellow-500/30 hover:border-yellow-400/70"
+                onClick={() => setSelected(t.id)}
+                className={`relative flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 cursor-pointer ${
+                  isSelected
+                    ? "bg-white border-2 border-amber-500 shadow-[0_16px_36px_-8px_rgba(217,119,6,0.18)] -translate-y-1.5"
+                    : "bg-white/80 border border-stone-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] hover:-translate-y-1 hover:border-amber-300 hover:shadow-lg"
                 }`}
               >
-                {/* Golden accent corner */}
-                <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full shadow-md transition-all duration-300 ${
-                  active 
-                    ? "bg-gradient-to-br from-amber-300 to-yellow-400 shadow-yellow-400/50 scale-125" 
-                    : "bg-gradient-to-br from-yellow-400 to-amber-500 shadow-yellow-500/40 group-hover:scale-110"
-                }`} />
-
-                <div className="flex items-baseline justify-between">
-                  {/* Enhanced amount display */}
-                  <div className={`text-2xl font-bold ${
-                    active 
-                      ? "text-amber-900" 
-                      : "bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent"
-                  }`}>
-                    ${t.amount}
+                {/* Popular Ribbon */}
+                {t.popular && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 px-3.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white shadow-sm">
+                      <Sparkles className="h-3 w-3" />
+                      Most Popular
+                    </span>
                   </div>
-                  {active ? (
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 shadow-md">
-                      <CheckCircle className="h-5 w-5 text-amber-800" aria-label="Selected" />
+                )}
+
+                <div>
+                  {/* Tier Title & Check indicator */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                      {t.name}
+                    </span>
+                    <div
+                      className={`flex h-6 w-6 items-center justify-center rounded-full transition-colors ${
+                        isSelected
+                          ? "bg-amber-500 text-white shadow-sm"
+                          : "border border-stone-300 bg-stone-50 text-transparent"
+                      }`}
+                    >
+                      <Check className="h-3.5 w-3.5 stroke-[3]" />
                     </div>
-                  ) : null}
+                  </div>
+
+                  {/* Price */}
+                  <div className="mt-4 flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold tracking-tight text-stone-900">
+                      ${t.amount}
+                    </span>
+                    <span className="text-xs font-medium text-stone-500">USD</span>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="my-5 border-t border-stone-100" />
+
+                  {/* Impact Features */}
+                  <ul className="space-y-3 text-xs leading-relaxed">
+                    {t.impact.map((feature, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2.5">
+                        <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber-50 text-amber-600">
+                          <Check className="h-2.5 w-2.5 stroke-[2.5]" />
+                        </span>
+                        <span className="text-stone-600 font-medium">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Enhanced impact list */}
-                <ul className="flex flex-col gap-3">
-                  {t.impact.map((i) => (
-                    <li key={i} className={`inline-flex items-center gap-3 text-sm font-medium ${
-                      active ? "text-amber-900" : "text-amber-700"
-                    }`}>
-                      <div className={`w-2 h-2 rounded-full ${
-                        active 
-                          ? "bg-amber-800 shadow-sm" 
-                          : "bg-gradient-to-r from-yellow-500 to-amber-600"
-                      }`} aria-hidden />
-                      {i}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Enhanced action button */}
-                <Link to='/donate'>
-                <div className={`mt-auto inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-bold transition-all duration-300 ${
-                  active
-                    ? "bg-amber-100 text-amber-900 shadow-lg shadow-amber-900/20 hover:bg-amber-50 hover:shadow-xl"
-                    : "bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-amber-900 shadow-lg shadow-yellow-500/30 border border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/40"
-                }`}>
-                  Give ${t.amount}
+                {/* Bottom Action Button */}
+                <div className="mt-8 pt-2">
+                  <Link
+                    to={`/donate?tier=${t.id}&amount=${t.amount}`}
+                    className={`inline-flex w-full items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition-all duration-200 active:scale-[0.98] ${
+                      isSelected
+                        ? "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-md shadow-amber-500/25 hover:brightness-105"
+                        : "border border-stone-200 bg-stone-50 text-stone-700 hover:border-amber-300 hover:bg-amber-50/50 hover:text-amber-800"
+                    }`}
+                  >
+                    <HeartHandshake className="h-3.5 w-3.5" />
+                    Donate ${t.amount}
+                  </Link>
                 </div>
-                </Link>
-              </motion.button>
+              </motion.div>
             )
           })}
         </div>
 
-        {/* Enhanced disclaimer */}
+        {/* Security & Transparency Disclaimer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-8 text-center"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 flex items-center justify-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-yellow-100 to-amber-100 px-4 py-2 text-xs font-semibold text-amber-700 border border-yellow-300/50 shadow-md shadow-yellow-400/20">
-            <div className="w-2 h-2 bg-yellow-500 rounded-full" />
-            All donations are tax-deductible where applicable and processed securely.
+          <div className="inline-flex items-center gap-2 rounded-full border border-stone-200/80 bg-white px-4 py-2 text-xs font-medium text-stone-600 shadow-sm">
+            <ShieldCheck className="h-4 w-4 text-amber-600" />
+            <span>256-bit encrypted • Eligible for official charitable tax deductions</span>
           </div>
         </motion.div>
+
       </div>
     </section>
   )

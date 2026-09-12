@@ -1,66 +1,87 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Globe2, School, Droplets } from "lucide-react"
+import { Globe2, School, Droplets, Sparkles } from "lucide-react"
 
 const items = [
-  { icon: Droplets, label: "Wells built", value: "92" },
-  { icon: School, label: "Students supported", value: "6,400+" },
-  { icon: Globe2, label: "Districts", value: "8" },
+  { 
+    icon: Droplets, 
+    label: "Wells Constructed", 
+    value: "92", 
+    detail: "Providing clean drinking water daily" 
+  },
+  { 
+    icon: School, 
+    label: "Students Supported", 
+    value: "6,400+", 
+    detail: "With safe schooling and supplies" 
+  },
+  { 
+    icon: Globe2, 
+    label: "Districts Reached", 
+    value: "8", 
+    detail: "Across remote underserved regions" 
+  },
 ]
 
 export default function ImpactBanner() {
   return (
-    <section className="relative bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-200 border-y-4 border-yellow-400/50">
-      {/* Golden decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute top-0 left-1/3 w-32 h-32 bg-gradient-to-br from-yellow-300/20 to-amber-400/20 rounded-full blur-xl" />
-        <div className="absolute bottom-0 right-1/3 w-24 h-24 bg-gradient-to-tl from-amber-300/20 to-yellow-400/20 rounded-full blur-lg" />
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-300/10 via-transparent to-amber-300/10" />
+    <section className="relative bg-[#FCFBF7] py-8 sm:py-12">
+      {/* Subtle ambient gold accent behind the strip */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden>
+        <div className="h-40 w-3/4 max-w-5xl rounded-full bg-gradient-to-r from-amber-200/20 via-yellow-100/30 to-amber-200/20 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-3">
-          {items.map((it, idx) => (
-            <motion.div
-              key={it.label}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group flex items-center justify-center gap-4 rounded-xl bg-gradient-to-br from-yellow-50 to-amber-50 px-6 py-5 shadow-xl shadow-yellow-400/25 border-2 border-yellow-300/50 hover:shadow-2xl hover:shadow-yellow-500/35 hover:scale-105 transition-all duration-300"
-            >
-              {/* Enhanced golden icon container */}
-              <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg shadow-yellow-500/40 group-hover:shadow-xl group-hover:shadow-yellow-500/50 group-hover:scale-110 transition-all duration-300">
-                <it.icon className="h-7 w-7 text-amber-900" aria-hidden />
-              </div>
-              
-              <div className="text-center">
-                {/* Enhanced value with golden gradient */}
-                <div className="text-xl font-bold bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent sm:text-2xl">
-                  {it.value}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Main Floating Banner Card */}
+        <div className="rounded-3xl border border-stone-200/80 bg-white/90 p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-md sm:p-8">
+          
+          <div className="grid gap-6 sm:grid-cols-3 sm:divide-x sm:divide-stone-200/80">
+            {items.map((it, idx) => (
+              <motion.div
+                key={it.label}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: idx * 0.12 }}
+                className={`group flex items-center gap-4 ${idx !== 0 ? "sm:pl-6" : ""}`}
+              >
+                {/* Refined Gold Icon Container */}
+                <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-md shadow-amber-500/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-amber-500/30">
+                  <it.icon className="h-6 w-6" aria-hidden />
                 </div>
-                {/* Enhanced label */}
-                <div className="text-xs font-semibold text-amber-700/80 uppercase tracking-wide mt-1">
-                  {it.label}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Added inspiring message */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 text-center"
-        >
-          <p className="text-sm font-bold bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent">
-            Together, we're building a brighter future, one community at a time
-          </p>
-        </motion.div>
+                {/* Counter & Details */}
+                <div className="flex flex-col">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">
+                      {it.value}
+                    </span>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-600">
+                    {it.label}
+                  </span>
+                  <span className="text-xs text-stone-500 line-clamp-1 mt-0.5">
+                    {it.detail}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Micro Bottom Verification Tag */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="mt-6 flex flex-wrap items-center justify-center gap-2 border-t border-stone-100 pt-5 text-center text-xs font-medium text-stone-500"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-amber-500" />
+            <span>Every single project milestone is independently verified and auditable on-chain.</span>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   )

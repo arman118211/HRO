@@ -2,116 +2,129 @@
 
 import { motion } from "framer-motion"
 import SectionHeader from "./section-header"
-import { Star } from "lucide-react"
+import { Star, Quote, CheckCircle2, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const testimonials = [
   {
-    name: "Amina, Community Organizer",
-    quote: "The support arrived right when we needed it. We built a well that now serves three villages.",
+    name: "Amina",
+    role: "Community Organizer",
+    quote: "The emergency support arrived right when we needed it most. We built a solar-powered well that now reliably serves three neighboring villages daily.",
     image: "https://assets.entrepreneur.com/content/3x2/2000/1755840264-LEADIMAGETEMPLATE25.png",
+    metric: "Clean water to 1,200+ residents"
   },
   {
-    name: "Rahul, Donor",
-    quote: "I loved the transparent reports and photos. You can see your impact—it's real and personal.",
+    name: "Rahul",
+    role: "Verified Sustaining Donor",
+    quote: "I was blown away by the granular reporting and timestamped photos. You actually see where every single dollar goes—it is transparent, personal, and real.",
     image: "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/05/12/Pictures/_18142e30-9422-11ea-9070-932bbf5d90a5.jpg",
+    metric: "Supporting since 2024"
   },
 ]
 
 export default function Testimonials() {
   return (
-    <section className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-50">
-      {/* Golden decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute top-16 right-12 w-44 h-44 bg-gradient-to-br from-yellow-300/12 to-amber-400/12 rounded-full blur-3xl" />
-        <div className="absolute bottom-16 left-12 w-36 h-36 bg-gradient-to-tl from-amber-300/12 to-yellow-400/12 rounded-full blur-2xl" />
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/20 via-transparent to-amber-100/20" />
+    <section className="relative bg-[#FCFBF7] py-20 lg:py-28 overflow-hidden">
+      {/* Ambient warm gold glows */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="absolute top-1/3 right-0 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-yellow-100/25 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-12">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Centered Header */}
+        <div className="mx-auto max-w-2xl text-center mb-14">
           <SectionHeader
             eyebrow="Voices from our community"
-            title="Trusted by donors and partners"
-            subtitle="Stories from the field and the people who make our work possible."
+            title="Trusted by donors and partners alike"
+            subtitle="Real field dispatches and firsthand perspectives from the people powering our mission."
           />
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2">
+        {/* Testimonials Cards Grid */}
+        <div className="grid gap-8 md:grid-cols-2">
           {testimonials.map((t, idx) => (
             <motion.figure
               key={t.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group relative flex flex-col gap-6 rounded-xl bg-gradient-to-br from-yellow-50 to-amber-50 p-8 shadow-xl shadow-yellow-400/25 border-2 border-yellow-300/50 hover:shadow-2xl hover:shadow-yellow-500/35 hover:scale-105 transition-all duration-300"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: idx * 0.15 }}
+              className="group relative flex flex-col justify-between rounded-3xl border border-stone-200/80 bg-white p-8 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-[0_16px_36px_-8px_rgba(217,119,6,0.12)]"
             >
-              {/* Golden quote decoration */}
-              <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full shadow-lg shadow-yellow-500/40 flex items-center justify-center">
-                <span className="text-amber-900 font-bold text-lg">"</span>
-              </div>
-
-              {/* Enhanced profile section */}
-              <div className="flex items-center gap-4">
-                <div className="relative">
-                  <img
-                    src={t.image || "/placeholder.svg?height=96&width=96&query=portrait%20headshot"}
-                    alt={`${t.name} headshot`}
-                    className="h-16 w-16 rounded-full object-cover border-3 border-yellow-400/60 shadow-lg shadow-yellow-400/30"
-                  />
-                  {/* Golden ring around avatar */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-400/20 to-amber-500/20" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <figcaption className="text-base font-bold bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent">
-                    {t.name}
-                  </figcaption>
-                  {/* Enhanced star rating */}
+              <div>
+                {/* Header Row: Stars & Watermark Icon */}
+                <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-1" aria-label="5 star rating">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className="h-4 w-4 text-yellow-500 fill-yellow-400 drop-shadow-sm" 
+                      <Star
+                        key={i}
+                        className="h-4 w-4 fill-amber-400 text-amber-500"
                       />
                     ))}
                   </div>
+
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-50 text-amber-600">
+                    <Quote className="h-4 w-4 fill-amber-500/20 text-amber-600" />
+                  </div>
                 </div>
+
+                {/* Quote Body */}
+                <blockquote className="text-base sm:text-lg leading-relaxed text-stone-700 font-normal">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
               </div>
 
-              {/* Enhanced quote with golden styling */}
-              <blockquote className="relative text-base leading-relaxed text-amber-700/90 font-medium italic">
-                &ldquo;{t.quote}&rdquo;
-                {/* Golden quote accent */}
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full shadow-md shadow-yellow-500/40 flex items-center justify-center">
-                  <span className="text-amber-900 font-bold text-sm">"</span>
+              {/* Author & Verification Footer */}
+              <div className="mt-8 pt-6 border-t border-stone-100 flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-3.5">
+                  <div className="relative">
+                    <img
+                      src={t.image}
+                      alt={`${t.name} portrait`}
+                      className="h-12 w-12 rounded-full object-cover ring-2 ring-amber-400/40 ring-offset-2 ring-offset-white"
+                    />
+                  </div>
+                  <div>
+                    <figcaption className="text-sm font-bold text-stone-900">
+                      {t.name}
+                    </figcaption>
+                    <p className="text-xs text-stone-500 font-medium">
+                      {t.role}
+                    </p>
+                  </div>
                 </div>
-              </blockquote>
 
-              {/* Verification badge */}
-              <div className="mt-auto inline-flex w-fit items-center gap-2 rounded-lg bg-gradient-to-r from-yellow-100 to-amber-100 px-3 py-2 text-xs font-bold text-amber-800 border border-yellow-300/60 shadow-md shadow-yellow-400/20">
-                <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
-                Verified Impact Story
+                {/* Micro verification badge */}
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-50/80 border border-amber-200/70 px-3 py-1 text-xs font-semibold text-amber-800">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-600" />
+                  <span>{t.metric}</span>
+                </div>
               </div>
             </motion.figure>
           ))}
         </div>
 
-        {/* Enhanced call-to-action */}
-        <Link to='/donate'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 text-center"
+        {/* Global CTA Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-14 text-center"
+        >
+          <Link
+            to="/donate"
+            className="group inline-flex items-center gap-3 rounded-full bg-stone-900 px-7 py-4 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-stone-800 hover:shadow-xl hover:-translate-y-0.5"
           >
-            <div className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300">
-              Join thousands of satisfied donors
-              <Star className="h-5 w-5 text-amber-800 fill-amber-700" />
+            <span>Join over 12,000 donors making a verified difference</span>
+            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-stone-900 group-hover:translate-x-1 transition-transform">
+              <ArrowRight className="h-3.5 w-3.5 stroke-[2.5]" />
             </div>
-          </motion.div>
-        </Link>
+          </Link>
+        </motion.div>
+
       </div>
     </section>
   )

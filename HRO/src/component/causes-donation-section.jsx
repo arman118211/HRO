@@ -18,6 +18,19 @@ import { trackEvent } from "../utills/analytics";
 const causes = [
 	{
 		id: 1,
+		title: "Nepal Flash Flood Emergency Response - 2026",
+		description:
+			"Help families affected by devastating flash floods with emergency food, clean drinking water, essential supplies, and temporary shelter.",
+		image: "./mobile_view/fundraiser-mob.png",
+		icon: GraduationCap,
+		raised: 0,
+		goal: 75000,
+		donors: 234,
+		urgency: "High",
+		category: "Emergency Relief",
+	},
+	{
+		id: 2,
 		title: "Education for All",
 		description:
 			"Help us provide quality education and school supplies to underprivileged children in remote areas.",
@@ -30,7 +43,7 @@ const causes = [
 		category: "Education",
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "Clean Water Access",
 		description:
 			"Support our mission to bring clean, safe drinking water to communities in need.",
@@ -43,7 +56,7 @@ const causes = [
 		category: "Health",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "Emergency Relief",
 		description:
 			"Provide immediate aid and support to families affected by natural disasters and emergencies.",
@@ -56,7 +69,7 @@ const causes = [
 		category: "Emergency",
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "Food Security",
 		description:
 			"Help us fight hunger by providing nutritious meals to families and children in need.",
@@ -69,7 +82,7 @@ const causes = [
 		category: "Nutrition",
 	},
 	{
-		id: 5,
+		id: 6,
 		title: "Free Medical Camp and Cataract Surgeries",
 		description:
 			"Providing essential healthcare, free medical checkups, and life-changing cataract surgeries to underserved communities.",
@@ -82,7 +95,7 @@ const causes = [
 		category: "Healthcare",
 	},
 	{
-		id: 6,
+		id: 7,
 		title: "Healthcare Access",
 		description:
 			"Provide essential medical care and health services to underserved communities.",

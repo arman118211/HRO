@@ -1,139 +1,135 @@
 "use client"
 
-import { motion } from "framer-motion"
-import SectionHeader from "./section-header"
-import { Plus, Minus } from "lucide-react"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import SectionHeader from "./section-header"
+import { Plus, ArrowUpRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const faqs = [
   {
-    q: "How do you verify campaigns?",
-    a: "We work with local partners and use a standardized audit checklist, budget reviews, and on-site verification before listing any campaign.",
+    num: "01",
+    q: "How do you verify campaigns before listing?",
+    a: "Every initiative undergoes on-ground partner vetting, expenditure auditing, baseline milestone mapping, and legal compliance checks before being approved for public funding.",
   },
   {
-    q: "Where does my donation go?",
-    a: "100% of your donation goes directly to the campaign you choose. Operational costs are covered by separate grants and sponsors.",
+    num: "02",
+    q: "Where does 100% of my donation actually go?",
+    a: "Every dollar donated reaches frontline programs directly. Operational expenses and transaction fees are independently sponsored by philanthropic board grants.",
   },
   {
-    q: "Do I receive updates?",
-    a: "Yes. You'll get email updates with reports, photos, and milestones as the project progresses.",
+    num: "03",
+    q: "How and when will I receive project updates?",
+    a: "You will receive timestamped progress reports, verified field photography, and itemized financial statements at each major campaign milestone.",
   },
   {
-    q: "Is my donation tax-deductible?",
-    a: "In many regions, yes. We provide a receipt immediately after your donation for your records.",
+    num: "04",
+    q: "Are my contributions tax-deductible?",
+    a: "Yes. An official 501(c)(3) tax receipt is generated instantly with each contribution and delivered directly to your inbox for record keeping.",
   },
 ]
 
 export default function Faq() {
-  const [openItems, setOpenItems] = useState(new Set([0])) // First item open by default
-
-  const toggleItem = (index) => {
-    const newOpenItems = new Set(openItems)
-    if (newOpenItems.has(index)) {
-      newOpenItems.delete(index)
-    } else {
-      newOpenItems.add(index)
-    }
-    setOpenItems(newOpenItems)
-  }
+  const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section className="relative bg-gradient-to-b from-yellow-50 via-amber-50 to-yellow-50">
-      {/* Golden decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute top-20 left-16 w-40 h-40 bg-gradient-to-br from-yellow-300/12 to-amber-400/12 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-16 w-32 h-32 bg-gradient-to-tl from-amber-300/12 to-yellow-400/12 rounded-full blur-2xl" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/8 to-transparent" />
-      </div>
-
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-12">
+    <section id="faq" className="relative bg-[#FAF8F5] py-24 lg:py-32">
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Centered Header */}
+        <div className="mx-auto max-w-2xl text-center mb-16">
           <SectionHeader
-            eyebrow="FAQ"
-            title="Common questions"
-            subtitle="If you have other questions, reach out to our support team."
+            eyebrow="Transparency & Trust"
+            title="Frequently asked questions"
+            subtitle="Clear answers about how your funds are vetted, protected, and directed."
           />
         </div>
 
-        <div className="space-y-4">
+        {/* Minimalist Editorial Accordion */}
+        <div className="divide-y divide-stone-200 border-t border-b border-stone-200">
           {faqs.map((f, idx) => {
-            const isOpen = openItems.has(idx)
+            const isOpen = openIndex === idx
+
             return (
-              <motion.div
-                key={f.q}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group rounded-xl bg-gradient-to-br from-yellow-50 to-amber-50 shadow-xl shadow-yellow-400/20 border-2 border-yellow-300/50 hover:shadow-2xl hover:shadow-yellow-500/30 transition-all duration-300 overflow-hidden"
+              <div
+                key={f.num}
+                className="group relative transition-colors duration-200"
               >
-                <button
-                  onClick={() => toggleItem(idx)}
-                  className={`w-full cursor-pointer list-none p-6 text-left transition-all duration-300 ${
-                    isOpen 
-                      ? "bg-gradient-to-r from-yellow-100 to-amber-100 border-b-2 border-yellow-300/60" 
-                      : "hover:bg-gradient-to-r hover:from-yellow-100/50 hover:to-amber-100/50"
+                {/* Active Left Gold Accent Bar */}
+                <div
+                  className={`absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-amber-500 to-amber-600 transition-opacity duration-300 ${
+                    isOpen ? "opacity-100" : "opacity-0"
                   }`}
+                />
+
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="flex w-full items-center justify-between gap-6 py-7 px-4 text-left transition-colors sm:px-6"
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <span className={`text-base font-bold ${
-                      isOpen 
-                        ? "bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-800 bg-clip-text text-transparent" 
-                        : "text-amber-800 group-hover:text-amber-900"
-                    }`}>
-                      {f.q}
+                  <div className="flex items-center gap-5 sm:gap-8">
+                    <span
+                      className={`text-xs font-mono font-bold tracking-widest transition-colors ${
+                        isOpen ? "text-amber-600" : "text-stone-400 group-hover:text-stone-600"
+                      }`}
+                    >
+                      {f.num}
                     </span>
-                    <div className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${
-                      isOpen 
-                        ? "bg-gradient-to-br from-yellow-400 to-amber-500 shadow-lg shadow-yellow-500/40 rotate-180" 
-                        : "bg-gradient-to-br from-amber-200 to-yellow-300 shadow-md shadow-yellow-400/30 group-hover:bg-gradient-to-br group-hover:from-yellow-300 group-hover:to-amber-400"
-                    }`}>
-                      {isOpen ? (
-                        <Minus className="h-4 w-4 text-amber-900" />
-                      ) : (
-                        <Plus className="h-4 w-4 text-amber-800" />
-                      )}
-                    </div>
+                    <h3
+                      className={`text-lg font-semibold tracking-tight transition-colors sm:text-xl ${
+                        isOpen ? "text-stone-900 font-bold" : "text-stone-700 group-hover:text-stone-900"
+                      }`}
+                    >
+                      {f.q}
+                    </h3>
+                  </div>
+
+                  {/* Minimalist Rotational Toggle */}
+                  <div
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                      isOpen
+                        ? "bg-amber-500 text-white rotate-45"
+                        : "border border-stone-200 bg-white text-stone-500 group-hover:border-amber-400 group-hover:text-stone-900"
+                    }`}
+                  >
+                    <Plus className="h-4 w-4 stroke-[2.5]" />
                   </div>
                 </button>
 
-                {/* Enhanced answer section with smooth animation */}
-                <motion.div
-                  initial={false}
-                  animate={{ 
-                    height: isOpen ? "auto" : 0,
-                    opacity: isOpen ? 1 : 0
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <div className="px-6 pb-6 pt-2">
-                    <p className="text-sm leading-relaxed text-amber-700/85 font-medium bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg p-4 border border-yellow-300/40 shadow-inner">
-                      {f.a}
-                    </p>
-                  </div>
-                </motion.div>
-              </motion.div>
+                {/* Animated Pure-Text Expand */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.28, ease: "easeInOut" }}
+                    >
+                      <div className="pb-8 pt-1 pl-12 pr-4 sm:pl-20 sm:pr-12">
+                        <p className="text-base leading-relaxed text-stone-600 max-w-3xl">
+                          {f.a}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             )
           })}
         </div>
 
-        {/* Enhanced support contact section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 text-center"
-        >
-          <Link to='/contact'>
-          <div className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 px-8 py-4 text-base font-bold text-amber-900 shadow-xl shadow-yellow-500/30 border-2 border-yellow-300 hover:shadow-2xl hover:shadow-yellow-500/40 hover:scale-105 transition-all duration-300">
-            <div className="w-2 h-2 bg-amber-800 rounded-full animate-pulse" />
-            Still have questions? Contact our support team
-          </div>
+        {/* Subtle, Clean Query Link */}
+        <div className="mt-14 flex items-center justify-center">
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-stone-600 transition-colors hover:text-amber-600"
+          >
+            <span>Have a different question? Talk to our team</span>
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-amber-500" />
           </Link>
-        </motion.div>
+        </div>
+
       </div>
     </section>
   )

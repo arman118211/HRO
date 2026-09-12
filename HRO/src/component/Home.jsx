@@ -13,6 +13,7 @@ import PosterCarousel from "./PosterCarousel";
 import OurCampaignSection from "./our-campaign";
 import LanguageSelector from "./LanguageSelector";
 import SEO from "./SEO";
+import NepalFloodSection from "./NepalFloodSection";
 
 export default function HomePage() {
 	return (
@@ -29,6 +30,7 @@ export default function HomePage() {
 
 				<PosterCarousel />
 				<AboutSection />
+				<NepalFloodSection/>
 				<CausesDonationSection />
 				<ProgramsSection />
 				<ImpactSection />

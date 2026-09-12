@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function FundRaiser() {
   return (
-    <main className="font-sans">
+    <main className="font-sans overflow-hidden">
       {/* Design Tokens (5 colors total):
          1) Primary: amber (golden)
          2) Neutral: white

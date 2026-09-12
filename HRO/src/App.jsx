@@ -22,12 +22,16 @@ import TermsOfService from "./component/TermsOfService"
 import SponsorshipPage from "./component/SponserShip"
 import SponsorshipDetail from "./component/SponserDetailPage"
 import AnalyticsTracker from "./component/AnalyticsTracker"
+import NepalFloodFundraiser from "./component/fundraiser/NepalFundraiser"
+import PopupAd from "./component/PopupAd"
 
 export default function App() {
   return (
     <Router>
       <AnalyticsTracker />
+      
       <Navbar />
+      <PopupAd imageSrc="./mobile_view/pop-mob.png" redirectPath="/donate" />
       <LanguageSelector />
       <ShareButton />
       <ScrollToTop />
@@ -48,7 +52,8 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/sponsorship" element={<SponsorshipPage />} />
-        <Route path="/sponsorship/:id" element={<SponsorshipDetail />} />
+        <Route path="/nepal_fundrasier" element={<NepalFloodFundraiser />} />
+
 
 
 
