@@ -6,6 +6,8 @@ import DonationTiers from "../component/fundraiser/donation-tiers"
 import ImpactBanner from "../component/fundraiser/impact-banner"
 import Testimonials from "../component/fundraiser/testimonials"
 import Faq from "../component/fundraiser/faq"
+import SupportingPartnersSection from "./fundraiser/SupportingPartnersSection"
+import DirectDonationSection from "./fundraiser/DirectDonationSection"
 
 
 export const metadata = {
@@ -29,6 +31,8 @@ export default function FundRaiser() {
       <HowItWorks />
       <ImpactBanner />
       <DonationTiers />
+      <SupportingPartnersSection/>
+			<DirectDonationSection/>
       <Testimonials />
       <Faq />
      

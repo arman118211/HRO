@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { trackEvent } from "../../utills/analytics";
+import SupportingPartnersSection from "../fundraiser/SupportingPartnersSection";
+import DirectDonationSection from "../fundraiser/DirectDonationSection";
 
 // Reusable Project Page Component
 export const ProjectPage = ({
@@ -347,6 +349,9 @@ export const ProjectPage = ({
 					</div>
 				</section>
 			)}
+			 
+			 <SupportingPartnersSection/>
+			 <DirectDonationSection/>
 
 			{/* Testimonials Section */}
 			{testimonials.length > 0 && (

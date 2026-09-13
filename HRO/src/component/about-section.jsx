@@ -24,13 +24,13 @@ export default function AboutSection() {
 			<div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-yellow-300/20 to-amber-400/20 rounded-full blur-2xl animate-pulse"></div>
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				<div className="text-center mb-16">
+				<div className="text-center mb-10 md:mb-16">
 					<motion.h2
 						initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8 }}
 						viewport={{ once: true }}
-						className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent mb-6"
+						className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent mb-4 md:mb-6 px-2 leading-tight"
 					>
 						About Human Relief Organization Nepal
 					</motion.h2>
@@ -39,7 +39,7 @@ export default function AboutSection() {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 						viewport={{ once: true }}
-						className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+						className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-2"
 					>
 						<ReadMore
 							text="Human Relief Organization Nepal (HRO Nepal) is a dedicated
@@ -59,7 +59,7 @@ export default function AboutSection() {
 					</motion.p>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+				<div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-10 md:mb-16">
 					{stats.map((stat, index) => (
 						<motion.div
 							key={index}
@@ -68,7 +68,7 @@ export default function AboutSection() {
 							transition={{ duration: 0.8, delay: index * 0.1 }}
 							viewport={{ once: true }}
 							whileHover={{ y: -8, scale: 1.02 }}
-							className="text-center bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white/30 relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
+							className="text-center bg-white/90 backdrop-blur-lg p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-white/30 relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
 						>
 							<div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 							<div className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
@@ -79,15 +79,15 @@ export default function AboutSection() {
 							<div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-amber-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300 delay-150"></div>
 							<div className="absolute top-1/2 left-4 w-1 h-1 bg-yellow-600 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300 delay-300"></div>
 
-							<div className="bg-gradient-to-br from-yellow-400/15 via-amber-500/10 to-yellow-600/5 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 group-hover:shadow-lg group-hover:shadow-yellow-400/25 transition-all duration-300 group-hover:scale-110">
+							<div className="bg-gradient-to-br from-yellow-400/15 via-amber-500/10 to-yellow-600/5 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-6 relative z-10 group-hover:shadow-lg group-hover:shadow-yellow-400/25 transition-all duration-300 group-hover:scale-110">
 								<div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
-								<stat.icon className="h-10 w-10 text-yellow-600 relative z-10 group-hover:text-amber-700 transition-colors duration-300" />
+								<stat.icon className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-yellow-600 relative z-10 group-hover:text-amber-700 transition-colors duration-300" />
 							</div>
 
-							<div className="text-4xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent mb-3 relative z-10 group-hover:scale-105 transition-transform duration-300">
+							<div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent mb-1 sm:mb-2 md:mb-3 relative z-10 group-hover:scale-105 transition-transform duration-300">
 								{stat.number}
 							</div>
-							<div className="text-slate-700 font-semibold text-lg relative z-10 group-hover:text-slate-800 transition-colors duration-300">
+							<div className="text-slate-700 font-semibold text-sm sm:text-base md:text-lg relative z-10 group-hover:text-slate-800 transition-colors duration-300">
 								{stat.label}
 							</div>
 
@@ -96,35 +96,35 @@ export default function AboutSection() {
 					))}
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 					<motion.div
 						initial={{ opacity: 0, x: -30 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8 }}
 						viewport={{ once: true }}
-						className="relative"
+						className="relative order-1"
 					>
-						<div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 to-amber-500/20 rounded-2xl blur-lg"></div>
+						<div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-yellow-400/20 to-amber-500/20 rounded-2xl blur-lg"></div>
 						<img
 							src="https://img.freepik.com/free-photo/close-up-people-volunteer-teamwork-putting-finger-star-shapehands-togetherstack-handsunity-teamwork-world-environment-day_640221-299.jpg?semt=ais_hybrid&w=740&q=80"
 							alt="Our team working in the community"
 							className="rounded-xl shadow-lg w-full relative z-10"
 						/>
 						{/* Decorative corner accents */}
-						<div className="absolute top-4 left-4 w-8 h-8 border-t-4 border-l-4 border-yellow-500 rounded-tl-lg"></div>
-						<div className="absolute bottom-4 right-4 w-8 h-8 border-b-4 border-r-4 border-amber-600 rounded-br-lg"></div>
+						<div className="absolute top-4 left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-4 border-l-4 border-yellow-500 rounded-tl-lg"></div>
+						<div className="absolute bottom-4 right-4 w-6 h-6 sm:w-8 sm:h-8 border-b-4 border-r-4 border-amber-600 rounded-br-lg"></div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, x: 30 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8 }}
 						viewport={{ once: true }}
-						className="space-y-6"
+						className="space-y-4 sm:space-y-6 order-2 text-center lg:text-left"
 					>
-						<h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent">
+						<h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-yellow-600 to-amber-700 bg-clip-text text-transparent">
 							Our Mission
 						</h3>
-						<p className="text-lg text-slate-600 leading-relaxed">
+						<p className="text-base sm:text-lg text-slate-600 leading-relaxed">
 							HRO Nepal is committed to serve humanity by integrating resources
 							for people in need. We strive to provide immediate response in
 							disasters, and effective programs in place of suffering for the
@@ -139,7 +139,7 @@ export default function AboutSection() {
 								})
 							}
 						>
-							<button className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-amber-600 hover:to-yellow-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+							<button className="w-full sm:w-auto bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-amber-600 hover:to-yellow-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
 								Learn More About Us
 							</button>
 						</Link>
