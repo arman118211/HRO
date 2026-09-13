@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import { trackEvent } from "../../utills/analytics";
 import SupportingPartnersSection from "../fundraiser/SupportingPartnersSection";
 import DirectDonationSection from "../fundraiser/DirectDonationSection";
+import FundDonationSection from "../fundraiser/FundDonationSection";
 
 // Reusable Project Page Component
 export const ProjectPage = ({
@@ -351,6 +352,7 @@ export const ProjectPage = ({
 			)}
 			 
 			 <SupportingPartnersSection/>
+			 <FundDonationSection/>
 			 <DirectDonationSection/>
 
 			{/* Testimonials Section */}

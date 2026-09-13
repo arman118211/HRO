@@ -937,7 +937,7 @@ export default function DonationSections({ project }) {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.1 }}
-        className="bg-white rounded-xl shadow-lg overflow-hidden "
+        className="bg-white rounded-xl shadow-lg overflow-hidden"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-[#FFD700] to-amber-600 text-white p-6">
